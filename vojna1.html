@@ -1,0 +1,1399 @@
+<!doctype html>
+<html lang="sl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+	<!-- Force landscape mode -->
+	<link rel="manifest" href="manifest.json">
+
+    <title>Zbrali smo pogum</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Slick Carousel CSS -->
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+	<!-- Slick Carousel customization for vertical down direction -->
+    <link href="css/slick-down.css" rel="stylesheet">
+
+	<!-- FancyBox 3 CSS -->
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+	<!-- FancyBox 3 customizations -->
+    <link href="css/fancybox.css" rel="stylesheet">
+
+    <!-- Custom styles for this site -->
+    <link href="css/landing.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/elements.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Modal -->
+	<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+		  <div class="modal-body">
+			<div class="close-icon">
+			  <span data-dismiss="modal" aria-label="Zapri">
+				<img src="img/icon_zapri_siva.svg">
+			  </span>
+			</div>
+			<div class="flex-row">
+			  <div class="flex-column" style="width:45%;margin-bottom:2rem">
+				<a href="https://www.gov.si/drzavni-organi/organi-v-sestavi/arhiv/" target="_blank"><img src="img/logo_MK_arhivSL.png" class="flex-item"></a>
+				<a href="https://www.zrss.si/" target="_blank"><img src="img/logo_ZRSS.png" class="flex-item"></a>
+				<a href="https://www.parkvojaskezgodovine.si/" target="_blank"><img src="img/logo_PVZ.png" class="flex-item"></a>
+			  </div>
+			  <div class="flex-item green-line credits-box" style="width:55%;padding:0 2vh">
+				<p>
+				  <b>Partnerji</b><br />
+				  Arhiv Republike Slovenije, direktor dr. Bojan Cvelfar<br />
+				  Zavod Republike Slovenije za šolstvo, direktor dr. Vinko Logaj<br />
+				  Park vojaške zgodovine Pivka, direktor mag. Janko Boštjančič
+				</p>
+				<p>
+				  <b>Avtorji</b><br />
+				  mag. Alenka Starman Alič, Arhiv Republike Slovenije<br />
+				  Ana Čič, Park vojaške zgodovine<br />
+				  dr. Vilma Brodnik, Zavod Republike Slovenije za šolstvo
+				</p>
+				<p>
+				  <b>Strokovni sodelavci projekta</b><br />
+				  dr. Bojan Cvelfar, Arhiv Republike Slovenije<br />
+				  mag. Janko Boštjančič, Park vojaške zgodovine<br />
+				  dr. Andrej Brodnik, Fakulteta za matematiko, naravoslovje in informacijske tehnologije, Univerza na Primorskem<br />
+				  Gregor Anželj, Gimnazija Bežigrad<br />
+				  Peter Požar in Žiga Požar
+				</p>
+				<p>
+				  <b>Avtorice učnega gradiva za osnovno šolo</b><br />
+				  Jana Bec, Osnovna šola Prule<br />
+				  Bojana Mlinar Podobnik, Osnovna šola Prule<br />
+				  Tjaša Petrič, Osnovna šola Koseze
+				</p>
+				<p>
+				  <b>Jezikovni pregled</b><br />
+				  Tine Logar
+				</p>
+				<p>
+				  <b>Institucije in drugi zunanji sodelavci</b><br />
+				  Urad predsednika Republike Slovenije<br />
+				  Predsednik RS Borut Pahor<br />
+				  Ministrstvo za obrambo<br />
+				  Ministrstvo za zunanje zadeve<br />
+				  Ministrstvo za notranje zadeve<br />
+				  Državni zbor RS<br />
+				  Muzej novejše zgodovine Slovenije<br />
+				  Slovenski etnografski muzej<br />
+				  Narodni muzej Slovenije<br />
+				  RTV Slovenija<br />
+				  Narodna univerzitetna knjižnica<br />
+				  Pošta Slovenije<br />
+				  Skupina Futura<br />
+				  Časopisi: Delo, Družina, Primorske novice, Večer<br />
+				  Posamezniki: Franco Juri, Tomaž Lavrič (Mladina), Helena Race
+				</p>
+				<p>
+				  <b>Videoprodukcija</b><br />
+				  Koprodukcija: RTV Slovenija<br />
+				  Izvedbena produkcija: Studio Virc d.o.o.
+				</p>
+				<p>
+				  <b>Oblikovanje</b><br />
+				  Matic Leban
+				</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Copyright -->
+	<div class="modal fade" id="copyright" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Obvestilo o avtorskih pravicah</b></p>
+					<p>Vse pravice pridržane. Brez pisnega dovoljenja ni dovoljeno nobenega dela virtualnega učnega gradiva (razstava, video film) na kakršenkoli način reproducirati, kopirati ali kako drugače razširjati. Ta prepoved se nanaša tako na mehanske oblike reprodukcije (fotokopiranje) kot na elektronske (snemanje ali prepisovanje na kakršenkoli pomnilniški medij). Izjemo predstavlja uporaba virtualnega učnega gradiva v šolske namene neposredno pri pouku.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    <nav class="br navbar navbar-dark fixed-top">
+      <a class="navbar-brand" href="index.html">
+	    <img id="logo" src="img/logo_menu.svg">
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleMenu" aria-controls="navbarToggleMenu" aria-expanded="false" aria-label="Toggle navigation">
+	    <div class="navbar-title">8. DAN PREJ</div>
+        <span id="navbar-hamburger" class="navbar-toggler-icon"></span>
+        <span id="navbar-cheeseburger" class="hidden" style="padding-top:0.1rem;">&#x2573;</span>
+      </button>
+    </nav>
+
+    <!-- Navbar toggle menu -->
+	<div id="navbarToggleMenu" class="br text-light hidden">
+	  <table>
+	    <tr>
+		  <td id="plebiscit-menu" style="width:75vh" class="disabled"><center>PLEBISCIT</center></td>
+		  <td rowspan="4" valign="top" style="height:100vh;padding:0">
+		    <div style="height:100vh;overflow-y:scroll;overflow:-moz-scrollbars-vertical;">
+		      <!-- Mobile menu: Plebiscit -->
+			  <table border="0" id="plebiscit-menu-m" class="hidden">
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit.html'">
+					<center style="font-size:1rem">Ogled filma</center>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit1.html'">
+					<div class="item-number-m">1</div>
+					<div class="item-label-m">PRED<br />PLEBISCITOM</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit2.html'">
+					<div class="item-number-m">2</div>
+					<div class="item-label-m">DAN<br />PLEBISCITA</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit3.html'">
+					<div class="item-number-m">3</div>
+					<div class="item-label-m">PO<br />PLEBISCITU</div>
+				  </td>
+				</tr>
+			  </table>
+		      <!-- Mobile menu: Osamosvojitev -->
+			  <table border="0" id="samostojnost-menu-m" class="hidden">
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost.html'">
+					<center style="font-size:1rem">Ogled filma</center>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost1.html'">
+					<div class="item-number-m">4</div>
+					<div class="item-label-m">80. LETA V<br />JUGOSLAVIJI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost2.html'">
+					<div class="item-number-m">5</div>
+					<div class="item-label-m">PROCESI<br />DEMOKRATIZACIJE</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost3.html'">
+					<div class="item-number-m">6</div>
+					<div class="item-label-m">RAZGLASITEV<br />SAMOSTOJNOSTI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost4.html'">
+					<div class="item-number-m">7</div>
+					<div class="item-label-m">VARNOSTNI<br />VIDIKI</div>
+				  </td>
+				</tr>
+			  </table>
+		      <!-- Mobile menu: Vojna -->
+			  <table border="0" id="vojna-menu-m">
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna.html'">
+					<center style="font-size:1rem">Ogled filma</center>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu active" style="height:25vh">
+					<div class="item-number-m">8</div>
+					<div class="item-label-m">DAN<br />PREJ</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu active content" style="height:25vh">
+					<div class="item-content-m" style="font-size:1rem">
+					  <a href="#vojna11" onclick="hideToggleMenu()">Približevanje konflikta</a><br />
+					  <a href="#vojna12" onclick="hideToggleMenu()">26. junij 1991</a><br />
+					</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna2.html'">
+					<div class="item-number-m">9</div>
+					<div class="item-label-m">SPOPADI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna3.html'">
+					<div class="item-number-m" style="padding-left:0.5rem">10</div>
+					<div class="item-label-m">KONEC<br />VOJNE</div>
+				  </td>
+				</tr>
+			  </table>
+		      <!-- Mobile menu: Osnovni meni -->
+			  <table border="0" width="100%" id="osnovni-menu-m" class="hidden" style="height:100vh">
+				<tr>
+				  <td width="40%" class="menu-main-column">
+					<img src="img/logo_menu.svg" style="width:100%;padding:10px">
+				  </td>
+				  <td class="menu-main-column">
+					<div class="menu-items" style="width:100%;font-size:1rem;line-height:1.5rem;">
+					  <a href="index.html">Vstopna stran</a><br />
+					  <a href="gradiva.html">Učna gradiva</a><br />
+					  <a href="viri.html">Viri</a><br />
+					  <a href="#" data-toggle="modal" data-target="#about">O projektu</a><br />
+					  <a href="#" data-toggle="modal" data-target="#copyright">Avtorske pravice</a><br />
+					</div>
+				  </td>
+				</tr>
+			  </table>
+			</div>
+		  </td>
+		</tr>
+	    <tr>
+		  <td id="samostojnost-menu" style="width:75vh" class="disabled"><center>OSAMOSVOJITEV</center></td>
+		</tr>
+	    <tr>
+		  <td id="vojna-menu" style="width:75vh"><center>VOJNA</center></td>
+		</tr>
+	    <tr>
+		  <td id="osnovni-menu" style="width:75vh" class="disabled"><center>OSNOVNI MENI</center></td>
+		</tr>
+	  </table>
+	</div>
+
+    <!-- Navbar bottom menu -->
+	<div id="navbarBottomMenu" class="br text-light hidden">
+	  <table>
+	    <tr>
+		  <td width="16%" rowspan="8" valign="top" class="menu-main-column">
+		    <img src="img/logo_menu.svg" width="60%">
+			<div class="menu-items" style="padding-left:1.3em;padding-top:1.3em">
+			  <a href="index.html">Vstopna stran</a><br />
+			  <a href="gradiva.html">Učna gradiva</a><br />
+			  <a href="viri.html">Viri</a><br />
+			  <a href="#" data-toggle="modal" data-target="#about">O projektu</a><br />
+			  <a href="#" data-toggle="modal" data-target="#copyright">Avtorske pravice</a><br />
+			</div>
+		  </td>
+		  <td width="28%" height="12.5%" id="plebiscit" class="disabled bl"><center>PLEBISCIT</center></td>
+		  <td width="28%" height="12.5%" id="samostojnost" class="disabled bl"><center>OSAMOSVOJITEV</center></td>
+		  <td width="28%" height="12.5%" id="vojna" class="bl"><center>VOJNA</center></td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit.html'">
+		    <center>Ogled filma</center>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost.html'">
+		    <center>Ogled filma</center>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna.html'">
+		    <center>Ogled filma</center>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit1.html'">
+		    <div class="item-number">1</div>
+			<div class="item-label">PRED<br />PLEBISCITOM</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost1.html'">
+		    <div class="item-number">4</div>
+			<div class="item-label">80. LETA V<br />JUGOSLAVIJI</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu active bl">
+		    <div class="item-number">8</div>
+			<div class="item-label">DAN<br />PREJ</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit2.html'">
+		    <div class="item-number">2</div>
+			<div class="item-label">DAN<br />PLEBISCITA</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost2.html'">
+		    <div class="item-number">5</div>
+			<div class="item-label">PROCESI<br />DEMOKRATIZACIJE</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu active content bl">
+		    <div class="item-content">
+			  <a href="#vojna11" onclick="hideBottomMenu()">Približevanje konflikta</a><br />
+			  <a href="#vojna12" onclick="hideBottomMenu()">26. junij 1991</a><br />
+			</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit3.html'">
+		    <div class="item-number">3</div>
+			<div class="item-label">PO<br />PLEBISCITU</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost3.html'">
+		    <div class="item-number">6</div>
+			<div class="item-label">RAZGLASITEV<br />SAMOSTOJNOSTI</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna2.html'">
+		    <div class="item-number">9</div>
+			<div class="item-label">SPOPADI</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost4.html'">
+		    <div class="item-number">7</div>
+			<div class="item-label">VARNOSTNI<br />VIDIKI</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna3.html'">
+		    <div class="item-number">10</div>
+			<div class="item-label">KONEC<br />VOJNE</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		</tr>
+	  </table>
+    </div>
+
+	<!-- Previous and next buttons -->
+	<div class="nav-prev-btn" id="navPrevBtn">
+		<svg width="20px" height="30px" viewBox="0 0 20 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g id="nazaj_24" transform="translate(-19, -103)" stroke="#858585" stroke-width="6">
+					<polyline id="nazaj_24" transform="translate(30, 118) rotate(-180) translate(-30, -118)" points="24 106 36 118 24 130"></polyline>
+				</g>
+			</g>
+		</svg>
+	</div>
+	<div class="nav-next-btn" id="navNextBtn">
+		<center>
+		<svg width="20px" height="30px" viewBox="0 0 20 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g id="naprej_24" transform="translate(-204, -729)" stroke="#858585" stroke-width="6">
+					<polyline id="naprej_24" points="207 732 219 744 207 756"></polyline>
+				</g>
+			</g>
+		</svg>
+		</center>
+	</div>
+
+
+	<!-- Device orientation -->
+    <div id="device-orientation">
+	  <center>
+	    <div id="orientation-box">
+	      <p><img src="img/list_desno.svg" style="height:20vh"></p>
+	      <p>Ta stran se vidi najbolje, če
+		  <br />je naprava obrnjena vodoravno.</p>
+	    </div>
+	  </center>
+	</div>
+
+	<!-- Loading box -->
+    <div id="content-loading">
+	  <center>
+	    <div id="loading-box">
+	      <img src="img/nalaganje_opt.gif">
+	      <br />Nalaganje v teku ...
+	    </div>
+	  </center>
+	</div>
+
+	<!-- Modal: Brionske deklaracije -->
+	<div class="modal fade" id="popup_brionske" tabindex="-1" role="dialog" aria-labelledby="podrobnosti31" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Brionska deklaracija</span></b></p>
+					<p>Več o Brionski deklaraciji si lahko ogledate v 3. delu pričujoče razstave z naslovom »Konec vojne«.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Mobilizacija -->
+	<div class="modal fade" id="popup_mobilizacija" tabindex="-1" role="dialog" aria-labelledby="podrobnosti31" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Mobilizacija</span></b></p>
+					<p>Mobilizacija pomeni uradni vpoklic oboroženih sil (lahko pa tudi gospodarskih struktur in dela civilnega prebivalstva) na opravljanje vojaške dolžnosti, torej prehod iz mirnodobnega stanja v vojno.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Nabor -->
+	<div class="modal fade" id="popup_nabor" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Nabor</span></b></p>
+					<p>Nabor je uradni postopek za ugotavljanje sposobnosti posameznika za vojaško službo. Nabornik je vojaški obveznik pred služenjem vojaškega roka. Naborniški sistem je bil v veljavi v nekdanji Jugoslaviji, v Sloveniji pa do leta 2003, ko je naborniško nadomestila poklicna vojska. Na Primorskem je bil nabor (poimenovan tudi vestirnga ali štelunga) običaj, pri katerem so mladi fantje pred odhodom na služenje vojaškega roka ob pomoči vaščanov izdelovali in okraševali naborne vozove s smrečjem in papirnatimi rožami ter se na njih pripeljali pred naborno komisijo, ki jih je potrdila za služenje vojaškega roka. Tradicija krasitve vozov za potrebe prevoza vojaških nabornikov je bila močno vpeta v lokalno okolje, saj je med sabo povezovala cele vasi ali mesta, katerih prebivalci so sodelovali pri nastajanju vozov. Pivška vestirnga je imela še posebej močne korenine in se odvijala vsakoletno vse do ukinitve sistema naborništva in profesionalizacije Slovenske vojske. Danes se ohranja le še kot etnološki običaj.</p>
+					<p>
+						<img src="thumb/31/photo/voz.jpg" class="img-fluid">
+						<div class="bottom-note" style="width:180px">
+						Primer nabornega vozu, hrani PVZ
+						</div>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Vladimir Milošević -->
+	<div class="modal fade" id="popup_milosevic" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/31/photo/milosevic.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Vladimir Miloševič,<br /> spletni vir: E-enciklopedija slovenske osamosvojitve, državnosti in ustavnosti
+						</div>
+					</span>
+					<p><b><span class="green">Vladimir Miloševič</span> (1940-), brigadir Slovenske vojske.</b></p>
+					<p>Leta 1990, po zamenjavi poveljnika Republiškega štaba Teritorialne obrambe RS (RŠTO), ga je major Janez Slapar imenoval za poveljnika Vzhodnoštajerske pokrajine TO (7. pokrajinski štab TO). Po vojni, leta 1993, je bil namestnik načelnika RŠTO.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Jovanov Pavlov -->
+	<div class="modal fade" id="popup_pavlov" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Jovan Pavlov</span> (1935), generalmajor Jugoslovanske ljudske armade.</b></p>
+					<p>V času vojne za Slovenijo je bil poveljnik 14. ljubljanskega korpusa in že 26. junija 1991 ukazal premik vojaških vozil iz vojašnice v Pivki proti mejnim prehodom. Do leta 1992 je služil v jugoslovanski vojski, nato pa bil demobiliziran.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Marjan Čad -->
+	<div class="modal fade" id="popup_cad" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/31/photo/cad.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Marijan Čad,<br /> spletni vir: Mladina, avtor Uroš Abram
+						</div>
+					</span>
+					<p><b><span class="green">Marjan Čad</span> (1932-2020), generalpodpolkovnik JLA slovenskega rodu.</b></p>
+					<p>Sredi šestdesetih let prejšnjega stoletja je končal Višjo vojaško akademijo JLA v Beogradu, leta 1973 pa še Šolo ljudske obrambe. Od leta 1988 do 1991 je bil poveljnik 13. reškega korpusa in že 26. junija 1991 ukazal premike tankovskih enot iz vojašnice v Ilirski Bistrici. Po vojni se je upokojil.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main page content -->
+    <div class="main-content">
+
+		<div class="heading-box heading-bg">
+		  <div class="heading-number">8</div>
+		  <div class="heading-title">DAN<br />PREJ</div>
+		  <div class="scroll-indicator">
+		    <img src="img/scroll_indicator2.png">
+		  </div>
+		</div>
+
+		<!------------------------------
+		//  PART 1
+		//----------------------------->
+		<div class="cover-box rel pointer" id="vojna11"><!-- MUST use "rel" -->
+		  <div class="heading-last-diagonal wd"></div>
+		  <div class="cover-box-title">
+			<div class="frame">
+			  PRIBLIŽEVANJE<br /><span class="green">KONFLIKTA</span>
+			</div>
+		  </div>
+		  <div class="intro-first-diagonal wd"></div>
+		</div>
+
+		<div class="intro-box w80" style="margin-left:-1px">
+		  <div class="h20 flex-row">
+		    <div class="intro-title"><!-- Brez naslova --></div>
+		  </div>
+		  <div class="h60 flex-row">
+		    <div class="intro-content">
+				V letu 1991 so se razmere v Jugoslaviji naglo zaostrovale. Državljani po posameznih republikah so ob katastrofalnih gospodarskih razmerah in političnih napetostih zahtevali spremembe, zvezna vlada in vojaški vrh Jugoslovanske ljudske armade pa nista pristajala na pogajanja in sta trmasto vztrajala pri grožnjah.
+				<br>
+				<br>
+				Medtem ko je Slovenija hitela s pripravo osamosvojitvenih zakonov, se je konec marca 1991 s spopadom na Plitvicah začela vojna med Hrvati in Srbi na Hrvaškem, kmalu pa se je v konflikt vključila tudi JLA. Slovenija in Hrvaška sta 25. junija razglasili samostojnost, že naslednji dan pa se je začela agresija JLA na slovenskem ozemlju. Avgusta 1991, ko so pri nas veljala določila <a href="#" class="intro-popup-link" data-toggle="modal" data-target="#popup_brionske">Brionske deklaracije</a>, so srbske sile napadle Vukovar, aprila 1992 pa se je vojna razplamtela še v Bosni in Hercegovini.
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="blue-last-diagonal wd"></div>
+		  <div class="content-box-inner ml8">
+			  <img src="media/31/karikatura_pocelo.jpg" class="h50 pointer" id="karikatura_pocelo">
+		  </div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/31/news1/01.jpg" class="h50 pointer" id="velika_prevara">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/31/docs1/zaostrovanje.jpg" class="h50 pointer" id="zaostrovanje">
+				<div class="bottom-note text-level2">
+					Zaostrovanje razmer
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/31/docs1/jla1.jpg" class="h50 pointer" id="dejavnosti_jla">
+				<div class="bottom-note text-level2">
+					Dejavnosti JLA v Republiki Sloveniji
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column">
+				<img src="thumb/31/docs1/bedem.jpg" class="h90 pointer" id="bedem">
+			</div>
+		</div>
+
+		<div class="content-box ml1rem">
+			<div class="content-box-inner h60">
+				<div class="flex-row h10 w40">
+					<div class="side-note text-level2 mb-auto">
+						Bedem-91
+					</div>
+				</div>
+				<div class="flex-row h50">
+					<div class="text-level2 mt-auto w40">
+						Vodstvo Republike Slovenije je aprila 1991 pridobilo tajni dokument o načrtovani vaji JLA, poimenovani »Bedem-91« oziroma »Okop-91«. Šlo je za poveljniško-štabno vajo jugoslovanske vojske, ki je predvidevala vojaški poseg JLA na območju Slovenije.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w40">
+				Slovenska vlada je kljub poskusom demilitarizacije in odvzemu orožja učinkovito oblikovala slovensko vojsko. Z Zakonom o obrambi in zaščiti ter Zakonom o vojaški dolžnosti je bila postavljena podlaga za izvedbo služenja vojaškega roka v Teritorialni obrambi RS. V učnih centrih TO na Igu pri Ljubljani in Pekrah pri Mariboru je 15. maja 1991 začela s služenjem prva generacija slovenskih vojakov. V 510. učni center Ljubljana (Ig) je prišlo 180, v 710. učni center Maribor (Pekre) pa 120 obveznikov. Fantje so tako prvič v zgodovini slovenskega naroda služili vojaški rok v slovenski vojski. Njihovo pripadnost je simboliziral znak na levem rokavu uniforme – velika rumena številka 1 na temni podlagi, obrobljena z barvami slovenske zastave. Ta izjemen dan v vojaški zgodovini slovenskega naroda danes obeležujemo kot dan Slovenske vojske.
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner w40">
+				<img src="thumb/31/photo/znak_1.jpg" class="h50 pointer" id="vojaski_znak">
+				<div class="bottom-note text-level2">
+					Vojaški znak, ki so ga na uniformah nosili vojaki prve generacije slovenske vojske
+				</div>
+			</div>
+			<div class="gray-first-diagonal wd"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news31_1">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/31/news1/11a.jpg" class="p2">
+					<img src="thumb/31/news1/11b.jpg" class="p2">
+					<img src="thumb/31/news1/11c.jpg" class="p2">
+					<img src="thumb/31/news1/11d.jpg" class="p2">
+					<img src="thumb/31/news1/11e.jpg" class="p2">
+				</div>
+				<div class="news-column news_down img-vertical-scroll w40">
+					<img src="thumb/31/news1/12.jpg" class="p2">
+					<img src="thumb/31/news1/13.jpg" class="p2">
+					<img src="thumb/31/news1/14a.jpg" class="p2">
+					<img src="thumb/31/news1/14b.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal wd"></div>
+			<div class="h100 mb-auto mt-auto flex-column">
+				<img src="media/31/photo/prisega.jpg" class="h90 pointer" id="prisega">
+			</div>
+		</div>
+		<div class="content-box ml1rem">
+			<div class="content-box-inner h60">
+				<div class="flex-row h10 w30">
+					<div class="side-note text-level2 mb-auto">
+						Slovesna prisega prvih vojakov
+					</div>
+				</div>
+				<div class="flex-row h50">
+					<div class="text-level2 mt-auto w30">
+						Slovesna prisega prve generacije slovenskih vojakov je potekala 2. junija 1991.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner h80 mt-auto mb-auto">
+				<img src="thumb/31/photo/ig.jpg" class="h70 pointer" id="ig">
+				<div class="bottom-note text-level2">
+					Slovesna prisega prvih vojakov
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner h60 w40 text-level1">
+				<p>
+					Zaradi zaostrovanja razmer in premikov enot JLA v državi se je 17. maja 1991 pričela <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_mobilizacija">mobilizacija</a> posameznih enot Teritorialne obrambe.
+				</p>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h100 mb-auto mt-auto flex-column">
+				<img src="media/31/docs1/mobilizacija.jpg" class="h90 pointer" id="mobilizacija">
+			</div>
+			<div class="h70 content-box-inner flex-column-space">
+				<div class="side-note w20 ml1rem">
+					Mobilizacija
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h80 mb-auto mt-auto flex-column">
+				<img src="media/31/docs1/odredba.jpg" class="h80 pointer" id="odredba">
+			</div>
+			<div class="h70 content-box-inner flex-column-space">
+				<div class="side-note w20 ml1rem">
+					Odredba, 23. maj 1991
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/31/news1/21.jpg" class="h50 pointer" id="mobilizacijaTO">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/31/docs1/naloge.jpg" class="h50 pointer" id="naloge">
+				<div class="bottom-note text-level2">
+					Operativne naloge za čas od 4. junija 1991 dalje
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w40">
+				<p>
+					Po vzpostavitvi učnih centrov za vojaške obveznike v Republiki Sloveniji se je jugoslovanski vojaški vrh zbal, da bodo tudi druge republike prenehale pošiljati <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_nabor">nabornike</a> na služenje vojaškega roka in se odločil za vojaško posredovanje. Tako je 23. maja 1991 enota JLA iz Maribora z oklepniki obkolila učni center TO v Pekrah, kar je pomenilo prvi odkrit napad JLA na Slovenskem.
+				</p>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w50">
+				Osebje učnega centra je zavarovalo obveznike in se razporedilo v obrambo. Napetosti so trajale ves dan, saj se pripadniki slovenske TO niso hoteli vdati, enota JLA pa se tudi ni odločila za napad. Položaj se je bistveno spremenil, ko so na kraj dogajanja prišli novinarji in domačini iz Peker in Maribora, ki so bili obkoljenim pripadnikom TO v veliko moralno podporo. S tem se je merjenje moči in živcev začelo odvijati pred očmi domače in svetovne javnosti. Zvečer je bil sprejet dogovor o pogajanjih, ki so potekala v prostorih Občine Maribor, na mestnih ulicah pa so potekale demonstracije ogorčenih Mariborčanov.
+			</div>
+		</div>
+
+		<div class="content-box ml8" id="galerija_pekre">
+			<div class="h100 flex-column">
+				<img src="thumb/31/pekre/07.jpg" class="h100 pointer" id="pekre07">
+			</div>
+			<div class="gallery-4rows h80 flex-gallery pointer" style="width:150vh">
+				<div class="w40" style="border:2px solid transparent">
+					<div class="photo-note zbirka-fotografij" style="height:24.4vh">
+						Pekrski dogodki
+					</div>
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/01.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/02.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/04.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/03.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/05.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/06.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/07.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/08.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/09.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/10.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/11.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/12.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/13.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/14.jpg" class="p2">
+				</div>
+				<div class="gallery-4rows-img">
+					<img src="thumb/31/pekre/15.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="media/31/karikatura_pekre.jpg" class="h50 pointer" id="karikatura_pekre">
+			</div>
+			<div class="gray-first-diagonal wd"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news31_2">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/31/news1/31.jpg" class="p2">
+					<img src="thumb/31/news1/32.jpg" class="p2">
+					<img src="thumb/31/news1/33.jpg" class="p2">
+					<img src="thumb/31/news1/34.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal wd"></div>
+			<div class="content-box-inner">
+				<img src="media/31/znak/pekre.png" class="h60 pointer" id="znak_pekre">
+			</div>
+			<div class="h60 content-box-inner flex-column-space ml1rem">
+				<div class="side-note w30">
+					Spominski bojni znak Pekre
+				</div>
+				<div class="text-level2 w30 mt-auto mb-0">
+					Bojni spominski znak je priznanje, ki se je podeljevalo v spomin na vojaške akcije, v katerih je bilo uporabljeno strelno orožje. Bojni spominski znak Pekre je bil podeljen pripadnikom Teritorialne obrambe RS, ki so bili maja 1991 obkoljeni v učnem centru.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w40">
+				<p>
+					Med pogajanji v zvezi z obkolitvijo učnega centra Pekre je JLA ugrabila poveljnika Vzhodnoštajerske pokrajine TO, rezervnega podpolkovnika <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_milosevic">Vladimirja Miloševiča</a>, ki je bil eden od pogajalcev slovenske strani. V noči s 23. na 24. maj 1991 so ga ugrabili pripadniki vojaške policije JLA in ga zaprli. Slovenske oblasti so nemudoma ukrepale ter kot povračilo vsem vojašnicam JLA izklopile telefon in električno energijo. Oklepniki JLA so se kmalu zatem umaknili iz Peker, učni center je bil deblokiran, podpolkovnik Miloševič pa izpuščen.
+				</p>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h80 flex-column mt-auto mb-auto">
+				<img src="thumb/31/docs1/sporocilo1.jpg" class="h80 pointer" id="sporocilo_ugrabitev">
+			</div>
+			<div class="h30 content-box-inner flex-column-space">
+				<div class="side-note w30 ml1rem">
+					Sporočilo o ugrabitvi
+				</div>
+			</div>
+			<div class="gray-first-diagonal"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news31_3">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/31/news1/51.jpg" class="p2">
+					<img src="thumb/31/news1/52.jpg" class="p2">
+				</div>
+			</div>
+			<div class="flex-column mr8">
+				<div class="flex-row text-level1 w30 mt-auto mb-auto">
+					Zaradi ugrabitve poveljnika pokrajinskega štaba TO je slovensko vodstvo ukazalo izklop telefona in električne energije vsem vojašnicam JLA .
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal"></div>
+			<div class="content-box-inner text-level1 w40">
+				V času demonstracij je vojaško vozilo JLA do smrti povozilo enega izmed zbranih protestnikov, Jožefa Šimčika. Še pred začetkom vojne za Slovenijo je tako padla prva žrtev agresije JLA v naši državi. Tragičen dogodek je sprožil buren odziv javnosti, v Mariboru pa so se Šimčiku poklonili z množičnim shodom s svečami.
+			</div>
+		</div>
+
+		<div class="content-box ml8" id="galerija_shod">
+			<div class="h100 flex-column">
+				<img src="thumb/31/shod/02.jpg" class="h80 pointer" id="shod02">
+			</div>
+			<div class="gallery-3rows h80 flex-gallery pointer" style="width:100vh">
+				<div class="w40" style="border:2px solid transparent">
+					<div class="photo-note zbirka-fotografij" style="height:26.1vh">
+						Shod za preminulim Jožefom Šimčikom
+					</div>
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/31/shod/01.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/31/shod/02.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/31/shod/03.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/31/shod/04.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/31/shod/05.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/31/shod/06.jpg" class="p2">
+				</div>
+			</div>
+			<div class="gray-first-diagonal"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news31_4">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/31/news1/41.jpg" class="p2">
+					<img src="thumb/31/news1/42.jpg" class="p2">
+					<img src="thumb/31/news1/43.jpg" class="p2">
+					<img src="thumb/31/news1/44.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal"></div>
+			<div class="content-box-inner text-level1 w40">
+				Zadnje dni pred razglasitvijo samostojne Slovenije se je jugoslovanska stran pospešeno pripravljala na vojaško posredovanje. Izpopolnjevala je svoje enote in materialno-tehnična sredstva, izvajala izvidniško ogledovanje, zbirala informacije o slovenskih obrambnih silah in izvajala taktične premike enot na pomembnejše položaje. Do vrhunca napetosti med JLA in slovensko milico je prišlo na mejnih prehodih zaradi menjavanja jugoslovanskih tabel s slovenskimi in izobešanja slovenskih zastav.
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h100 flex-column">
+				<img src="thumb/31/docs1/povzetek1.jpg" class="h90 pointer" id="povzetek">
+			</div>
+			<div class="h60 flex-column mt-auto mb-auto ml1rem">
+				<div class="side-note">
+					Povzetek aktivnosti JLA v RS
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w40">
+				Na drugi strani so slovenski organi zaradi pekrskih dogodkov v okviru priprav na osamosvojitev pospešili vojaške priprave, izdelanih pa je bilo tudi več mogočih scenarijev ravnanja JLA po razglasitvi samostojnosti. Skupaj s Hrvaško so potekali dogovori za usklajeno delovanje, a je na koncu obramba obeh republik potekala ločeno.
+			</div>
+			<div class="gray-first-diagonal"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news31_5">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/31/news1/61.jpg" class="p2">
+					<img src="thumb/31/news1/62.jpg" class="p2">
+					<img src="thumb/31/news1/63.jpg" class="p2">
+					<img src="thumb/31/news1/64.jpg" class="p2">
+					<img src="thumb/31/news1/65.jpg" class="p2">
+					<img src="thumb/31/news1/66.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<!------------------------------
+		//  PART 2
+		//----------------------------->
+		<div class="cover-box rel pointer" id="vojna12"><!-- MUST use "rel" -->
+			<div class="gray-last-diagonal"></div>
+		  <div class="cover-box-title">
+			<div class="frame">
+			  <span class="green">26. JUNIJ 1991</span>
+			</div>
+		  </div>
+		  <div class="intro-first-diagonal wd"></div>
+		</div>
+
+		<div class="intro-box" style="width:81vh;margin-left:-1px">
+		  <div class="h20 flex-row">
+		    <div class="intro-title" id="citat_celin">
+				»Ogorčenja ljudi, ki so se zbrali na ulicah ni mogoče opisati«
+				<span class="text-level2 ml2">Branko Celin</span>
+			</div>
+		  </div>
+		  <div class="h60 flex-row">
+		    <div class="intro-content">
+				V slovenski skupščini je bila 25. junija 1991 razglašena samostojnost Republike Slovenije. Že naslednji dan, 26. junija zvečer, je na Trgu republike potekala državna proslava ob osamosvojitvi, ljudje pa so s kurjenjem kresov in postavljanjem mlajev praznovali povsod po državi. Kot uradni začetek oboroženega napada JLA na Slovenijo se pogosto navaja 27. junij, ko je zgodaj zjutraj protiletalska enota z oklepnimi vozili iz Karlovca prestopila mejo pri Metliki. A dejansko se je vojna začela že dan prej, torej 26. junija, še pred omenjeno državno proslavo. Na ta dan so namreč odpeljali prvi tanki iz vojašnice v Pivki in nato še vojašnice v Ilirski Bistrici ter s tem začeli z agresijo na pravkar osamosvojeno Slovenijo.
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+			<div class="blue-last-diagonal wd"></div>
+			<div class="content-box-inner h60 ml8 mr8">
+				<img src="img/video_ozadje.svg" class="crt pointer" id="tanki_pivka">
+				<div class="bottom-note w60 text-level2">
+					Izhod tankovske kolone iz vojašnice v Pivki
+				</div>
+			</div>
+			<div class="gray-first-diagonal"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news31_6">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/31/news2/01.jpg" class="p2">
+					<img src="thumb/31/news2/02.jpg" class="p2">
+					<img src="thumb/31/news2/03.jpg" class="p2">
+				</div>
+				<div class="news-column news_down img-vertical-scroll w40">
+					<img src="thumb/31/news2/04.jpg" class="p2">
+					<img src="thumb/31/news2/05.jpg" class="p2">
+					<img src="thumb/31/news2/06.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal"></div>
+			<div class="flex-column">
+				<div class="flex-row" id="stalisce">
+					<div class="news-column img-vertical-scroll w40">
+						<img src="thumb/31/docs2/stalisce1.jpg" class="p2">
+						<img src="thumb/31/docs2/stalisce2.jpg" class="p2">
+						<img src="thumb/31/docs2/stalisce3.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+			<div class="h60 w30 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row mt-0 mb-auto">
+					<div class="side-note text-level2">
+						Stališče izvršnega sveta
+					</div>
+				</div>
+				<div class="flex-row mt-auto mb-0">
+					<div class="text-level2">
+						Izvršni svet Republike Slovenije je 26. junija 1991 objavil stališče o razglasitvi samostojne in suverene države. V dokumentu je bilo poudarjeno zagotavljanje prostega prehajanja meje in izpolnjevanje sprejetih mednarodnih obveznosti ter izpostavljeno, da na slovenski strani ne bo z nobenim dejanjem uporabljena ali izzvana uporaba sile. Zveznim organom je izvršni svet predlagal reševanje nastale situacije po mirni in demokratični poti, brez uporabe nasilja.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8" id="tabla">
+			<div class="h80 flex-column mt-auto mb-auto">
+				<img src="thumb/31/docs2/tabla1.jpg" class="h80 pointer">
+			</div>
+			<div class="h80 flex-column mt-auto mb-auto ml4">
+				<img src="thumb/31/docs2/tabla2.jpg" class="h80 pointer">
+			</div>
+			<div class="h60 content-box-inner flex-column-space ml1rem">
+				<div class="side-note w30">
+					Postavitev table
+				</div>
+				<div class="text-level2 w30 mt-auto mb-0">
+					V Sloveniji so 26. junija potekale priprave na proslavo dneva osamosvojitve, na mejnih prehodih pa je prihajalo do napetosti med slovenskimi miličniki in pripadniki JLA, predvsem zaradi menjav mejnih tabel in izobešanja slovenskih zastav.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h100 flex-column">
+				<img src="thumb/31/docs2/porocilo_a.jpg" class="h90 pointer" id="porocilo_a">
+			</div>
+			<div class="h60 flex-column mt-auto mb-auto ml1rem">
+				<div class="side-note">
+					Operativno poročilo
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w40">
+				<p>
+					V Pivki, ki je spadala pod poveljstvo 14. ljubljanskega korpusa pod poveljstvom generala <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_pavlov">Jovana Pavlova</a>, je bilo že v dneh pred razglasitvijo zaznati povečane aktivnosti JLA, predvsem premike moštva in vozil, 26. junija pa je kolona oklepnih vozil ob 11.10 krenila iz vojašnice skozi Pivko proti Prestranku ter naprej v smeri Vipave. Ker je bila na Rebrnicah postavljena barikada, je kolona prek Hruševja in Landola peljala do Bukovja in po gozdni poti naprej proti Colu. Pred Colom se je spustila v dolino Bele in skozi Sanabor nadaljevala proti Vrhpolju, kjer so se ji po robu postavili domačini. Zvečer ji je vseeno uspelo priti do Vipave, kjer je počakala do naslednjega dne in nato nadaljevala pot proti italijanski meji.
+				</p>
+			</div>
+		</div>
+
+		<div class="content-box ml8" id="povelje">
+			<div class="h80 flex-column mt-auto mb-auto">
+				<img src="thumb/31/docs2/povelje1.jpg" class="h80 pointer">
+			</div>
+			<div class="h80 flex-column mt-auto mb-auto ml4">
+				<img src="thumb/31/docs2/povelje2.jpg" class="h80 pointer">
+			</div>
+			<div class="h30 content-box-inner flex-column-space ml1rem">
+				<div class="side-note w30">
+					Povelje Franca Anderliča, poveljnika Južnoprimorske pokrajine TO
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="content-box-inner h60 ml8 mr4">
+				<img src="img/video_ozadje.svg" class="crt pointer" id="tanki_bukovje">
+				<div class="bottom-note w60 text-level2">
+					Tankovska kolona v Bukovju
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8" id="porocilo_bc">
+			<div class="h80 flex-column mt-auto mb-auto">
+				<img src="thumb/31/docs2/porocilo_b.jpg" class="h80 pointer">
+			</div>
+			<div class="h80 flex-column mt-auto mb-auto ml4">
+				<img src="thumb/31/docs2/porocilo_c.jpg" class="h80 pointer">
+			</div>
+			<div class="h60 flex-column mt-auto mb-auto ml1rem">
+				<div class="side-note w25">
+					Redno operativno poročilo
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w50">
+				<p>
+					Vojašnica v Ilirski Bistrici je za razliko od pivške spadala pod poveljstvo 13. reškega korpusa, ki ga je vodil general <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_cad">Marijan Čad</a>. Imela je velik pomen za zasedbo mejnih prehodov z Italijo, saj je bila edina večja vojašnica na tem območju – ob meji so bile le manjše vojaške graničarske enote. 26. junija ob 13. uri sta iz Ilirske Bistrice krenili dve oklepni koloni JLA. Ena se je usmerila po cesti Ilirska Bistrica–Postojna do Ribnice in naprej po Vremski dolini proti Divači ter mejnima prehodoma Lipica in Fernetiči, druga kolona pa je iz Ilirske Bistrice krenila proti Podgradu, Kozini in mejnemu prehodu Krvavi potok.
+				</p>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column">
+				<div class="flex-row" id="pregled_dogodkov">
+					<div class="news-column img-vertical-scroll w40">
+						<img src="thumb/31/docs2/dogodki1.jpg" class="p2">
+						<img src="thumb/31/docs2/dogodki2.jpg" class="p2">
+						<img src="thumb/31/docs2/dogodki3.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+			<div class="h40 w30 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row mt-0 mb-auto">
+					<div class="side-note text-level2">
+						Pregled dogodkov 26. junij 1991
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h70 flex-column mt-auto mb-auto">
+				<div class="gallery-2rows-zigzag h80 flex-zigzag pointer" style="width:40vh" id="zasedba">
+					<div class="gallery-zigzag-item">
+						<img src="thumb/31/docs2/zasedba1.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/31/docs2/zasedba2.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item zigzag-offset-top">
+						<img src="thumb/31/docs2/zasedba3.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/31/docs2/zasedba4.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="content-box-inner">
+				<div class="side-note text-level2 w20 ml1rem">
+					Nasilna zasedba mejnega prehoda Krvavi potok
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h70 flex-column mt-auto mb-auto">
+				<img src="media/31/karikatura_turisti.jpg" class="h70 pointer" id="karikatura_turisti">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w40">
+				Kljub ukazu, da slovenska stran še ne sme uporabljati orožja, prodor tankov, ki so 26. junija začeli svojo pot v Pivki in Ilirski Bistrici, ni potekal neovirano. Oklepnike »ljudske« armade so na poti proti Vipavi spremljali domačini z žvižgi, psovkami in tudi kamenjem, ter njihov prodor ovirali v vaseh nad Vipavo. Na območju takratne občine Sežana, na cestah proti Krvavemu potoku, Lipici in Fernetičem pa so se enote JLA srečevale z raznimi barikadami.
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h70 flex-column mt-auto mb-auto">
+				<div class="gallery-2rows-zigzag h80 flex-zigzag pointer" style="width:60vh" id="sezana">
+					<div class="gallery-zigzag-item zigzag-offset-top">
+						<img src="thumb/31/docs2/sezana1.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/31/docs2/sezana2.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/31/docs2/sezana3.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/31/docs2/sezana4.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item  zigzag-offset-top">
+						<img src="thumb/31/docs2/sezana5.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="content-box-inner">
+				<div class="side-note text-level2 w30 ml1rem">
+					Delovanje civilnih struktur in prebivalstva Občine Sežana
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h80 flex-column mt-auto mb-auto">
+				<img src="thumb/31/news2/11.jpg" class="h80 pointer" id="vojna_je_mimo">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w40">
+				Angažiranje domačinov na barikadah je bilo samoiniciativno. Ogorčene množice so glasno protestirale, nekateri posamezniki pa so oklepnikom preprečevali prehod s svojimi osebnimi avtomobili. Poleg spontanega oviranja tankov so njihov prodor skušale sistematično zaustaviti tudi slovenske obrambne strukture, pri čemer je bila uporabljena predvsem gradbena mehanizacija in tovornjaki bližnjih podjetij. Na Kozini je prehod tankov preprečil strojevodja, ki je ustavil vlak na železniški progi in zapustil lokomotivo.
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column">
+				<div class="flex-row" id="nacrt_oviranja">
+					<div class="news-column img-vertical-scroll w40">
+						<img src="thumb/31/docs2/nacrt1.jpg" class="p2">
+						<img src="thumb/31/docs2/nacrt2.jpg" class="p2">
+						<img src="thumb/31/docs2/nacrt3.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+			<div class="h40 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row mt-0 mb-auto">
+					<div class="side-note text-level2">
+						Načrt oviranja
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w40">
+				Informacija, da so na primorskih cestah že tanki in da se je s tem vojna v Sloveniji dejansko že začela, 26. junija ni prišla v osrednje medije in s tem v širšo javnost. Z nacionalnega vidika je bilo namreč bistveno, da večerna slovesnost v Ljubljani poteka nemoteno ter da posnetki praznovanja slovenske osamosvojitve preplavijo evropske in svetovne medije. S tem je bila vojna v Sloveniji predstavljena kot odkrit napad JLA na samostojno državo in ne kot zatrtje notranjih nemirov ali državljanska vojna. Na Primorskem se je tako za opis dogajanja 26. junija 1991 uveljavil izraz »Dan prej«.
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h100 flex-column">
+				<img src="thumb/31/docs2/poziv.jpg" class="h90 pointer" id="poziv">
+			</div>
+			<div class="h60 content-box-inner flex-column-space ml1rem">
+				<div class="side-note w30">
+					Poziv starešinam
+				</div>
+				<div class="text-level2 w30 mt-auto mb-0">
+					Republiški sekretariat za ljudsko obrambo je 26. junija 1991 objavil javni poziv starešinam in vojaškim osebam v JLA. V njem je bilo opozorilo, da je pristojnost nad mejnimi prehodi in carinsko službo prevzela Slovenija in da za premike enot proti mejnim prehodom tekom dneva ni bilo utemeljenega razloga. Starešinam, ki bi izkazali lojalnost Sloveniji, je sekretariat zagotavljal vse socialne in statusne pravice, odprta vprašanja pa naj bi se reševala z dogovori, brez uporabe sile. Poleg tega je iz dopisa razvidno, da je vodstvo JLA svojim vojakom premik tankov proti mejam pojasnjevalo z lažnimi trditvami o grožnjah iz sosednjih držav.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="media/31/diareja_mladina_napad.jpg" class="h60 pointer" id="diareja_mladina_napad">
+			</div>
+			<div class="h30 content-box-inner flex-column-space ml1rem">
+				<div class="side-note w25">
+					Ob spopadu v Sloveniji so navadni vojaki obveščeni, da so državo napadle sile Nata
+				</div>
+			</div>
+		</div>
+
+		<div class="heading-box">
+		  <div class="beige-last-diagonal wd"></div>
+		  <div class="heading-next flex-row float-right" id="naprej">
+			<div class="w60">SPOPADI</div>
+		    <img src="img/naprej.svg" id="start">
+		  </div>
+		</div>
+
+    </div>
+
+	<!------------------------------
+	//  FIXED FOOTER
+	//----------------------------->
+	<div class="progress-container">
+	  <div class="progress-bar" id="progressBar"></div>
+	</div>
+
+	<div id="bottombar" class="bt navbar-dark">
+	  <button class="bottombar-toggler" type="button" data-toggle="collapse" data-target="#navbarBottomMenu" aria-controls="navbarBottomMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="bottombar-title"><span class="dimmed">VOJNA / </span>8. DAN PREJ</div>
+        <span id="btmbar-hamburger" class="navbar-toggler-icon"></span>
+        <span id="btmbar-cheeseburger" class="hidden" style="padding-top:0.1rem;">&#x2573;</span>
+      </button>
+	  <div class="paging">
+	    <table width="100%" border="0">
+		  <tr align="center">
+		    <td width="25%"><a href="samostojnost4.html">&#x3008;</a></td>
+			<td width="50%">8</td>
+			<td width="25%"><a href="vojna2.html">&#x3009;</a></td>
+		  </tr>
+		</table>
+	  </div>
+	</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Slick Carousel JavaScript -->
+<script src="js/slick.min.js"></script>
+
+<!-- FancyBox 3 JavaScript -->
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/fancybox-31-parts.js"></script>
+<script src="js/fancybox-31-video.js"></script>
+
+<!-- Navigacija -->
+<script src="js/navigation.js"></script>
+
+<!-- Custom JavaScript for this site -->
+<script>
+/*
+ *  Hide loading box when page load complete
+ */
+window.onload = function(){
+	document.getElementById('content-loading').style.visibility = 'hidden';
+};
+
+function hideToggleMenu() {
+	$('#navbar-hamburger').removeClass('hidden');
+	$('#navbar-cheeseburger').addClass('hidden');        
+	$('#navbarToggleMenu').addClass('hidden');		  
+}
+
+function hideBottomMenu() {
+	$('#btmbar-hamburger').removeClass('hidden');
+	$('#btmbar-cheeseburger').addClass('hidden');        
+	$('#navbarBottomMenu').addClass('hidden');		  
+}
+
+
+$(function() {
+
+	/*
+	 *  Advance to next part
+	 */
+	$('#naprej').click(function(event){
+		window.location.href = 'vojna2.html';
+	});
+
+});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-66REXS9BK3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-66REXS9BK3');
+</script>
+
+</body>
+</html>

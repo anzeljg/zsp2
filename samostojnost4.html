@@ -1,0 +1,1253 @@
+<!doctype html>
+<html lang="sl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+	<!-- Force landscape mode -->
+	<link rel="manifest" href="manifest.json">
+
+    <title>Zbrali smo pogum</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Slick Carousel CSS -->
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+	<!-- Slick Carousel customization for vertical down direction -->
+    <link href="css/slick-down.css" rel="stylesheet">
+
+	<!-- FancyBox 3 CSS -->
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+	<!-- FancyBox 3 customizations -->
+    <link href="css/fancybox.css" rel="stylesheet">
+
+    <!-- Custom styles for this site -->
+    <link href="css/landing.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/elements.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Modal -->
+	<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+		  <div class="modal-body">
+			<div class="close-icon">
+			  <span data-dismiss="modal" aria-label="Zapri">
+				<img src="img/icon_zapri_siva.svg">
+			  </span>
+			</div>
+			<div class="flex-row">
+			  <div class="flex-column" style="width:45%;margin-bottom:2rem">
+				<a href="https://www.gov.si/drzavni-organi/organi-v-sestavi/arhiv/" target="_blank"><img src="img/logo_MK_arhivSL.png" class="flex-item"></a>
+				<a href="https://www.zrss.si/" target="_blank"><img src="img/logo_ZRSS.png" class="flex-item"></a>
+				<a href="https://www.parkvojaskezgodovine.si/" target="_blank"><img src="img/logo_PVZ.png" class="flex-item"></a>
+			  </div>
+			  <div class="flex-item green-line credits-box" style="width:55%;padding:0 2vh">
+				<p>
+				  <b>Partnerji</b><br />
+				  Arhiv Republike Slovenije, direktor dr. Bojan Cvelfar<br />
+				  Zavod Republike Slovenije za šolstvo, direktor dr. Vinko Logaj<br />
+				  Park vojaške zgodovine Pivka, direktor mag. Janko Boštjančič
+				</p>
+				<p>
+				  <b>Avtorji</b><br />
+				  mag. Alenka Starman Alič, Arhiv Republike Slovenije<br />
+				  Ana Čič, Park vojaške zgodovine<br />
+				  dr. Vilma Brodnik, Zavod Republike Slovenije za šolstvo
+				</p>
+				<p>
+				  <b>Strokovni sodelavci projekta</b><br />
+				  dr. Bojan Cvelfar, Arhiv Republike Slovenije<br />
+				  mag. Janko Boštjančič, Park vojaške zgodovine<br />
+				  dr. Andrej Brodnik, Fakulteta za matematiko, naravoslovje in informacijske tehnologije, Univerza na Primorskem<br />
+				  Gregor Anželj, Gimnazija Bežigrad<br />
+				  Peter Požar in Žiga Požar
+				</p>
+				<p>
+				  <b>Avtorice učnega gradiva za osnovno šolo</b><br />
+				  Jana Bec, Osnovna šola Prule<br />
+				  Bojana Mlinar Podobnik, Osnovna šola Prule<br />
+				  Tjaša Petrič, Osnovna šola Koseze
+				</p>
+				<p>
+				  <b>Jezikovni pregled</b><br />
+				  Tine Logar
+				</p>
+				<p>
+				  <b>Institucije in drugi zunanji sodelavci</b><br />
+				  Urad predsednika Republike Slovenije<br />
+				  Predsednik RS Borut Pahor<br />
+				  Ministrstvo za obrambo<br />
+				  Ministrstvo za zunanje zadeve<br />
+				  Ministrstvo za notranje zadeve<br />
+				  Državni zbor RS<br />
+				  Muzej novejše zgodovine Slovenije<br />
+				  Slovenski etnografski muzej<br />
+				  Narodni muzej Slovenije<br />
+				  RTV Slovenija<br />
+				  Narodna univerzitetna knjižnica<br />
+				  Pošta Slovenije<br />
+				  Skupina Futura<br />
+				  Časopisi: Delo, Družina, Primorske novice, Večer<br />
+				  Posamezniki: Franco Juri, Tomaž Lavrič (Mladina), Helena Race
+				</p>
+				<p>
+				  <b>Videoprodukcija</b><br />
+				  Koprodukcija: RTV Slovenija<br />
+				  Izvedbena produkcija: Studio Virc d.o.o.
+				</p>
+				<p>
+				  <b>Oblikovanje</b><br />
+				  Matic Leban
+				</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Copyright -->
+	<div class="modal fade" id="copyright" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Obvestilo o avtorskih pravicah</b></p>
+					<p>Vse pravice pridržane. Brez pisnega dovoljenja ni dovoljeno nobenega dela virtualnega učnega gradiva (razstava, video film) na kakršenkoli način reproducirati, kopirati ali kako drugače razširjati. Ta prepoved se nanaša tako na mehanske oblike reprodukcije (fotokopiranje) kot na elektronske (snemanje ali prepisovanje na kakršenkoli pomnilniški medij). Izjemo predstavlja uporaba virtualnega učnega gradiva v šolske namene neposredno pri pouku.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    <nav class="br navbar navbar-dark fixed-top">
+      <a class="navbar-brand" href="index.html">
+	    <img id="logo" src="img/logo_menu.svg">
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleMenu" aria-controls="navbarToggleMenu" aria-expanded="false" aria-label="Toggle navigation">
+	    <div class="navbar-title">7. VARNOSTNI VIDIKI</div>
+        <span id="navbar-hamburger" class="navbar-toggler-icon"></span>
+        <span id="navbar-cheeseburger" class="hidden" style="padding-top:0.1rem;">&#x2573;</span>
+      </button>
+    </nav>
+
+    <!-- Navbar toggle menu -->
+	<div id="navbarToggleMenu" class="br text-light hidden">
+	  <table>
+	    <tr>
+		  <td id="plebiscit-menu" style="width:75vh" class="disabled"><center>PLEBISCIT</center></td>
+		  <td rowspan="4" valign="top" style="height:100vh;padding:0">
+		    <div style="height:100vh;overflow-y:scroll;overflow:-moz-scrollbars-vertical;">
+		      <!-- Mobile menu: Plebiscit -->
+			  <table border="0" id="plebiscit-menu-m" class="hidden">
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit.html'">
+					<center style="font-size:1rem">Ogled filma</center>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit1.html'">
+					<div class="item-number-m">1</div>
+					<div class="item-label-m">PRED<br />PLEBISCITOM</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit2.html'">
+					<div class="item-number-m">2</div>
+					<div class="item-label-m">DAN<br />PLEBISCITA</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit3.html'">
+					<div class="item-number-m">3</div>
+					<div class="item-label-m">PO<br />PLEBISCITU</div>
+				  </td>
+				</tr>
+			  </table>
+		      <!-- Mobile menu: Osamosvojitev -->
+			  <table border="0" id="samostojnost-menu-m">
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost.html'">
+					<center style="font-size:1rem">Ogled filma</center>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost1.html'">
+					<div class="item-number-m">4</div>
+					<div class="item-label-m">80. LETA V<br />JUGOSLAVIJI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost2.html'">
+					<div class="item-number-m">5</div>
+					<div class="item-label-m">PROCESI<br />DEMOKRATIZACIJE</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost3.html'">
+					<div class="item-number-m">6</div>
+					<div class="item-label-m">RAZGLASITEV<br />SAMOSTOJNOSTI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu active" style="height:25vh">
+					<div class="item-number-m">7</div>
+					<div class="item-label-m">VARNOSTNI<br />VIDIKI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu active content" style="height:25vh">
+					<div class="item-content-m" style="font-size:1rem">
+					  <a href="#samostojnost41" onclick="hideToggleMenu()">Vzpostavitev slov. obrambnih sil</a><br />
+					  <a href="#samostojnost42" onclick="hideToggleMenu()">Zadišalo je po slovenski vojski</a><br />
+					</div>
+				  </td>
+				</tr>
+			  </table>
+		      <!-- Mobile menu: Vojna -->
+			  <table border="0" id="vojna-menu-m" class="hidden">
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna.html'">
+					<center style="font-size:1rem">Ogled filma</center>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna1.html'">
+					<div class="item-number-m">8</div>
+					<div class="item-label-m">DAN<br />PREJ</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna2.html'">
+					<div class="item-number-m">9</div>
+					<div class="item-label-m">SPOPADI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna3.html'">
+					<div class="item-number-m">10</div>
+					<div class="item-label-m">KONEC<br />VOJNE</div>
+				  </td>
+				</tr>
+			  </table>
+		      <!-- Mobile menu: Osnovni meni -->
+			  <table border="0" width="100%" id="osnovni-menu-m" class="hidden" style="height:100vh">
+				<tr>
+				  <td width="40%" class="menu-main-column">
+					<img src="img/logo_menu.svg" style="width:100%;padding:10px">
+				  </td>
+				  <td class="menu-main-column">
+					<div class="menu-items" style="width:100%;font-size:1rem;line-height:1.5rem;">
+					  <a href="index.html">Vstopna stran</a><br />
+					  <a href="gradiva.html">Učna gradiva</a><br />
+					  <a href="viri.html">Viri</a><br />
+					  <a href="#" data-toggle="modal" data-target="#about">O projektu</a><br />
+					  <a href="#" data-toggle="modal" data-target="#copyright">Avtorske pravice</a><br />
+					</div>
+				  </td>
+				</tr>
+			  </table>
+			</div>
+		  </td>
+		</tr>
+	    <tr>
+		  <td id="samostojnost-menu" style="width:75vh"><center>OSAMOSVOJITEV</center></td>
+		</tr>
+	    <tr>
+		  <td id="vojna-menu" style="width:75vh" class="disabled"><center>VOJNA</center></td>
+		</tr>
+	    <tr>
+		  <td id="osnovni-menu" style="width:75vh" class="disabled"><center>OSNOVNI MENI</center></td>
+		</tr>
+	  </table>
+	</div>
+
+    <!-- Navbar bottom menu -->
+	<div id="navbarBottomMenu" class="br text-light hidden">
+	  <table>
+	    <tr>
+		  <td width="16%" rowspan="8" valign="top" class="menu-main-column">
+		    <img src="img/logo_menu.svg" width="60%">
+			<div class="menu-items" style="padding-left:1.3em;padding-top:1.3em">
+			  <a href="index.html">Vstopna stran</a><br />
+			  <a href="gradiva.html">Učna gradiva</a><br />
+			  <a href="viri.html">Viri</a><br />
+			  <a href="#" data-toggle="modal" data-target="#about">O projektu</a><br />
+			  <a href="#" data-toggle="modal" data-target="#copyright">Avtorske pravice</a><br />
+			</div>
+		  </td>
+		  <td width="28%" height="12.5%" id="plebiscit" class="disabled bl"><center>PLEBISCIT</center></td>
+		  <td width="28%" height="12.5%" id="samostojnost" class="bl"><center>OSAMOSVOJITEV</center></td>
+		  <td width="28%" height="12.5%" id="vojna" class="disabled bl"><center>VOJNA</center></td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit.html'">
+		    <center>Ogled filma</center>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost.html'">
+		    <center>Ogled filma</center>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna.html'">
+		    <center>Ogled filma</center>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit1.html'">
+		    <div class="item-number">1</div>
+			<div class="item-label">PRED<br />PLEBISCITOM</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost1.html'">
+		    <div class="item-number">4</div>
+			<div class="item-label">80. LETA V<br />JUGOSLAVIJI</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna1.html'">
+		    <div class="item-number">8</div>
+			<div class="item-label">DAN<br />PREJ</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit2.html'">
+		    <div class="item-number">2</div>
+			<div class="item-label">DAN<br />PLEBISCITA</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost2.html'">
+		    <div class="item-number">5</div>
+			<div class="item-label">PROCESI<br />DEMOKRATIZACIJE</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna2.html'">
+		    <div class="item-number">9</div>
+			<div class="item-label">SPOPADI</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit3.html'">
+		    <div class="item-number">3</div>
+			<div class="item-label">PO<br />PLEBISCITU</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost3.html'">
+		    <div class="item-number">6</div>
+			<div class="item-label">RAZGLASITEV<br />SAMOSTOJNOSTI</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna3.html'">
+		    <div class="item-number">10</div>
+			<div class="item-label">KONEC<br />VOJNE</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="menu active bl">
+		    <div class="item-number">7</div>
+			<div class="item-label">VARNOSTNI<br />VIDIKI</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="menu active content bl">
+		    <div class="item-content">
+			  <a href="#samostojnost41" onclick="hideBottomMenu()">Vzpostavitev slov. obrambnih sil</a><br />
+			  <a href="#samostojnost42" onclick="hideBottomMenu()">Zadišalo je po slovenski vojski</a><br />
+			</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		</tr>
+	  </table>
+    </div>
+
+	<!-- Previous and next buttons -->
+	<div class="nav-prev-btn" id="navPrevBtn">
+		<svg width="20px" height="30px" viewBox="0 0 20 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g id="nazaj_24" transform="translate(-19, -103)" stroke="#858585" stroke-width="6">
+					<polyline id="nazaj_24" transform="translate(30, 118) rotate(-180) translate(-30, -118)" points="24 106 36 118 24 130"></polyline>
+				</g>
+			</g>
+		</svg>
+	</div>
+	<div class="nav-next-btn" id="navNextBtn">
+		<center>
+		<svg width="20px" height="30px" viewBox="0 0 20 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g id="naprej_24" transform="translate(-204, -729)" stroke="#858585" stroke-width="6">
+					<polyline id="naprej_24" points="207 732 219 744 207 756"></polyline>
+				</g>
+			</g>
+		</svg>
+		</center>
+	</div>
+
+
+	<!-- Device orientation -->
+    <div id="device-orientation">
+	  <center>
+	    <div id="orientation-box">
+	      <p><img src="img/list_desno.svg" style="height:20vh"></p>
+	      <p>Ta stran se vidi najbolje, če
+		  <br />je naprava obrnjena vodoravno.</p>
+	    </div>
+	  </center>
+	</div>
+
+	<!-- Loading box -->
+    <div id="content-loading">
+	  <center>
+	    <div id="loading-box">
+	      <img src="img/nalaganje_opt.gif">
+	      <br />Nalaganje v teku ...
+	    </div>
+	  </center>
+	</div>
+
+	<!-- Modal: Borisav Jović -->
+	<div class="modal fade" id="popup_jovic" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/24/photo/jovic.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Borisav Jović,<br />spletni vir: XXZ portal
+						</div>
+					</span>
+					<p><b><span class="green">Borisav Jović</span> (1928–), srbski politik.</b></p>
+					<p>V Beogradu je leta 1965 doktoriral iz ekonomije, nato pa opravljal različne državne funkcije, večinoma na družbenogospodarskem področju. Konec sedemdesetih let je bil veleposlanik SFRJ v Italiji, leta 1983 pa je bil izbran za podpredsednika srbske skupščine. Leta 1989 je bil izbran za člana predsedstva SFRJ, nato je opravljal funkcijo njegovega podpredsednika in leta 1990, za Janezom Drnovškom, postal predsednik predsedstva. Med letoma 1991 in 1995 je vodil socialistično stranko Srbije, nato pa bil njen podpredsednik. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Republiški štab TO -->
+	<div class="modal fade" id="popup_stab_to" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Republiški štab TO</span></b></p>
+					<p>Teritorialno obrambo v posameznih republikah SFRJ so vodili republiški štabi (RŠTO). V Sloveniji je pristojnosti nad RŠTO septembra 1990 prevzelo Predsedstvo Republike Slovenije in za poveljnika imenovalo majorja Janeza Slaparja. Ta je nato imenoval še poveljnike TO za posamezne pokrajine. Ko je sedež RŠTO v Ljubljani zasedla JLA, se je RŠTO pod poveljstvom Janeza Slaparja preselil v prostore Republiškega sekretariata za ljudsko obrambo. Tako sta bila v Sloveniji med vojno formalno dva RŠTO, a je bil tisti, ki ga je zasedla JLA, brez funkcije.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Ivan Hočevar -->
+	<div class="modal fade" id="popup_hocevar" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/24/photo/hocevar.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Ivan Hočevar,<br />spletni vir: Dnevnik
+						</div>
+					</span>
+					<p><b><span class="green">Ivan Hočevar</span> (1933–2021), slovenski general.</b></p>
+					<p>V času osamosvajanja Slovenije je bil načelnik Republiškega štaba TO in izdal ukaz o razorožitvi oziroma premestitvi orožja TO v skladišča JLA, zaradi česar ga je Predsedstvo Republike Slovenije odstavilo in na njegovo mesto postavilo majorja Slaparja.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Janez Slapar -->
+	<div class="modal fade" id="popup_slapar" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/24/photo/slapar.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Janez Slapar,<br />vir: avtor M. Garbajs, hrani PVZ
+						</div>
+					</span>
+					<p><b><span class="green">Janez Slapar</span> (1949–), slovenski generalmajor.</b></p>
+					<p>Na začetku sedemdesetih let se je zaposlil kot vodja priprav za splošni ljudski odpor na upravnem organu za ljudsko obrambo v Tržiču ter nato v enotah TO. Leta 1980 je bil imenovan za načelnika pokrajinskega štaba, leta 1988 pa za poveljnika TO Gorenjske. Med letoma 1990 in 1993 je bil določen za vršilca dolžnosti načelnika Republiškega štaba TO. Za svoje delo je bil večkrat odlikovan, med drugim z Zlatim častnim znakom svobode Republike Slovenije.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Main page content -->
+    <div class="main-content">
+
+		<div class="heading-box heading-bg">
+		  <div class="heading-number">7</div>
+		  <div class="heading-title">VARNOSTNI VIDIKI<br />OSAMOSVAJANJA</div>
+		  <div class="scroll-indicator">
+		    <img src="img/scroll_indicator2.png">
+		  </div>
+		</div>
+
+		<!------------------------------
+		//  PART 1
+		//----------------------------->
+		<div class="cover-box rel pointer" id="samostojnost41"><!-- MUST use "rel" -->
+		  <div class="heading-last-diagonal wd"></div>
+		  <div class="cover-box-title">
+			<div class="frame">
+			  VZPOSTAVITEV<br />SLOVENSKIH<br /><span class="green">OBRAMBNIH SIL</span>
+			</div>
+		  </div>
+		  <div class="intro-first-diagonal wd"></div>
+		</div>
+
+		<div class="intro-box" style="width:85vh;margin-left:-1px">
+		  <div class="h20 flex-row">
+		    <div class="intro-title"></div>
+		  </div>
+		  <div class="h60 flex-row">
+		    <div class="intro-content">
+		    Sredi osemdesetih let so se v slovenski civilni družbi vse pogosteje pojavljale zahteve po temeljiti reorganizaciji vojske, uporabi nacionalnega jezika pri poveljevanju, služenju vojaškega roka bližje domu, zmanjševanju oborožitvenih stroškov in ukinjanju privilegijev vojske. Zveza komunistov Jugoslavije in vojaški vrh sta zahteve civilne družbe označevali za kontrarevolucijo, zaradi katere bi bilo nujno posredovanje vojske in discipliniranje Slovenije. Vsebina dokumenta, zaradi katerega je stekel proces proti četverici, je bila prav priprava vojaških enot v Sloveniji na takšno posredovanje. JLA je z grožnjami razkazovala svojo moč in postajala politični dejavnik, ki se je zavzemal za zvestobo skupni državi in komunizmu. 
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="blue-last-diagonal wd"></div>
+		  <div class="content-box-inner flex-column-space ml4">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Na drugi strani pa je odnos slovenske javnosti do vojske zaradi njenega samovoljnega početja postal izrazito odklonilen. Poleg gospodarskega in političnega vprašanja je tako vse bolj aktualno postajalo tudi vprašanje vojske oziroma vzpostavitev slovenskih obrambnih sil. Pobudo za ustanovitev Slovenske vojske je 2. marca 1990 na tiskovni konferenci predstavil Demos. Pomen vzpostavitve obrambnih sil je postal še pomembnejši po volitvah aprila 1990, saj se je nevarnost intervencije JLA še stopnjevala – vse do oboroženega konflikta ob razglasitvi samostojnosti.  
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8 mr8">
+			<div class="h50 mt-auto mb-auto">
+			  <img src="media/24/diareja_mladina_supersonic.jpg" class="h50 pointer" id="diareja_mladina_supersonic">
+			  <div class="bottom-note w60">
+			    Neuresničen projekt domače vojaške industrije - nadzvočno bojno letalo Supersonic
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8">
+			<div class="h50 mt-auto mb-auto">
+			  <img src="thumb/24/docs1/misli.jpg" class="h50 pointer" id="docs1_misli">
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box ml8">
+	      <div class="flex-column">
+			<div class="h100 mt-auto mb-auto">
+			  <div><img src="media/24/docs1/pozdrav_miru.jpg" class="h100 pointer" id="docs1_mir"></div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box ml8">
+		  <div class="content-box-inner flex-column-space ml4 mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w60">
+				Maja 1990 je predsedstvo države prevzel predstavnik Srbije <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_jovic">Borisav Jović</a> in takoj zahteval uvedbo izrednih ukrepov v državi, vojaški vrh pa bi s sklepi predsedstva dobil formalno možnost, da s silo poseže v proces demokratičnih sprememb v Sloveniji in na Hrvaškem. Eden prvih ukrepov vojaškega vrha je bil ukaz o premestitvi orožja Teritorialne obrambe (TO) in upravnih organov za obrambo v skladišča JLA. Operativni ukaz o razorožitvi TO v Sloveniji je 15. maja 1990, tik pred prisego Demosove vlade, izdal poveljnik <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_stab_to">Republiškega štaba Teritorialne obrambe</a> generalpolkovnik <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_hocevar">Ivan Hočevar</a>. Zvezne oblasti so računale, da bodo s tem dejanjem disciplinirale Slovenijo in Hrvaško ter novima demokratičnima republiškima vodstvoma onemogočile razpolaganje s precejšnjo količino orožja. Informacija o odvzemu orožja je v Sloveniji sprožila buren odziv in 19. maja je republiško predsedstvo ustavilo oddajo, a je bila Teritorialna obramba takrat v veliki meri že razorožena.   
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box ml8" id="docs1_ukaz">
+	      <div class="flex-column">
+			<div class="h60 mt-auto mb-auto">
+			  <div><img src="thumb/24/docs1/ukaz1.jpg" class="h60 pointer"></div>
+			</div>
+		  </div>
+	      <div class="flex-column ml4">
+			<div class="h60 mt-auto mb-auto">
+			  <div><img src="thumb/24/docs1/ukaz2.jpg" class="h60 pointer"></div>
+			</div>
+		  </div>
+	      <div class="flex-column ml1rem">
+		    <div class="content-box-inner">
+			  <div class="side-note w25 mb-auto">
+			  Ukaz o razorožitvi
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="flex-column">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+
+	      <div class="flex-row ml8 mr8">
+		    <div class="news-column news_up img-vertical-scroll w40 pointer" id="news1_1">
+			  <img src="thumb/24/news1/01.jpg" class="p2">
+			  <img src="thumb/24/news1/02.jpg" class="p2">
+			  <img src="thumb/24/news1/03.jpg" class="p2">
+			  <img src="thumb/24/news1/04.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+		  <div class="content-box-inner flex-column-space ml4 mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Z zaplembo orožja je ostala Teritorialna obramba oslabljena in deloma tudi razcepljena. Njena slabost je bila v razpetosti med lojalnostjo republiškemu vodstvu in formalno podrejenostjo JLA. Izkazalo se je, da je treba nujno reformirati obrambni sistem. Avgusta 1990 je bila tako ustanovljena Specialna enota Republiškega sekretariata za notranje zadeve (RSNZ), oblikovana pa je bila tudi Manevrska struktura narodne zaščite (MSNZ).<br />
+				MSNZ je bila skrivna organizacija, ki je nastala prav v dneh odvzemanja orožja Teritorialni obrambi. Formalno pokritje je imela v organizaciji Narodne zaščite, ki je bila del sistema splošnega ljudskega odpora.   
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space ml4 mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Prvi organizatorji so organizacijo v nekaj tednih razširili v vse slovenske pokrajine, predvsem po neformalnih kanalih. Zajela je nekatere pripadnike Teritorialne obrambe, organov za notranje zadeve in milice. Vsi so bili v organizaciji tajno, tvegajoč aretacijo, saj je njihova dejavnost presegala takratne legalne okvirje. Člani MSNZ so organizirali odporna jedra za primer posredovanja JLA v Sloveniji, zbirali so orožje in ga shranjevali na varnih krajih ter ga razmeščali po območjih, ki so ostala brez orožja. MSNZ je bila ob milici v tistem času dejansko edina obrambna sila Slovenije, saj je bila Teritorialna obramba paralizirana tako zaradi vodstva, ki je bilo podrejeno JLA, kot odvzema orožja.   
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column">
+			<div class="h100 mt-auto mb-auto">
+			  <div><img src="media/24/docs1/odlocba.jpg" class="h100 pointer" id="docs1_odlocba"></div>
+			</div>
+		  </div>
+	      <div class="flex-column ml1rem">
+		    <div class="content-box-inner">
+			  <div class="side-note w25 mb-auto">
+			  Odločba o imenovanju načelnika Narodne Zaščite
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box" id="docs1_razglednice">
+	      <div class="flex-column ml8">
+			<div class="h30 mt-auto">
+			  <div><img src="thumb/24/docs1/razglednica1.jpg" class="h30 pointer"></div>
+			</div>
+			<div class="h10"></div>
+			<div class="h40 mb-auto">
+			  <div><img src="thumb/24/docs1/razglednica2.jpg" class="h30 pointer"></div>
+			  <div class="bottom-note w30">
+			    Hiše, v katerih je bilo skrito orožje
+			  </div>
+			</div>
+		  </div>
+	      <div class="flex-column ml4 mr8">
+		    <div class="content-box-inner">
+			  <div class="text-level2 w20 mb-auto">
+			  Pripadniki MSNZ so bili v sodelovanju z enotami milice edini sposobni zavarovati ukrepe nastajajoče države. Po ukazu o razorožitvi TO so orožje in vojaško opremo, ki je niso premestili v skladišča JLA, ponoči vozili na skrivne lokacije po Sloveniji, večinoma na domove civilistov, ki so jim zaupali. Fotografije hiš, v katerih je bilo med vojno skrito orožje, je v sklopu zbirke vojnih razglednic izdal Pokrajinski muzej Brežice.
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column">
+			<div class="h80 mt-auto mb-auto">
+			  <div><img src="media/24/news1/11.jpg" class="h80 pointer" id="news1_2"></div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space ml8">
+			<div class="mb-auto">
+		      <div class="text-level1 w60">
+				<p>Slovenija je pristojnost nad republiško TO pridobila z ustavnim amandmajem, ki ga je sprejela slovenska skupščina konec septembra 1990. Predsedstvo Republike Slovenije je nato odstavilo generala Hočevarja in imenovalo majorja <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_slapar">Janeza Slaparja</a>, dotedanjega poveljnika Pokrajinskega štaba TO za Gorenjsko, za vršilca dolžnosti načelnika RŠTO. Ta je ob predhodnem soglasju Predsedstva Republike Slovenije imenoval še poveljnike pokrajinskih štabov TO. S tem so prenehali tudi razlogi za delovanje MSNZ – slednjo so razpustili, večino njenih pripadnikov pa razporedili v sestavo nove TO.</p>
+				<p>V odgovor na zamenjavo poveljnika RŠTO je JLA v noči s 4. na 5. oktober 1990 zasedla nekdanje prostore Republiškega štaba Teritorialne obrambe v Ljubljani in v njih vztrajala šest mesecev. RŠTO pod poveljstvom Janeza Slaparja se je preselil v prostore Republiškega sekretariata za ljudsko obrambo.</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8 mr8">
+			<div class="h80 mt-auto mb-auto">
+			  <img src="thumb/24/photo/zasedba_rsto.jpg" class="h70 pointer" id="zasedba_rsto">
+			  <div class="bottom-note">
+			    Igor Bavčar ob zasedbi Republiškega štaba Teritorialne obrambe 5. oktobra 1990
+			  </div>
+			</div>
+		  </div>
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="flex-column">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+	      <div class="flex-row ml8 mr8 pointer" id="news1_3">
+			<div class="news-column news_up img-vertical-scroll w40">
+			  <img src="thumb/24/news1/21.jpg" class="p2">
+			  <img src="thumb/24/news1/22.jpg" class="p2">
+			  <img src="thumb/24/news1/23.jpg" class="p2">
+			  <img src="thumb/24/news1/24.jpg" class="p2">
+			  <img src="thumb/24/news1/25.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+	      <div class="flex-column ml8 mr8">
+			<div class="h70 mt-auto mb-auto">
+			  <img src="media/24/karikatura_na_muhi.jpg" class="h70 pointer" id="karikatura_na_muhi">
+			</div>
+		  </div>
+		  <div class="heading-first-diagonal wd"></div>
+		</div>
+
+		<!------------------------------
+		//  PART 2
+		//----------------------------->
+		<div class="cover-box rel pointer" style="margin-left:-1px" id="samostojnost42"><!-- MUST use "rel" -->
+		  <div class="heading-last-diagonal wd"></div>
+		  <div class="cover-box-title">
+			<div class="frame">
+			  ZADIŠALO JE<br />PO <span class="green">SLOVENSKI<br />VOJSKI</span>
+			</div>
+		  </div>
+		  <div class="intro-first-diagonal wd"></div>
+		</div>
+
+		<div class="intro-box" style="width:85vh;margin-left:-1px">
+		  <div class="h20 flex-row">
+		    <div class="intro-title" id="citat_peterle">
+			  »Odločeni smo vztrajati na naši poti k samostojnosti in vi ste eno od jamstev za to pot.«
+			  <span class="text-level2 ml2">Lojze Peterle</span>
+			</div>
+		  </div>
+		  <div class="h60 flex-row">
+		    <div class="intro-content">
+		    Z zamenjavo načelnika Republiškega štaba TO in imenovanjem pokrajinskih poveljnikov je jeseni 1990 slovenski sekretariat za ljudsko obrambo izvedel prvo veliko preureditev sil za zagotovitev varnosti osamosvajanja. Teritorialna obramba je postala vojaška sila za prehodno časovno obdobje, predvsem pa je bilo pomembno, da je postala legalna formacija v jugoslovanskem pravnem sistemu. 
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="blue-last-diagonal wd"></div>
+		  <div class="content-box-inner flex-column-space ml8 mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Posebno mesto v slovenski obrambni strukturi je dobila 30. razvojna skupina TO, ki jo je od oktobra 1990 vodil prejšnji vodja MSNZ Anton Krkovič, sestavljali pa so jo poklicni vojaki. Prvi javni postroj enote je potekal 17. decembra 1990, tik pred plebiscitom, v Kočevski Reki, kjer je bila izpostavljena kot elitna enota Teritorialne obrambe. Predsednik vlade Lojze Peterle je takratno dogajanje opisal kot dan, ko je prvič zadišalo po slovenski vojski. Iz 30. razvojne skupine se je oblikovala posebna brigada Ministrstva za obrambo Republike Slovenije – 1. specialna brigada MORiS.   
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box" id="photo2_galerija1">
+		  <div class="h80">
+		    <img src="thumb/24/photo/postroj01.jpg" class="h80 p2 pointer photo2_1">
+		  </div>
+		  <div class="gallery-3rows h80 flex-gallery pointer photo2_1" style="width:165vh">
+			<div class="w40" style="border:2px solid transparent">
+			  <div class="photo-note" style="height:26.1vh">
+			  Postroj v Kočevski Reki
+			  </div>
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj02.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj03.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj04.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj06.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj09.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj12.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj14.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj16.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj18.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj19.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj20.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj21.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj22.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj23.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj31.jpg" class="p2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/24/photo/postroj33.jpg" class="p2">
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space ml8 mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Zaradi zaostrovanja razmer v Jugoslaviji in groženj JLA z intervencijo v Republiki Sloveniji je januarja 1991 Demos predlagal sprejetje predlogov za skrajšanje vojaškega roka na sedem mesecev in predčasno upokojitev vseh oficirjev JLA, starejših od 55 let. Slovenska skupščina je zahtevala umik vojske iz politike, predsedstvu SFRJ pa predlagala moratorij na služenje vojaškega roka. Slovenska vlada je pripravila tudi pravno podlago za slovensko pristojnost nad vsemi vojaškimi obvezniki v Republiki Sloveniji.  
+			  </div>
+			</div>
+		  </div>
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="flex-column">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+	      <div class="flex-row ml8 mr8 pointer" id="news2_1">
+			<div class="news-column news_up img-vertical-scroll w40">
+			  <img src="thumb/24/news2/01.jpg" class="p2">
+			  <img src="thumb/24/news2/02.jpg" class="p2">
+			  <img src="thumb/24/news2/03.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+	      <div class="flex-column ml8 mr8">
+			<div class="h60 mt-auto mb-auto">
+			  <img src="media/24/karikatura_kam.jpg" class="h60 pointer" id="karikatura_kam">
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space ml8 mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				V naslednjih mesecih se je v skupščinskih klopeh odvijala ostra razprava v zvezi z zakonom o obrambi in izvrševanju vojaške obveznosti. Potekali so spori med zagovorniki demilitarizirane Slovenije in zagovorniki oblikovanja slovenske vojske.
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box" id="pismo_jansa">
+		  <div class="blue-speech w80 ml8">
+		    <br /><p><b>ČLANOM PREDSEDSTVA REPUBLIKE SLOVENIJE IN ČLANOM IZVRŠNEGA SVETA RS, KI SO PODPISALI TAKO IMENOVANO »DEKLARACIJO ZA MIR«</b></p>
+			<p>Spoštovani!</p>
+			<p>Dovolite mi, da Vam ukradem nekaj dragocenega časa in Vas na tak, povsem neformalen način obvestim o nekaterih pomislekih in vprašanjih, ki se mi pojavljajo ob prebiranju zgoraj omenjene deklaracije.</p>
+			<p>Mirovna iniciativa je potrebna, tudi če v določenem trenutku ni realna. Gre na eni strani za vizijo prihodnosti, ki naj bo, kolikor je mogoče, brez nasilja, na drugi strani pa tudi za konkurenco težnjam po sli kot prevladujočem instrumentu za reševanje konfliktov ter za nadzor nad državnimi institucijami represije. Za družbo kot celoto je v vsakem primeru dobro, če v njej obstajajo močna mirovna gibanja in če imajo mirovne iniciative podporo.</p>
+			<p>Toda eno je, če zbira podpise civilna iniciativa, drugo pa, če je to močna politična akcija različnih strank, ali če to delajo člani organa, ki je vrhovni poveljnik oboroženih sil v republiki, in ki ima po veljavni ustavi ne samo pravico, temveč tudi dolžnost, da vodi in organizira obrambo, vključno z oboroženim bojem. Tudi če sami mislimo, da je možno praktično ločiti npr. g. Milana Kučana kot občana od g. Milana Kučana kot predsednika predsedstva RS, pa seveda ljudje tega ne ločijo. To je dejstvo, pa če nam je všeč ali ne in posledice dejanj so politične tudi v primeru, če jih politik stori povsem osebno.</p>
+			<p>V deklaraciji je med drugim zapisana zgodovinska neresnica (v Sobotni prilogi Dela je sestavek Janeza Švajncerja, zato se pri tem ne ustavljam) ter hkrati navedena najmanj ena formulacija, ki zavaja javnost in s strokovnega vidika ne vzdrži kritike. Mislim na stavek, v katerem piše, da bomo v prehodnem obdobju varnost zagotavljali s »policijo in TO v sedanjem obsegu«.</p>
+			<p>TO v stalni sestavi za zdaj nima vojakov. TO so rezervne vojaške formacije, sestavljene iz obveznikov pretežno starejših letnikov. Če ni vojaškega usposabljanja mlajših letnikov, se struktura rezerve postara brez ustreznega nadomestila. Tudi če kdo misli, da bo »obdobje negotovosti« trajalo samo dve leti, tovrstno staranje predstavlja resen problem. V trenutku, ko brez ustreznega nadomestila v lastnem vojaškem usposabljanju prenehamo pošiljati nabornike v JLA, je avtomatično prekinjen tudi dotok mladih obveznikov s svežim vojaškim znanjem v TO.</p>
+			<p>Poleg tega, kdo bo v tem času ljudem pojasnil, da nekateri (starejši!) letniki so obvezniki, drugi (mlajši) pa niso? V vseh državah namreč obramba temelji pretežno na generaciji med dvajsetim in tridesetim letom, pri nas pa bi jo vezali na štiridesetletnike? In s kakšno pravico bodo eni obvezniki, drugi pa ne? Kje je tukaj enakost pred zakonom? Ne, ta zadeva ni tako enostavna, kot se komu na prvi pogled zdi. Projekta nacionalne varnosti se je treba lotiti resno. Vprašanje je usodno za slovensko osamosvajanje in za zavarovanje slovenske samostojnosti, ko bo dosežena in priznana. Če lahko kod odloči o tem, da se razorožimo oziroma da lastno varnost zagotavljamo brez armade, potem so to lahko samo Slovenci in prebivalci bodoče suverene države same. Rešite, do katere bi lahko prišli na tak način, pa mora biti čista. Nemogoče je igrati na karto nekje vmes, kot to poskuša Deklaracija s formulacijo o »policiji in TO v sedanjem obsegu«. Ali transformacija sedanjih obrambnih struktur Slovenije in deloma JLA v normalno, parlamentarno nadzorovano in ekonomski moči družbe prilagojeno strukturo, ali pa popolna ukinitev vseh oboroženih formacij(z izjemo mirnodobnega sestava policije). Sestava oboroženih sil mora biti namreč po kvaliteti in kvantiteti takšna, da je zadostna oziroma da ustreza ciljem. Po dokaj usklajenem mnenju strokovnjakov je Slovenija sposobna brez prevelikega obremenjevanja družbe zagotoviti zadostno kvantiteto in kvaliteto oborožene obrambe. Če le ta ni zadostna, potem je res bolje, da se ne igramo, saj v tem primeru zgolj neodgovorno izpostavljamo žrtvovanju tisto peščico, ki naj bi nas po mnenju sestavljalcev deklaracije branila. V tem primeru pa seveda tudi predlagam, da projekt osamosvajanja obesimo na klin in se ne igramo z usodo naroda, saj bi ravnali podobno, kot nekdo, ki stopi na mraz, pri tem pa sleče še suknjič, namesto, da bi oblekel plašč.</p>
+			<p>Živimo v zelo občutljivem času. Nikakršne garancije nimamo, da se ta občutljivost ne bo spremenila v oborožen konflikt ali celo v državljansko vojno. V tem primeru bodo, o tem ste lahko stoodstotno prepričani, ljudje zahtevali predvsem varnost. Na žalost se le-te ne more vedno zagotoviti samo z deklaracijami. Nihče, ki je bil legitimno izvoljen na katerokoli odgovorno mesto v vseh vejah oblasti v Sloveniji, nima nikakršne pravice, da ignorira realnost in govori, da je svet s konflikti in z orožjem utopija. Nasprotno. Na žalost je tak svet zelo kruta realnost in nič manj kruta ne bo, če tega ne bomo videli ali se delali, kot da nam nihče nič ne more. Sprenevedanje lahko nevarnost zgolj poveča, hkrati pa ogrozi tudi procese realne demilitarizacije, ki vsaj v nekaterih delih razvitega sveta dejansko potekajo. S tem da tam temeljijo na spreminjajoči se zavesti ljudi in ne na fizičnem odmetavanju orožja. Temeljni problem nasilja leži v človeku, ne pa v ekonomiji ali v orožju. Če orožja nihče ni prisiljen ali celo pripravljen uporabiti, je tako ali tako relativno nenevarno. Demilitarizacija predstavlja proces, ki ne more biti absolutno omejen na eno državo ali narod ali občino. Še več. Povsem razorožena država, obdana s sosedi, ki so močno oboroženi, je praktično težko dejavnik stabilnosti v regiji ali na celini. Vprašajte tuje diplomate, kaj mislijo o tem. Res je, da več orožja globalno pomeni dodatno nevarnost, toda še večjo nevarnost za mir predstavlja nenadoma porušeno ravnovesje v regiji, ki se lahko konča z oboroženim konfliktom tudi z manj orožja.</p>
+			<p>V JLA v Sloveniji je večje število starešin Slovencev in Neslovencev, ki so na začetku ali na sredini svojega službovanja in katerim smo na nek način zagotavljali, da v primeru osamosvojitve Slovenije ne bodo ostali brez dela. Poleg osebnih ima podobna generacija tudi druge, politične pomene. Če rečemo: »Obdržali bomo samo TO v sedanjem obsegu,« potem seveda nihče ne bo več videl kakih posebnih možnosti, da svojo poklicno kariero nadaljujejo npr. v TO in se bo bolj oklepal službe, ki jo za zdaj ima.</p>
+			<p>Ameriški senator Denis De Concini je konec januarja letos v ameriškem parlamentu izrekel tudi naslednjo misel, ki nam ob vsem, kar mi vsi skupaj vemo, ni pa javno znano, lahko ponudi dodatno snov za razmišljanje in tudi zaskrbljenost. Dejal je, da so razmere pri nas take, da je povsem možno, da se 20. stoletje tudi konča tako, kot se je začelo: Z vojno na Balkanu.</p>
+			<p>Občutljivost vprašanja nacionalne varnosti terja od vseh, ki se z njim tako ali drugače poklicno ukvarjajo (in člani predsedstva in vlade zagotovo brez izjeme spadajo sem), profesionalen odnos, ki ne dovoljuje vedno cenenega nabiranja političnih točk. Sam sem prepričan, da pri ogromni večini podpisnikov deklaracije za mir ne gre ne za politikantstvo in ne za nasprotovanje slovenski osamosvojitvi, temveč za iskreno zavzemanje za tisto, kar dokument ponuja v naslovu, tj. zavzemanje za mir. Problem pa je v tem, ker v podrobnostih (ki jih večina ne prebere podrobno) deklaracija en ponuja zgolj zavzemanja za mir, temveč je po vsebini »zahteva po hitri enostranski razorožitvi«, ki nam ne bo prinesla niti miru niti samostojnosti. Ker so med podpisniki močne politične stranke, so stavki deklaracije s tem avtomatično točke političnega programa in ne samo občanska iniciativa.</p>
+			<p>Naj vas ob koncu spomnim še na rezultate SJM 1990, ki decembra lanskega leta ugotavlja, da je samo 15 % prebivalcev Slovenije za hitro enostransko razorožitev, vsi ostali pa so za lastno vojsko vsaj v prehodnem obdobju.</p>
+			<p>In morda zgolj kot motiv za droben razmislek še naslednji citat:</p>
+			<p>Winston S. Churchill, Druga svetovna vojna, I. poglavje: Pot v katastrofo:</p>
+			<p>»Kot eden tistih, ki so takrat živeli in delovali, bi rad pojasnil, kako lahko bi preprečili tragedijo druge svetovne vojne in kako je zlobo podležev pospeševala slabost spodobnih ljudi ... Videli bomo, kako nasveti previdnosti in zmernosti lahko postanejo glavni vzrok smrtne nevarnosti, kako srednja pot, izbrana v želji po varnosti in mirnem življenju, lahko pripelje naravnost v največje zlo.«</p>
+			<p>Prosil bi vas, da to pismo ostane interne narave,</p>
+			<p>Lep pozdrav in brez zamere!</p>
+			<p align="right">Janez Janša</p>
+			<p>Ljubljana, 25. 2. 1990</p>
+			<p>
+			  <br />Poslano tudi:
+			  <br />&ndash; predsedniku skupščine RS
+			  <br />&ndash; predsedniku IS RS
+			</p>
+			<p><br />Spletni vir: Pismo Janeza Janše Predsedstvu, UKOM.</p>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space ml8 mr8">
+			<div class="mb-auto">
+		      <div class="text-level2 w40">
+				Že v marcu 1990 je bila predstavljena pobuda za demilitarizirano Slovenijo in odpravo vojske, kar naj bi bilo najboljši garant za varnostno politiko, ki ne gradi na vojaški sili. Pobudo je prav v času žgočih razprav o konceptu vojaške obrambe Slovenije podprlo tudi slovensko predsedstvo, saj so februarja 1991 trije člani predsedstva, vključno s predsednikom Milanom Kučanom, podpisali Deklaracijo za mir, ki se je zavzemala za izdelavo mirovne opcije reševanja jugoslovanske krize, ustavitev nadaljnjega oboroževanja Slovenije in Jugoslavije ter demilitarizacijo. Koalicija Demos je deklaracijo odločno obsodila, saj naj bi prav v času velike nevarnosti intervencije JLA ogrožala slovenske obrambne sposobnosti.
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="flex-column">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+	      <div class="flex-row ml8 mr8 pointer" id="news2_2">
+			<div class="news-column news_up img-vertical-scroll w40">
+			  <img src="thumb/24/news2/11.jpg" class="p2">
+			  <img src="thumb/24/news2/12.jpg" class="p2">
+			  <img src="thumb/24/news2/13.jpg" class="p2">
+			  <img src="thumb/24/news2/14.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+		  <div class="content-box-inner flex-column-space ml8 mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Predsedstvo Republike Slovenije je 18. marca 1991 ustanovilo koordinacijsko telo za primer izrednih razmer, ki ga je vodil Igor Bavčar, njegov namestnik pa je bil Janez Janša. Med vojno je to telo usklajevalo ukrepe na vojaškem, političnem in diplomatskem področju. 
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner gallery-2rows-zigzag h80 ml8 flex-zigzag pointer" style="width:60vh" id="docs2_sklep">
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/24/docs2/sukt1.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/24/docs2/sukt2.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item zigzag-offset-top">
+			  <img src="thumb/24/docs2/sukt3.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/24/docs2/sukt4.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/24/docs2/sukt5.jpg" class="p2">
+			</div>
+		  </div>
+	      <div class="flex-column w25 ml1rem">
+		    <div class="content-box-inner">
+			  <div class="side-note w25 mb-auto">
+			  Sklep o ustanovitvi koordinacijskega telesa.
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box"  id="photo_premik">
+	      <div class="flex-column ml2">
+			<div class="h40 mt-auto">
+			  <div><img src="thumb/24/photo/premik1.jpg" class="h40 pointer"></div>
+			</div>
+			<div class="h10"></div>
+			<div class="h40 mb-auto">
+			  <div><img src="thumb/24/photo/premik2.jpg" class="h40 pointer"></div>
+			</div>
+		  </div>
+		  <div class="content-box-inner h70 flex-column-space ml1rem">
+			<div class="side-note w40 mb-auto" id="citat_oman">
+			»Pozdravljeni vojaki Slovenske vojske!« (Ivan Oman na vaji Premik '91)
+			</div>
+			<div class="text-level2 h50 w40 mt-auto mb-auto">
+			V času osamosvajanja Slovenije se je slovenska TO začela pripravljati na obrambo države, saj je obstajala realna možnost napada JLA. V drugi polovici marca 1991 je bila organizirana mobilizacijska taktična vaja Premik '91, s katero je bila preverjena sposobnost in pripravljenost enot TO za obrambo osamosvojitvenih procesov. Vaja je bila tudi del procesa preoblikovanja TO v Slovensko vojsko in je dala jasen signal tako Slovencem kot JLA, da je kljub razorožitvi vojska pripravljena na obrambo domovine.
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8">
+			<div class="h80 mt-auto mb-auto">
+			  <div><img src="media/24/news2/21.jpg" class="h80 pointer" id="news2_3"></div>
+			</div>
+		  </div>
+	      <div class="flex-column ml1rem">
+		    <div class="content-box-inner">
+			  <div class="side-note w25 mb-auto">
+			  Obramba Slovenije zagotovljena
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space ml8 mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				V aprilu sta bila sprejeta še Zakon o obrambi in zaščiti, ki je urejal organizacijo, pripravljanje in delovanje obrambnega sistema v primeru ogrožanja svobode, neodvisnosti in ozemeljske celovitosti Slovenije, ter Zakon o vojaški dolžnosti, na podlagi katerega se je prvič v slovenski zgodovini začela usposabljati lastna mirnodobna vojska. Izhajala sta iz splošne vojaške obveznosti državljanov republike, ki naj bi jo izvajali tako na služenju vojaškega roka kot v primeru vpoklica v TO Slovenije, saj je bil že od marca v veljavi moratorij na pošiljanje nabornikov v JLA.
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box mr1rem flex-column">
+		  <div class="h20 flex-row">
+		    <div class="side-note-left w25 mt-auto mb-auto">
+		    Zakon o obrambi in zaščiti (Uradni list RS, št. 15, 6. april 1991, leto XLVIII).
+		    </div>
+		  </div>
+		  <div class="h60 flex-row"></div>
+		</div>
+		<div class="content-box">
+	      <div class="flex-column img-vertical-scroll w25 pointer" id="docs2_zoz">
+			<img src="thumb/24/docs2/zoz01.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz02.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz03.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz04.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz05.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz06.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz07.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz08.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz09.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz10.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz11.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz12.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz13.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz14.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz15.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz16.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz17.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz18.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz19.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz20.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zoz21.jpg" width="100%" class="p2">
+		  </div>
+		</div>
+		<div class="content-box">
+	      <div class="flex-column img-vertical-scroll w25 pointer" id="docs2_zvd">
+			<img src="thumb/24/docs2/zvd01.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zvd02.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zvd03.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zvd04.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zvd05.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zvd06.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zvd07.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zvd08.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zvd09.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zvd10.jpg" width="100%" class="p2">
+			<img src="thumb/24/docs2/zvd11.jpg" width="100%" class="p2">
+		  </div>
+		</div>
+		<div class="content-box ml1rem flex-column">
+		  <div class="h20 flex-row">
+		    <div class="side-note w25 mt-auto mb-auto">
+		    Zakon o vojaški dolžnosti (Uradni list RS, št. 18, 27. april 1991, leto XLVIII).
+		    </div>
+		  </div>
+		  <div class="h60 flex-row"></div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space ml8 mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Sekretariat za ljudsko obrambo je z zakonsko podlago dobil dovoljenje za uvedbo služenja vojaškega roka v TO. Razvita sta bila koncept in program služenja ter pripravljena dva učna centra za slovenske nabornike – na Igu pri Ljubljani in v Pekrah pri Mariboru. V njih se je 15. maja začela usposabljati prva generacija slovenskih vojakov. Na ta dan Slovenska vojska obeležuje svoj praznik.  
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="flex-column">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+	      <div class="flex-row ml8 mr8 pointer" id="news2_4">
+			<div class="news-column news_up img-vertical-scroll w40">
+			  <img src="thumb/24/news2/31.jpg" class="p2">
+			  <img src="thumb/24/news2/32.jpg" class="p2">
+			  <img src="thumb/24/news2/33.jpg" class="p2">
+		    </div>
+		    <div class="news-column news_down img-vertical-scroll w40">
+			  <img src="thumb/24/news2/41.jpg" class="p2">
+			  <img src="thumb/24/news2/42.jpg" class="p2">
+			  <img src="thumb/24/news2/43.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+		</div>
+		
+		<div class="content-box">
+	      <div class="flex-column ml8">
+			<div class="h80 mb-auto mt-auto">
+			  <div><img src="thumb/24/photo/hocem_brata.jpg" class="h80 pointer" id="hocem_brata"></div>
+			</div>
+		  </div>
+	      <div class="flex-column ml4 mr8">
+		    <div class="content-box-inner">
+			  <div class="text-level2 w40 mb-auto">
+			  S slabšanjem razmer v federaciji je položaj slovenskih vojakov, ki so služili vojaški rok v vojašnicah po vsej Jugoslaviji, postal nezavidljiv. V Ljubljani se je zato 16. maja 1991 samoiniciativno zbrala skupina staršev slovenskih nabornikov v JLA in ustanovila Odbor staršev za varstvo in vrnitev slovenskih vojakov iz JLA. Njihov glavni cilj je bila varna vrnitev otrok domov. V naslednjih mesecih, po izbruhu spopadov, se je odbor kot nevladno, nadstrankarsko in civilnodružbeno gibanje v želji po rešitvi okoli 6000 slovenskih fantov obrnil tako na slovenske oblasti kot tudi še vedno delujoče jugoslovanske institucije. Dogovor dr. Janeza Drnovška, člana jugoslovanskega predsedstva, z zveznim ministrom za obrambo Veljkom Kadijevićem je v drugi polovici julija končal množično in nevarno »dezertiranje« slovenskih nabornikov iz vojašnic, ki se je začel po slovenski osamosvojitvi 25. junija 1991.
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8">
+			<div class="h80 mt-auto mb-auto">
+			  <div><img src="thumb/24/news2/51.jpg" class="h80 pointer" id="news2_5a"></div>
+			</div>
+		  </div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8 mr8">
+			<div class="h60 mt-auto mb-auto">
+			  <img src="thumb/24/news2/52.jpg" class="h50 pointer" id="news2_5b">
+			</div>
+		  </div>
+		</div>
+
+		<div class="heading-box">
+		  <div class="beige-last-diagonal wd"></div>
+		  <div class="heading-next flex-row float-right" id="naprej">
+			<div class="w60">DAN<br />PREJ</div>
+		    <img src="img/naprej.svg" id="start">
+		  </div>
+		</div>
+
+    </div>
+
+	<!------------------------------
+	//  FIXED FOOTER
+	//----------------------------->
+	<div class="progress-container">
+	  <div class="progress-bar" id="progressBar"></div>
+	</div>
+
+	<div id="bottombar" class="bt navbar-dark">
+	  <button class="bottombar-toggler" type="button" data-toggle="collapse" data-target="#navbarBottomMenu" aria-controls="navbarBottomMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="bottombar-title"><span class="dimmed">OSAMOSVOJITEV / </span>7. VARNOSTNI VIDIKI</div>
+        <span id="btmbar-hamburger" class="navbar-toggler-icon"></span>
+        <span id="btmbar-cheeseburger" class="hidden" style="padding-top:0.1rem;">&#x2573;</span>
+      </button>
+	  <div class="paging">
+	    <table width="100%" border="0">
+		  <tr align="center">
+		    <td width="25%"><a href="samostojnost3.html">&#x3008;</a></td>
+			<td width="50%">7</td>
+			<td width="25%"><a href="vojna1.html">&#x3009;</a></td>
+		  </tr>
+		</table>
+	  </div>
+	</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Slick Carousel JavaScript -->
+<script src="js/slick.min.js"></script>
+
+<!-- FancyBox 3 JavaScript -->
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/fancybox-24-parts.js"></script>
+<!--
+<script src="js/fancybox-24-video.js"></script>
+//-->
+
+<!-- Navigacija -->
+<script src="js/navigation.js"></script>
+
+<!-- Custom JavaScript for this site -->
+<script>
+/*
+ *  Hide loading box when page load complete
+ */
+window.onload = function(){
+	document.getElementById('content-loading').style.visibility = 'hidden';
+};
+
+function hideToggleMenu() {
+	$('#navbar-hamburger').removeClass('hidden');
+	$('#navbar-cheeseburger').addClass('hidden');        
+	$('#navbarToggleMenu').addClass('hidden');		  
+}
+
+function hideBottomMenu() {
+	$('#btmbar-hamburger').removeClass('hidden');
+	$('#btmbar-cheeseburger').addClass('hidden');        
+	$('#navbarBottomMenu').addClass('hidden');		  
+}
+
+
+$(function() {
+	  
+	/*
+	 *  Advance to next part
+	 */
+	$('#naprej').click(function(event){
+		window.location.href = 'vojna1.html';
+	});
+
+});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-66REXS9BK3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-66REXS9BK3');
+</script>
+
+</body>
+</html>

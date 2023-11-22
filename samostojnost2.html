@@ -1,0 +1,1996 @@
+<!doctype html>
+<html lang="sl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+	<!-- Force landscape mode -->
+	<link rel="manifest" href="manifest.json">
+
+    <title>Zbrali smo pogum</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Slick Carousel CSS -->
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+	<!-- Slick Carousel customization for vertical down direction -->
+    <link href="css/slick-down.css" rel="stylesheet">
+
+	<!-- FancyBox 3 CSS -->
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+	<!-- FancyBox 3 customizations -->
+    <link href="css/fancybox.css" rel="stylesheet">
+
+    <!-- Custom styles for this site -->
+    <link href="css/landing.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/elements.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+	<!-- Image map CSS -->
+	<style>
+	  area { cursor: pointer; }
+	</style>
+</head>
+
+<body>
+
+	<!-- Modal -->
+	<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+		  <div class="modal-body">
+			<div class="close-icon">
+			  <span data-dismiss="modal" aria-label="Zapri">
+				<img src="img/icon_zapri_siva.svg">
+			  </span>
+			</div>
+			<div class="flex-row">
+			  <div class="flex-column" style="width:45%;margin-bottom:2rem">
+				<a href="https://www.gov.si/drzavni-organi/organi-v-sestavi/arhiv/" target="_blank"><img src="img/logo_MK_arhivSL.png" class="flex-item"></a>
+				<a href="https://www.zrss.si/" target="_blank"><img src="img/logo_ZRSS.png" class="flex-item"></a>
+				<a href="https://www.parkvojaskezgodovine.si/" target="_blank"><img src="img/logo_PVZ.png" class="flex-item"></a>
+			  </div>
+			  <div class="flex-item green-line credits-box" style="width:55%;padding:0 2vh">
+				<p>
+				  <b>Partnerji</b><br />
+				  Arhiv Republike Slovenije, direktor dr. Bojan Cvelfar<br />
+				  Zavod Republike Slovenije za šolstvo, direktor dr. Vinko Logaj<br />
+				  Park vojaške zgodovine Pivka, direktor mag. Janko Boštjančič
+				</p>
+				<p>
+				  <b>Avtorji</b><br />
+				  mag. Alenka Starman Alič, Arhiv Republike Slovenije<br />
+				  Ana Čič, Park vojaške zgodovine<br />
+				  dr. Vilma Brodnik, Zavod Republike Slovenije za šolstvo
+				</p>
+				<p>
+				  <b>Strokovni sodelavci projekta</b><br />
+				  dr. Bojan Cvelfar, Arhiv Republike Slovenije<br />
+				  mag. Janko Boštjančič, Park vojaške zgodovine<br />
+				  dr. Andrej Brodnik, Fakulteta za matematiko, naravoslovje in informacijske tehnologije, Univerza na Primorskem<br />
+				  Gregor Anželj, Gimnazija Bežigrad<br />
+				  Peter Požar in Žiga Požar
+				</p>
+				<p>
+				  <b>Avtorice učnega gradiva za osnovno šolo</b><br />
+				  Jana Bec, Osnovna šola Prule<br />
+				  Bojana Mlinar Podobnik, Osnovna šola Prule<br />
+				  Tjaša Petrič, Osnovna šola Koseze
+				</p>
+				<p>
+				  <b>Jezikovni pregled</b><br />
+				  Tine Logar
+				</p>
+				<p>
+				  <b>Institucije in drugi zunanji sodelavci</b><br />
+				  Urad predsednika Republike Slovenije<br />
+				  Predsednik RS Borut Pahor<br />
+				  Ministrstvo za obrambo<br />
+				  Ministrstvo za zunanje zadeve<br />
+				  Ministrstvo za notranje zadeve<br />
+				  Državni zbor RS<br />
+				  Muzej novejše zgodovine Slovenije<br />
+				  Slovenski etnografski muzej<br />
+				  Narodni muzej Slovenije<br />
+				  RTV Slovenija<br />
+				  Narodna univerzitetna knjižnica<br />
+				  Pošta Slovenije<br />
+				  Skupina Futura<br />
+				  Časopisi: Delo, Družina, Primorske novice, Večer<br />
+				  Posamezniki: Franco Juri, Tomaž Lavrič (Mladina), Helena Race
+				</p>
+				<p>
+				  <b>Videoprodukcija</b><br />
+				  Koprodukcija: RTV Slovenija<br />
+				  Izvedbena produkcija: Studio Virc d.o.o.
+				</p>
+				<p>
+				  <b>Oblikovanje</b><br />
+				  Matic Leban
+				</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Copyright -->
+	<div class="modal fade" id="copyright" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Obvestilo o avtorskih pravicah</b></p>
+					<p>Vse pravice pridržane. Brez pisnega dovoljenja ni dovoljeno nobenega dela virtualnega učnega gradiva (razstava, video film) na kakršenkoli način reproducirati, kopirati ali kako drugače razširjati. Ta prepoved se nanaša tako na mehanske oblike reprodukcije (fotokopiranje) kot na elektronske (snemanje ali prepisovanje na kakršenkoli pomnilniški medij). Izjemo predstavlja uporaba virtualnega učnega gradiva v šolske namene neposredno pri pouku.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    <nav class="br navbar navbar-dark fixed-top">
+      <a class="navbar-brand" href="index.html">
+	    <img id="logo" src="img/logo_menu.svg">
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleMenu" aria-controls="navbarToggleMenu" aria-expanded="false" aria-label="Toggle navigation">
+	    <div class="navbar-title">5. PROCESI DEMOKRATIZACIJE</div>
+        <span id="navbar-hamburger" class="navbar-toggler-icon"></span>
+        <span id="navbar-cheeseburger" class="hidden" style="padding-top:0.1rem;">&#x2573;</span>
+      </button>
+    </nav>
+
+    <!-- Navbar toggle menu -->
+	<div id="navbarToggleMenu" class="br text-light hidden">
+	  <table>
+	    <tr>
+		  <td id="plebiscit-menu" style="width:75vh" class="disabled"><center>PLEBISCIT</center></td>
+		  <td rowspan="4" valign="top" style="height:100vh;padding:0">
+		    <div style="height:100vh;overflow-y:scroll;overflow:-moz-scrollbars-vertical;">
+		      <!-- Mobile menu: Plebiscit -->
+			  <table border="0" id="plebiscit-menu-m" class="hidden">
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit.html'">
+					<center style="font-size:1rem">Ogled filma</center>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit1.html'">
+					<div class="item-number-m">1</div>
+					<div class="item-label-m">PRED<br />PLEBISCITOM</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit2.html'">
+					<div class="item-number-m">2</div>
+					<div class="item-label-m">DAN<br />PLEBISCITA</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit3.html'">
+					<div class="item-number-m">3</div>
+					<div class="item-label-m">PO<br />PLEBISCITU</div>
+				  </td>
+				</tr>
+			  </table>
+		      <!-- Mobile menu: Osamosvojitev -->
+			  <table border="0" id="samostojnost-menu-m">
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost.html'">
+					<center style="font-size:1rem">Ogled filma</center>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost1.html'">
+					<div class="item-number-m">4</div>
+					<div class="item-label-m">80. LETA V<br />JUGOSLAVIJI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu active" style="height:25vh">
+					<div class="item-number-m">5</div>
+					<div class="item-label-m">PROCESI<br />DEMOKRATIZACIJE</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu active content" style="height:25vh">
+					<div class="item-content-m" style="font-size:1rem">
+					  <a href="#samostojnost21" onclick="hideToggleMenu()">Nove politične stranke</a><br />
+					  <a href="#samostojnost22" onclick="hideToggleMenu()">Demos</a><br />
+					  <a href="#samostojnost23" onclick="hideToggleMenu()">Volitve</a><br />
+					</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost3.html'">
+					<div class="item-number-m">6</div>
+					<div class="item-label-m">RAZGLASITEV<br />SAMOSTOJNOSTI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost4.html'">
+					<div class="item-number-m">7</div>
+					<div class="item-label-m">VARNOSTNI<br />VIDIKI</div>
+				  </td>
+				</tr>
+			  </table>
+		      <!-- Mobile menu: Vojna -->
+			  <table border="0" id="vojna-menu-m" class="hidden">
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna.html'">
+					<center style="font-size:1rem">Ogled filma</center>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna1.html'">
+					<div class="item-number-m">8</div>
+					<div class="item-label-m">DAN<br />PREJ</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna2.html'">
+					<div class="item-number-m">9</div>
+					<div class="item-label-m">SPOPADI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna3.html'">
+					<div class="item-number-m">10</div>
+					<div class="item-label-m">KONEC<br />VOJNE</div>
+				  </td>
+				</tr>
+			  </table>
+		      <!-- Mobile menu: Osnovni meni -->
+			  <table border="0" width="100%" id="osnovni-menu-m" class="hidden" style="height:100vh">
+				<tr>
+				  <td width="40%" class="menu-main-column">
+					<img src="img/logo_menu.svg" style="width:100%;padding:10px">
+				  </td>
+				  <td class="menu-main-column">
+					<div class="menu-items" style="width:100%;font-size:1rem;line-height:1.5rem;">
+					  <a href="index.html">Vstopna stran</a><br />
+					  <a href="gradiva.html">Učna gradiva</a><br />
+					  <a href="viri.html">Viri</a><br />
+					  <a href="#" data-toggle="modal" data-target="#about">O projektu</a><br />
+					  <a href="#" data-toggle="modal" data-target="#copyright">Avtorske pravice</a><br />
+					</div>
+				  </td>
+				</tr>
+			  </table>
+			</div>
+		  </td>
+		</tr>
+	    <tr>
+		  <td id="samostojnost-menu" style="width:75vh"><center>OSAMOSVOJITEV</center></td>
+		</tr>
+	    <tr>
+		  <td id="vojna-menu" style="width:75vh" class="disabled"><center>VOJNA</center></td>
+		</tr>
+	    <tr>
+		  <td id="osnovni-menu" style="width:75vh" class="disabled"><center>OSNOVNI MENI</center></td>
+		</tr>
+	  </table>
+	</div>
+
+    <!-- Navbar bottom menu -->
+	<div id="navbarBottomMenu" class="br text-light hidden">
+	  <table>
+	    <tr>
+		  <td width="16%" rowspan="8" valign="top" class="menu-main-column">
+		    <img src="img/logo_menu.svg" width="60%">
+			<div class="menu-items" style="padding-left:1.3em;padding-top:1.3em">
+			  <a href="index.html">Vstopna stran</a><br />
+			  <a href="gradiva.html">Učna gradiva</a><br />
+			  <a href="viri.html">Viri</a><br />
+			  <a href="#" data-toggle="modal" data-target="#about">O projektu</a><br />
+			  <a href="#" data-toggle="modal" data-target="#copyright">Avtorske pravice</a><br />
+			</div>
+		  </td>
+		  <td width="28%" height="12.5%" id="plebiscit" class="disabled bl"><center>PLEBISCIT</center></td>
+		  <td width="28%" height="12.5%" id="samostojnost" class="bl"><center>OSAMOSVOJITEV</center></td>
+		  <td width="28%" height="12.5%" id="vojna" class="disabled bl"><center>VOJNA</center></td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit.html'">
+		    <center>Ogled filma</center>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost.html'">
+		    <center>Ogled filma</center>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna.html'">
+		    <center>Ogled filma</center>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit1.html'">
+		    <div class="item-number">1</div>
+			<div class="item-label">PRED<br />PLEBISCITOM</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost1.html'">
+		    <div class="item-number">4</div>
+			<div class="item-label">80. LETA V<br />JUGOSLAVIJI</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna1.html'">
+		    <div class="item-number">8</div>
+			<div class="item-label">DAN<br />PREJ</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit2.html'">
+		    <div class="item-number">2</div>
+			<div class="item-label">DAN<br />PLEBISCITA</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu active bl">
+		    <div class="item-number">5</div>
+			<div class="item-label">PROCESI<br />DEMOKRATIZACIJE</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna2.html'">
+		    <div class="item-number">9</div>
+			<div class="item-label">SPOPADI</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit3.html'">
+		    <div class="item-number">3</div>
+			<div class="item-label">PO<br />PLEBISCITU</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu active content bl">
+		    <div class="item-content">
+			  <a href="#samostojnost21" onclick="hideBottomMenu()">Nove politične stranke</a><br />
+			  <a href="#samostojnost22" onclick="hideBottomMenu()">Demos</a><br />
+			  <a href="#samostojnost23" onclick="hideBottomMenu()">Volitve</a><br />
+			</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna3.html'">
+		    <div class="item-number">10</div>
+			<div class="item-label">KONEC<br />VOJNE</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost3.html'">
+		    <div class="item-number">6</div>
+			<div class="item-label">RAZGLASITEV<br />SAMOSTOJNOSTI</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost4.html'">
+		    <div class="item-number">7</div>
+			<div class="item-label">VARNOSTNI<br />VIDIKI</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		</tr>
+	  </table>
+    </div>
+
+	<!-- Previous and next buttons -->
+	<div class="nav-prev-btn" id="navPrevBtn">
+		<svg width="20px" height="30px" viewBox="0 0 20 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g id="nazaj_24" transform="translate(-19, -103)" stroke="#858585" stroke-width="6">
+					<polyline id="nazaj_24" transform="translate(30, 118) rotate(-180) translate(-30, -118)" points="24 106 36 118 24 130"></polyline>
+				</g>
+			</g>
+		</svg>
+	</div>
+	<div class="nav-next-btn" id="navNextBtn">
+		<center>
+		<svg width="20px" height="30px" viewBox="0 0 20 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g id="naprej_24" transform="translate(-204, -729)" stroke="#858585" stroke-width="6">
+					<polyline id="naprej_24" points="207 732 219 744 207 756"></polyline>
+				</g>
+			</g>
+		</svg>
+		</center>
+	</div>
+
+
+	<!-- Device orientation -->
+    <div id="device-orientation">
+	  <center>
+	    <div id="orientation-box">
+	      <p><img src="img/list_desno.svg" style="height:20vh"></p>
+	      <p>Ta stran se vidi najbolje, če
+		  <br />je naprava obrnjena vodoravno.</p>
+	    </div>
+	  </center>
+	</div>
+
+	<!-- Loading box -->
+    <div id="content-loading">
+	  <center>
+	    <div id="loading-box">
+	      <img src="img/nalaganje_opt.gif">
+	      <br />Nalaganje v teku ...
+	    </div>
+	  </center>
+	</div>
+
+	<!-- Modal: Ivan Oman -->
+	<div class="modal fade" id="popup_oman" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/oman.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Ivan Oman,<br />spletni vir: avtor Igor Napast, Večer
+						</div>
+					</span>
+					<p><b><span class="green">Ivan Oman</span> (1929–2019), slovenski politik.</b></p>
+					<p>Leta 1988 je prevzel vodenje iniciativnega odbora za ustanovitev Slovenske kmečke zveze in bil izvoljen za njenega predsednika. Sodeloval je pri vseh večjih dogodkih demokratizacije in osamosvajanja Slovenije. Bil je podpredsednik Demosa in sodeloval tudi pri ustanavljanju ostalih pomladnih strank. Leta 1990 je bil izvoljen za člana predsedstva Republike Slovenije, po osamosvojitvi leta 1992 pa za poslanca prvega Državnega zbora Republike Slovenije. Ivan Oman je prejemnik državnega odlikovanja Zlati častni znak svobode Republike Slovenije, in sicer za izjemne zasluge pri obrambi svobode in uveljavljanju suverenosti Republike Slovenije.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Dimitrij Rupel -->
+	<div class="modal fade" id="popup_rupel" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/rupel.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Dimitrij Rupel,<br />spletni vir: Dnevnik
+						</div>
+					</span>
+					<p><b><span class="green">Dimitrij Rupel</span> (1946–), slovenski sociolog, politik, diplomat, pisatelj, dramatik, urednik in publicist.</b></p>
+					<p>Bil je profesor na Fakulteti za sociologijo, politične vede in novinarstvo ter sodeloval v uredništvih več revij, med drugim Nove revije. Leta 1989 je bil med ustanovitelji stranke Slovenska demokratična zveza, med letoma 1990 in 1992 pa je bil prvi zunanji minister Republike Slovenije. Leta 1992 je bil izvoljen v prvi Državni zbor Republike Slovenije, decembra 1994 pa je bil izvoljen za ljubljanskega župana. Kasneje je opravljal funkciji veleposlanika Republike Slovenije v ZDA in ministra za zunanje zadeve ter kot posebni odposlanec za zunanje zadeve in svetovalec sodeloval v kabinetu predsednika vlade.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: France Tomšič -->
+	<div class="modal fade" id="popup_tomsic" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/tomsic.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						France Tomšič,<br />spletni vir: sds.si
+						</div>
+					</span>
+					<p><b><span class="green">France Tomšič</span> (1937–2010), slovenski sindikalni voditelj in politik.</b></p> 
+					<p>Po izobrazbi je bil strojni inženir. Decembra 1987, ko je bil še zaposlen v Litostroju, je vodil stavko tamkajšnjih delavcev. Bil je prvi predsednik Socialdemokratske zveze Slovenije. S sodelavko Alenko Orel je ustanovil prvo demokratično sindikalno centralo v Slovenji, Konfederacijo novih sindikatov Slovenije – KNSS Neodvisnost.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Jože Pučnik -->
+	<div class="modal fade" id="popup_pucnik" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/pucnik.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Jože Pučnik,<br />spletni vir: Reporter
+						</div>
+					</span>
+					<p><b><span class="green">Jože Pučnik</span> (1932–2003), slovenski politik in sociolog.</b></p>
+					<p>Zaradi kritičnih objav proti oblasti v Novi reviji in Perspektivah je bil v šestdesetih letih prejšnjega stoletja zaprt, potem pa je emigriral v Nemčijo. Tam je ponovno doštudiral, saj mu jugoslovanske oblasti niso hotele izdati potrdila o diplomi, in kasneje tudi doktoriral. Konec osemdesetih se je vrnil v Slovenijo in postal vodja koalicije Demos, ki je na prvih svobodnih volitvah leta 1990 zmagala in Slovenijo povedla na pot demokratizacije in tržnega gospodarstva. Jože Pučnik je kandidiral tudi na takratnih predsedniških volitvah, a je izgubil proti Milanu Kučanu, ki je postal prvi predsednik Republike Slovenije. Pučnik danes velja za enega od idejnih očetov slovenske osamosvojitve.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Lojze Peterle -->
+	<div class="modal fade" id="popup_peterle" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/peterle.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Lojze Peterle,<br />spletni vir: es.electionsmeter.com
+						</div>
+					</span>
+					<p><b><span class="green">Lojze Peterle</span> (1948–), slovenski politik.</b></p>
+					<p>V politično dogajanje se je vključil v osemdesetih letih, najprej prek Revije 2000 in Odbora za varstvo človekovih pravic. Bil je soustanovitelj slovenskega krščansko-socialnega gibanja, nato pa predsednik stranke Slovenski krščanski demokrati. Leta 1990 se je stranka priključila koaliciji Demos in na prvih večstrankarskih volitvah prejela največ glasov – Lojze Peterle je zato postal predsednik prve slovenske demokratično izvoljene vlade. Po osamosvojitvi Slovenije je postal predsednik izvršnega sveta (vlade) in zunanji minister. Kasneje je postal poslanec Evropskega parlamenta, leta 2007 pa je kandidiral tudi na predsedniških volitvah.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Jože Smole -->
+	<div class="modal fade" id="popup_smole" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/smole.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Jože Smole,<br />spletni vir: Wikipedija
+						</div>
+					</span>
+					<p><b><span class="green">Jože Smole</span> (1927–1996), slovenski novinar in politik.</b></p>
+					<p>Sodeloval je v NOB, po vojni pa nadaljeval z novinarstvom pri različnih revijah (Mladina, Tanjug, Borba, Delo) in bil predsednik Zveze novinarjev Jugoslavije. Med letoma 1968 in 1970 je bil Titov osebni tajnik in vodja kabineta predsednika republike. Bil je tudi jugoslovanski veleposlanik na Japonskem in v Sovjetski zvezi, nato pa član predsedstva Centralnega komiteja Zveze komunistov Jugoslavije. Na položaju predsednika Socialistične zveze delovnega ljudstva Slovenije je kot eden prvih vodil dialog z drugače mislečimi in odobraval demokratizacijo. Bil je tudi poslanec v skupščini Socialistične republike Slovenije.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Alojzij Šuštar -->
+	<div class="modal fade" id="popup_sustar" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/sustar.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Alojzij Šuštar,<br />spletni vir: lokalno.si
+						</div>
+					</span>
+					<p><b><span class="green">Alojzij Šuštar</span> (1920–2007), slovenski duhovnik in ljubljanski nadškof.</b></p>
+					<p>V Rimu, kjer so ga posvetili v duhovnika, je doktoriral iz teologije. Služboval je v Švici, predaval pa tudi v Nemčiji, Avstriji, Italiji in Franciji. Od leta 1971 do 1976 je bil stalni tajnik Sveta evropskih škofovskih konferenc (CCEE), leta 1980 pa ga je papež Janez Pavel II. imenoval za ljubljanskega nadškofa in metropolita. Bil je ustanovitelj in predsednik Slovenske škofovske konference, obenem pa tudi podpredsednik Sveta evropskih škofovskih konferenc. Nadškof Šuštar je pomembno podprl proces demokratizacije in osamosvojitve Slovenije ter s svojimi povezavami pripomogel k njenem mednarodnem priznanju.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Civilna družba -->
+	<div class="modal fade" id="popup_civilna_druzba" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Civilna družba</span></b></p>
+					<p>Civilna družba je temeljni del demokracije. Pomeni širok nabor organiziranja državljanov v skupine, ki delujejo izven okvira države ter so tej hkrati dopolnitev in protiutež. Med raznolike organizacije civilne družbe sodijo sindikati, humanitarne organizacije, gospodarske in poklicne zbornice, verske in mladinske organizacije, športna in kulturna društva, družbena gibanja in civilne pobude (iniciative). Vsem oblikam civilnega združevanja je skupno to, da zagovarjajo skupne interese svojih članov. Civilna družba v razvitih demokracijah skrbi za uveljavljanje interesov državljanov in nadzoruje delo državnih organov.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Pravna država -->
+	<div class="modal fade" id="popup_pravna_drzava" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Pravna država</span></b></p>
+					<p>Pravna država je Moderna država, v kateri je delovanje državnih organov določeno z zakoni in v kateri so zagotovljene temeljne pravice. Pravna država je organizirana kot demokratična država, ki temelji na načelu delitve oblasti in vladavini prava. Temelji na pravilih, ki so predpisana v ustavi in zakonih, ter pravilih neodvisnih sodišč.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Večinski sistem -->
+	<div class="modal fade" id="popup_vecinski_sistem" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Večinski volilni sistem</span></b></p>
+					<p>Večinski volilni sistem deluje po principu izvoljene večine. Poznamo večinski sistem relativne večine in večinski sistem absolutne večine. Prvi je najenostavnejši in tudi najstarejši volilni sistem, pri katerem kandidatu za osvojitev mandata zadostuje že glas več od drugega najboljšega kandidata po številu dobljenih glasov volivcev. Sistem absolutne večine pa je na primer v rabi pri predsedniških volitvah v Sloveniji. Kandidat lahko zmaga že v prvem krogu, če zanj glasuje več kot 50 odstotkov udeležencev volitev, če pa dobi manj glasov, se v drugem krogu pomeri s tistim, ki je bil v prvem krogu drugi po številu pridobljenih glasov.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Proporcionalni sistem -->
+	<div class="modal fade" id="popup_proporcionalni_sistem" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Proporcionalni volilni sistem</span></b></p>
+					<p>Proporcionalni volilni sistem, na podlagi katerega volimo tudi v Sloveniji, omogoča, da se volilni rezultat enakomernejše porazdeli med poslanske sedeže v državnem zboru. Poslanski sedeži se delijo po določenih formulah, pri čemer poznamo d'Hondtov, Harejev in Droopov sistem delitve sedežev. V proporcionalnem sistemu volivci ne odločajo o posameznih imenih, ampak o listi kandidatov, ki jih oblikujejo stranke. Vlado sestavi več strank, ki skupaj tvorijo koalicijo, zato obstaja manj možnosti za zlorabo oblasti.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Hubert Požarnik -->
+	<div class="modal fade" id="popup_pozarnik" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/pozarnik.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Hubert Požarnik,<br />spletni vir: Reporter
+						</div>
+					</span>
+					<p><b><span class="green">Hubert Požarnik</span> (1937–), slovenski klinični psiholog, psihoterapevt, pisatelj, publicist, ekolog in politik.</b></p>
+					<p>Bil je soustanovitelj koalicije Demos.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Milan Kučan -->
+	<div class="modal fade" id="popup_kucan" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/kucan.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Milan Kučan,<br />spletni vir: e-Maribor
+						</div>
+					</span>
+					<p><b><span class="green">Milan Kučan</span> (1941–), slovenski politik.</b></p>
+					<p>Med letoma 1968 in 1969 je bil predsednik Zveze socialistične mladine Slovenije, nato pa najprej član sekretariata in leta 1973 sekretar Zveze komunistov Slovenije. Leta 1978 je postal predsednik Skupščine Socialistične republike Slovenije, leta 1982 pa slovenski predstavnik v predsedstvu Centralnega komiteja Zveze komunistov Jugoslavije. Med letoma 1986 in 1988 je opravljal funkcijo predsednika predsedstva Centralnega komiteja Zveze komunistov Slovenije. Na prvih demokratičnih volitvah v Republiki Sloveniji aprila 1990 je bil izvoljen za predsednika predsedstva Republike Slovenije, po osamosvojitvi Slovenije pa se je skladno z ustavo njegova funkcija preimenovala v predsednika Republike Slovenije. Za predsednika je bil ponovno izvoljen leta 1992 na prvih volitvah v samostojni Sloveniji in nato še leta 1997 na drugih. Mandat se mu je iztekel leta 2002. Leta 2012 je ustanovil Društvo Forum21 in postal njegov predsednik.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Marko Demšar -->
+	<div class="modal fade" id="popup_demsar" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/demsar.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Marko Demšar,<br />spletni vir: Viva
+						</div>
+					</span>
+					<p><b><span class="green">Marko Demšar</span> (1936–), doktor medicine, specialist radiologije in politik.</b></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Ivan Kramberger -->
+	<div class="modal fade" id="popup_kramberger" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/kramberger.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Ivan Kramberger,<br />spletni vir: Prlekija-on.net
+						</div>
+					</span>
+					<p><b><span class="green">Ivan Kramberger</span> (1936–1992), slovenski pisatelj, izumitelj in politik.</b></p>
+					<p>Njegov vzdevek je bil »Dobrotnik iz Negove«. Izšolal se je za dimnikarja, v šestdesetih letih pa je odšel v Nemčijo in se tam izobrazil za dializnega tehnika. Patentiral je dopolnjen stroj za dializo, nato pa kupoval odslužene dializne aparate, jih izpopolnjeval ter podarjal institucijam v domovini. Leta 1983 se je invalidsko upokojil in se vrnil v Slovenijo. Postal je izredna osebnost v slovenskem medijskem in političnem prostoru. Pogosto je imel politično obarvane govore in pisal knjige. S podporo ljudskih glasov je kandidiral na predsedniških volitvah aprila 1990. Leta 1992 je napovedal, da se bo s svojo stranko udeležil volitev v državni zbor, a je bil še pred uradnim začetkom volilne kampanje ustreljen. Njegova smrt je sprožila vrsto špekulacij in teorij o motivih umora.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Ciril Zlobec -->
+	<div class="modal fade" id="popup_zlobec" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/zlobec.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Ciril Zlobec,<br />spletni vir: avtor Bojan Puhek, Siol
+						</div>
+					</span>
+					<p><b><span class="green">Ciril Zlobec</span> (1925–2018), slovenski pesnik, pisatelj, publicist, prevajalec, novinar in politik.</b></p>
+					<p>Med 2. svetovno vojno je bil partizan, po vojni pa je dokončal študij slavistike. Po študiju je delal kot novinar in urednik ter se ukvarjal s prevajanjem. V Zvezi komunistov Slovenije je imel več političnih funkcij, bil pa je tudi poslanec v Skupščini Socialistične republike Slovenije, podpredsednik Socialistične zveze delovnega ljudstva Slovenije, predsednik Sveta Univerze v Ljubljani in predsednik Zveze pisateljev Jugoslavije. Na aprilskih volitvah leta 1990 je bil izvoljen za člana predsedstva Republike Slovenije. Ustvaril je obsežen literarni opus, bil je član SAZU-ja in Evropske akademije znanosti in umetnosti, trideset let pa tudi glavni urednik literarne revije Sodobnost.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Matjaž Kmecl -->
+	<div class="modal fade" id="popup_kmecl" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/kmecl.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Matjaž Kmecl,<br />spletni vir: Dnevnik
+						</div>
+					</span>
+					<p><b><span class="green">Matjaž Kmecl</span> (1934–), slovenski literarni zgodovinar, slovenist, teoretik in politik.</b></p>
+					<p>V sedemdesetih letih je služboval kot profesor zgodovine slovenske književnosti na Filozofski fakulteti v Ljubljani, med letoma 1977 in 1979 pa je bil tudi dekan iste fakultete. V letih 1979–1980 je pri republiški Socialistični zvezi delovnega ljudstva vodil Sekcijo za slovenščino v javnosti in Jezikovno razsodišče. Nato je leta 1982 postal predsednik Republiškega komiteja za kulturo (do 1986) in bil izvoljen v predsedstvo Centralnega komiteja Komunistične partije Slovenije (do 1990). Na aprilskih volitvah 1990 je bil izvoljen v predsedstvo države, kasneje pa je nekaj časa vodil Svet za kulturo Republike Slovenije. Sodeloval je pri različnih strokovnih projektih, v uredništvih in organih ter z različnimi evropskimi univerzami. Bil je tudi predsednik sveta Borštnikovega srečanja, Mladinske knjige, Triglavskega narodnega parka in SNG Drame v Ljubljani. Je tudi član SAZU-ja in predsednik Valvasorjeve fundacije pri SAZU-ju.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Dušan Plut -->
+	<div class="modal fade" id="popup_plut" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/plut.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Dušan Plut,<br />spletni vir: Nova24TV
+						</div>
+					</span>
+					<p><b><span class="green">Dušan Plut</span> (1950–), slovenski geograf in pedagog ter profesor na Filozofski fakulteti v Ljubljani.</b></p>
+					<p>Leta 1989 je postal ustanovni predsednik Zelenih Slovenije, ki so se z osmimi delegati uvrstili v takratni Družbenopolitični zbor in vstopili v Demosovo vlado. Leta 1990 je bil izvoljen v prvo republiško predsedstvo.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: France Bučar -->
+	<div class="modal fade" id="popup_bucar" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/22/photo/bucar.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						France Bučar,<br />spletni vir: Siol
+						</div>
+					</span>
+					<p><b><span class="green">France Bučar</span> (1923–2015), slovenski pravnik in politik.</b></p>
+					<p>Velja za starosto slovenske politike in enega od očetov slovenske osamosvojitve. Med 2. svetovno vojno se je pridružil NOB, po vojni pa je nekaj časa deloval v organizacijah KNOJ in OZNA. Služboval je v različnih državnih uradih, v šestdesetih letih pa je začel predavati na Pravni fakulteti v Ljubljani. V sedemdesetih je bil zaradi kritičnih idej razglašen za oporečnika. Z opozicijo je začel sodelovati ob ustanavljanju Nove revije in sodeloval pri njeni 57. številki leta 1987. Leta 1989 je bil med soustanovitelji Slovenske demokratične zveze in z njo kot del Demosa zmagal na prvih demokratičnih volitvah v Sloveniji. Med letoma 1990 in 1992 je bil predsednik Skupščine Republike Slovenije in ena vodilnih osebnosti procesa osamosvojitve Slovenije. Skupaj s Petrom Jambrekom je bil tudi glavni avtor prve slovenske ustave. Leta 1992 je bil izvoljen v prvi Državni zbor Republike Slovenije in bil član raznih delovnih teles. Po neuspešni kandidaturi za predsednika Slovenije leta 2002 se je posvetil publicistiki, bil je tudi predsednik Slovenskega panevropskega gibanja. Prejel je najvišje odlikovanje Republike Slovenije – red za izredne zasluge.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: Prva vlada -->
+	<!-- dinamično spreminjanje podatkov za vsakega člana prve vlade -->
+	<div class="modal fade" id="prva_vlada" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p id="oseba_ime">Janez Novak</p>
+					<p id="oseba_funkcija" class="bottom-note">funkcija, ki jo opravlja</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Main page content -->
+    <div class="main-content">
+
+		<div class="heading-box heading-bg">
+		  <div class="heading-number">5</div>
+		  <div class="heading-title">PROCESI<br />DEMOKRATIZACIJE</div>
+		  <div class="scroll-indicator">
+		    <img src="img/scroll_indicator2.png">
+		  </div>
+		</div>
+
+		<!------------------------------
+		//  PART 1
+		//----------------------------->
+		<div class="cover-box rel pointer" id="samostojnost21"><!-- MUST use "rel" -->
+		  <div class="heading-last-diagonal wd"></div>
+		  <div class="cover-box-title">
+			<div class="frame">
+			  NOVE<br /><span class="green">POLITIČNE<br />STRANKE</span>
+			</div>
+		  </div>
+		  <div class="intro-first-diagonal wd"></div>
+		</div>
+
+		<div class="intro-box w80" style="margin-left:-2px">
+		  <div class="h20 flex-row">
+		    <div class="intro-title"></div>
+		  </div>
+		  <div class="h60 flex-row">
+		    <div class="intro-content">
+		    Politične, gospodarske in socialne razmere v jugoslovanski federaciji so se konec osemdesetih hitro slabšale, partijski vrh pa je še vedno vztrajal pri tem, da oblasti ne bo delil z nikomer. V Sloveniji se je iz civilnodružbenih gibanj pospešeno razvijala politična opozicija, ki je zahtevala ukinitev oblastnega monopola zveze komunistov in uvedbo demokracije. Leta 1989 so nastale najpomembnejše slovenske opozicijske stranke. Kljub različnim programom in usmeritvam so si bile njihove temeljne zahteve podobne – zavzemale so se za večjo samostojnost Slovenije in razvoj politične demokracije. Večina novonastalih gibanj in strank je bila do razmer v državi kritična in je zagovarjala spremembe na gospodarskem, zdravstvenem, šolskem, socialnem, vojaškem in zunanjepolitičnem področju, pa tudi tesnejše povezovanje slovenskega in jugoslovanskega prostora z Evropo in svetom. 
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box" id="casovni_trak_stranke">
+		  <div class="blue-last-diagonal wd"></div>
+		  <div id="timeline-iframe" class="mt-auto mb-auto ml4 mr4 h60">
+			<iframe src="samostojnost2-trak.html"class="h50 w100" style="border:none;"></iframe>
+			<div class="bottom-note w60 mb-auto">
+			  Nastanek najpomembnejših opozicijskih strank.
+			</div>
+		  </div>
+		  <div class="content-box-inner flex-column-space">
+			<div class="mt-auto">
+		      <div class="text-level1 w40 h60">
+				V prvih mesecih svojega obstoja so se novonastale zveze in gibanja srečevale z različnimi težavami, ki so ovirale njihov obstoj in razvoj. Politično prizorišče je bilo namreč po desetletjih prepovedanega političnega združevanja in enostrankarskega sistema zelo zaprto in okorno. Pripadniki novih strank so bili velikokrat deležni poskusov zastraševanja in so se srečevali s finančnimi težavami. Tudi v medijih, glasnikih vladajoče politike, so naleteli na izrazito odklonilen sprejem.
+			  </div>
+			</div>
+		  </div>
+		  <div class="content-box-inner flex-column-space">
+			<div class="mt-auto ml8 mr8">
+		      <div class="flex-column">
+				<img src="media/22/diareja_mladina_1_01.jpg" class="h50 pointer" id="diareja_mladina_1_01">
+			    <div class="bottom-note w60 mb-auto">
+				  Množično ustanavljanje novih strank
+			    </div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="flex-column">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+
+	      <div class="flex-row ml8">
+		    <div class="news-column news_up img-vertical-scroll w40 pointer" id="news1_1">
+			  <img src="thumb/22/news1/01a.jpg" class="p2">
+			  <img src="thumb/22/news1/01b.jpg" class="p2">
+			  <img src="thumb/22/news1/01c.jpg" class="p2">
+			  <img src="thumb/22/news1/01d.jpg" class="p2">
+		    </div>
+		  </div>
+
+		  <div class="content-box-inner flex-column-space">
+		    <div class="mb-auto ml8 mr4">
+		      <div class="text-level2 w50">
+				<b>SLOVENSKA KMEČKA ZVEZA</b><br />
+				Slovenska kmečka zveza z <a href="#" class="news-popup-link" data-toggle="modal" data-target="#popup_oman">Ivanom Omanom</a> na čelu je nastala 12. maja 1988 in je bila prva politična organizacija v času obnavljanja političnega pluralizma. Zastopala je stanovske interese kmetov, se zavzemala za razvoj kmetij, prenovo zadružništva, pravično davčno politiko, vrnitev krivično odvzete lastnine, skladen regionalni razvoj Slovenije ter tržno gospodarstvo po načelih ekoloških in socialnih smernic. Konec leta 1990 se je zveza preimenovala v Slovensko kmečko zvezo – Ljudsko stranko, po osamosvojitvi pa v Slovensko ljudsko stranko.
+			  </div>
+			</div>
+		  </div>
+
+	      <div class="news-single h60 mt-auto mb-auto" style="width:60vh">
+			<img src="media/22/news1/02.jpg" style="width:57vh;height:60vh" class="p2 pointer" id="ustanovitev_skz">
+		  </div>
+
+		  <div class="content-box-inner h60 ml8 mr4">
+			<img src="img/video_ozadje.svg" class="crt pointer" id="video_oman">
+		    <div class="news-bottom-note w60">
+		      Ivan Oman na zborovanju v Dornberku 11. novembra 1989 
+		    </div>
+		  </div>
+
+		  <div class="content-box-inner flex-column-space">
+		    <div class="mb-auto ml8">
+			  <div class="h50 flex-row mr1rem">
+		        <div class="text-level2 w50" style="padding-right:4vh">
+				  <b>SLOVENSKA DEMOKRATIČNA ZVEZA</b><br />
+				  Slovenska demokratična zveza (SDZ) je bila ustanovljena 11. januarja 1989 in je bila prva prava opozicijska politična stranka. V njenem programu so bile zbrane vse zahteve takratne opozicije, med drugim parlamentarna in strankarska demokracija, tržno gospodarstvo in varstvo okolja. Prvi predsednik stranke je postal <a href="#" class="news-popup-link" data-toggle="modal" data-target="#popup_rupel">Dimitrij Rupel</a>.
+				</div>
+			  </div>
+		      <div class="flex-row">
+		        <div class="news-note-left w50 mt-auto mb-auto">
+		          Ustanovitev slovenske demokratične zveze<br />v Cankarjevem domu 11. januarja 1989.
+		        </div>
+		      </div>
+			</div>
+		  </div>
+
+	      <div class="news-single h100 mt-auto mb-auto" style="width:70vh">
+			<img src="media/22/photo/ustanovitev_sdz.jpg" style="width:66vh;height:100vh" class="pointer" id="ustanovitev_sdz">
+		  </div>
+
+		  <div class="content-box-inner flex-column-space">
+		    <div class="mb-auto ml8 mr4">
+		      <div class="text-level2 w50">
+				<b>SOCIALDEMOKRATSKA ZVEZA SLOVENIJE</b><br />
+				Ideja za ustanovitev Socialdemokratske zveze Slovenije se je porodila že med stavko delavcev Litostroja, decembra 1987. Pobudnikom stavke so se kmalu pridružili tudi ostali somišljeniki in se organizirali v stranko Socialdemokratska zveza Slovenije (SDZS), na čelu katere je bil <a href="#" class="news-popup-link" data-toggle="modal" data-target="#popup_tomsic">France Tomšič</a>. Stranka si je prizadevala za suvereno državo, večstrankarski parlamentarni sistem, učinkovit gospodarski sistem ter zaščito in varovanje okolja. Leta 1989 je vodenje stranke prevzel <a href="#" class="news-popup-link" data-toggle="modal" data-target="#popup_pucnik">Jože Pučnik</a>, leto kasneje pa se je zveza preimenovala v Socialdemokratsko stranko Slovenije.
+			  </div>
+			</div>
+		  </div>
+
+	      <div class="flex-row">
+		    <div class="news-column news_up img-vertical-scroll w40 pointer" id="news1_2">
+			  <img src="thumb/22/news1/03.jpg" class="p2">
+			  <img src="thumb/22/news1/04.jpg" class="p2">
+			  <img src="thumb/22/news1/05.jpg" class="p2">
+		    </div>
+		  </div>
+
+		  <div class="content-box-inner h60 ml8 mr4">
+			<img src="img/video_ozadje.svg" class="crt pointer" id="video_pucnik">
+		    <div class="news-bottom-note w60">
+		      Jože Pučnik na zborovanju v Dornberku 11. novembra 1989 
+		    </div>
+		  </div>
+
+		  <div class="content-box-inner flex-column-space">
+		    <div class="mb-auto ml8 mr4">
+		      <div class="text-level2 w50">
+				<b>NASTANEK SLOVENSKEGA KRŠČANSKO-SOCIALNEGA GIBANJA</b><br />
+				Pobudo za ustanovitev slovenskega krščansko-socialnega gibanja je podalo uredništvo Revije 2000, urednik Peter Kovačič pa je postal prvi predsednik. V začetku novembra 1989 se je gibanje preimenovalo v Slovenske krščanske demokrate (SKD), položaj predsednika pa je prevzel <a href="#" class="news-popup-link" data-toggle="modal" data-target="#popup_peterle">Lojze Peterle</a>. Med drugim je stranka zahtevala pravico do javnega spomina na vse mrtve, rehabilitacijo po krivici obsojenih in odpravo vseh ideoloških ovir v družbi.
+			  </div>
+			</div>
+		  </div>
+
+	      <div class="flex-row mr8">
+		    <div class="news-column news_up img-vertical-scroll w40 pointer" id="news1_3">
+			  <img src="thumb/22/news1/11.jpg" class="p2">
+			  <img src="thumb/22/news1/12.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+		  <div class="content-box-inner h60 flex-column ml8">
+		    <div class="text-level1 w60 h30">
+		      Razlog spreminjajočih se političnih razmer v drugi polovici osemdesetih let so bile tudi spremembe v vodstvih obeh vodilnih slovenskih družbenopolitičnih organizacij. V Zvezi komunistov Slovenije (ZKS) je v nasprotju z ustaljeno prakso začelo prihajati do nesoglasij med starejšimi in mlajšimi politiki. Slednji so vse bolj kritizirali obstoječe razmere in izražali neodobravanje s politiko stranke, kar je pripeljalo do krize in osipa članstva. 
+		    </div>
+			<img src="media/22/news1/21.jpg" style="width:77vh;height:30vh" class="pointer" id="news1_4">
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column h70 w60 mt-auto mb-auto ml8 mr8">
+			<div class="h50 mt-auto">
+			  <img src="media/22/karikatura_delegacija.jpg" class="h40 pointer" id="karikatura_delegacija">
+			</div>
+			<div class="text-level2 h20 mt-auto">
+			  Prelomen dogodek v ZKS je bil 14. izredni kongres Zveze komunistov Jugoslavije (ZKJ), 22. januarja 1990 v Beogradu. Slovenski delegati so na njem predlagali demokratične reforme za celotno Jugoslavijo ter reformo federacije in ZKJ, a so bili vsi predlogi zavrnjeni. Zaradi neupoštevanja njenih stališč in zavračanja zahtev je slovenska delegacija protestno zapustila kongres, ki je bil, kot se je pozneje izkazalo, zadnji – Zveza komunistov Jugoslavije je razpadla, Zveza komunistov Slovenije pa se je preoblikovala in preimenovala v Stranko demokratične prenove.
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="flex-column">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+	      <div class="flex-row ml8 mr8">
+		    <div class="news-column news_up img-vertical-scroll w40 pointer" id="news1_5">
+			  <img src="thumb/22/news1/22.jpg" class="p2">
+			  <img src="thumb/22/news1/23.jpg" class="p2">
+			  <img src="thumb/22/news1/24.jpg" class="p2">
+			  <img src="thumb/22/news1/25.jpg" class="p2">
+			  <img src="thumb/22/news1/26.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+		  <div class="content-box-inner flex-column-space">
+			<div class="ml8 mb-auto">
+		      <div class="text-level2 w50">
+				Vodstvo Socialistične zveze delovnega ljudstva je leta 1986 prevzel <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_smole">Jože Smole</a>, ki je zavzel strpnejšo držo do verujočih. Izboljševanje pogojev za vernike je potekalo v soglasju med Socialistično zvezo delovnega ljudstva Slovenije (SZDLS) in slovensko Rimskokatoliško cerkvijo, ki jo je vodil nadškof <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_sustar">Alojzij Šuštar</a>. Slednji je lahko leta 1986 prvič po letu 1952, ko je bil božič odpravljen kot dela prost dan, vernikom voščil po radiu. V naslednjih letih so se začele odpirati tudi druge teme v povezavi s Cerkvijo – o božiču kot dela prostem dnevu, možnostih dostopa vernikov do medijev, verski oskrbi zapornikov in bolnikov ... Socialistična zveza delovnega ljudstva se je v začetku januarja 1990 preimenovala v Socialistično zvezo Slovenije, nato pa v Socialistično stranko Slovenije.
+			  </div>
+			</div>
+		  </div>
+
+	      <div class="ml8 mr8 news-single h60 mt-auto mb-auto" style="width:61vh">
+			<img src="media/22/news1/31.jpg" style="width:61vh;height:60vh" class="p2 pointer" id="news1_6">
+		  </div>
+
+		  <div class="content-box ml8">
+			<div class="h60 content-box-inner">
+				<img src="media/22/karikatura_staro_novo.jpg" class="h60 pointer" id="karikatura_staro_novo">
+			</div>
+		  </div>
+
+		  <div class="content-box-inner flex-column-space">
+			<div class="ml8 mb-auto">
+		      <div class="text-level2 w50">
+				Tudi Zveza socialistične mladine Slovenije je v kontekstu političnih sprememb razvila številne politične pobude in vse bolj kritizirala obstoječi sistem. Podprla je različne alternativne skupine in gibanja ter sodelovala tudi z nastajajočo opozicijo. Skladno s tem je jeseni 1989 predstavila nov pomen svojih kratic – Za svobodo mislečega sveta. V novem programu se je zavzemala za parlamentarno demokracijo, tržno gospodarstvo in ekološko ozaveščenost. Leto kasneje je spremenila ime v Liberalno demokratsko stranko (LDS). 
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8 mr4">
+			<div class="h60 mt-auto mb-auto">
+			  <div><img src="thumb/22/news1/41.jpg" class="h25 pointer" id="news1_7"></div>
+			  <div class="h10">&nbsp;</div>
+			  <div><img src="thumb/22/news1/42.jpg" class="h25 pointer" id="news1_8"></div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space">
+			<div class="mt-auto ml8 mr8">
+		      <div class="flex-column">
+				<img src="media/22/diareja_mladina_1_02.jpg" class="h50 pointer" id="diareja_mladina_1_02">
+			    <div class="bottom-note w60 mb-auto">
+				  Ustanovljena prva ekološka stranka pri nas
+			    </div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space">
+			<div class="ml4 mb-auto">
+		      <div class="text-level1 w60">
+				Spremembe jugoslovanske ustave iz leta 1974, ki so odpravile temeljna načela federativne ureditve, so v Sloveniji spodbudile nastanek in organiziranje ustavne opozicije. Februarja 1989 je sedem slovenskih društev in organizacij ustanovilo Zbor za ustavo, ki je v naslednjih mesecih pripravil vrsto predlogov za spremembo slovenske ustave. Le-ta naj bi zagotovila politični pluralizem, ekonomsko suverenost in pravico do samoodločbe.<br />
+				Zbor je s svojimi predlogi glede ustavnih sprememb močno vplival na delo ustavne komisije. Oblikovanje dopolnil k slovenski ustavi je mesece burilo duhove v slovenski javnosti ter sprožalo odločna nasprotovanja najvišjih jugoslovanskih državnih in partijskih oblasti. Enainosemdeset amandmajev, ki so bili sprejeti 27. septembra 1989, je temeljno spremenilo republiško ustavo in pomenilo velik korak v smeri večstrankarske parlamentarne demokracije.
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner gallery-2rows-zigzag h70 ml8 flex-zigzag pointer" style="width:159vh" id="docs1_amandmaji">
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/amandmaji01.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/amandmaji02.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item zigzag-offset-top">
+			  <img src="thumb/22/docs1/amandmaji03.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/amandmaji04.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/amandmaji05.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/amandmaji06.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item zigzag-offset-top">
+			  <img src="thumb/22/docs1/amandmaji07.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/amandmaji08.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/amandmaji09.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/amandmaji10.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item zigzag-offset-top">
+			  <img src="thumb/22/docs1/amandmaji11.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/amandmaji12.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/amandmaji13.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/amandmaji14.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item zigzag-offset-top">
+			  <img src="thumb/22/docs1/amandmaji15.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/amandmaji16.jpg" class="p2">
+			</div>
+		  </div>
+	      <div class="flex-column">
+		    <div class="content-box-inner">
+			  <div class="side-note w25 mb-auto">
+			  Ustavni amandmaji
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Z dopolnili je bila uveljavljena pravica slovenskega naroda do samoodločbe in pravica, da lahko izredne razmere v Sloveniji razglasi le slovenska skupščina. Amandmaji so določali tudi, da v družbenopolitičnem življenju enakopravno sodelujejo vse organizacije delovnih ljudi in občanov, ki delujejo v skladu z ustavo, s čimer je bila odprta možnost za delovanje političnih strank. Nadalje je bil za uresničevanje suverenih pravic Slovenije uveden referendum, kot državna himna pa je bila določena Zdravljica. Drugi ustavni amandmaji so omogočali prehod iz socialističnega v tržno gospodarstvo ter zmanjšali nekatere pristojnosti federacije v Sloveniji, odpravljena pa je bila tudi smrtna kazen. 
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner gallery-2rows-zigzag h70 ml8 flex-zigzag pointer" style="width:140vh" id="docs1_zvs">
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zvs01.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zvs02.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item zigzag-offset-top">
+			  <img src="thumb/22/docs1/zvs03.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zvs04.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zvs05.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zvs06.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item zigzag-offset-top">
+			  <img src="thumb/22/docs1/zvs07.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zvs08.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zvs09.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zvs10.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item zigzag-offset-top">
+			  <img src="thumb/22/docs1/zvs11.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zvs12.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zvs13.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zvs14.jpg" class="p2">
+			</div>
+		  </div>
+	      <div class="flex-column ml1rem">
+		    <div class="h30 content-box-inner">
+			  <div class="side-note w25 mb-auto">
+			  Zakon o volitvah v skupščine,<br />27. december 1989.
+			  </div>
+			</div>
+			<div>
+			  <div class="text-level2 h30 w30">
+			  Skupščina socialistične republike Slovenije je 27. decembra 1989 sprejela Zakon o volitvah v skupščine in Zakon o političnem združevanju. 
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner gallery-2rows-zigzag h70 ml8 flex-zigzag pointer" style="width:80vh" id="docs1_zpz">
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zpz01.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zpz02.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item zigzag-offset-top">
+			  <img src="thumb/22/docs1/zpz03.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zpz04.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zpz05.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item">
+			  <img src="thumb/22/docs1/zpz06.jpg" class="p2">
+			</div>
+			<div class="gallery-zigzag-item zigzag-offset-top">
+			  <img src="thumb/22/docs1/zpz07.jpg" class="p2">
+			</div>
+		  </div>
+	      <div class="flex-column ml1rem">
+		    <div class="content-box-inner">
+			  <div class="side-note w25 mb-auto">
+			  Zakon o političnem združevanju
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8">
+			<div class="h80 mt-auto mb-auto">
+			  <div><img src="media/22/news1/51.jpg" class="h80 pointer" id="news1_9"></div>
+			</div>
+		  </div>
+
+		  <div class="content-box-inner flex-column-space">
+			<div class="mt-auto ml8 mr8">
+		      <div class="flex-column">
+				<img src="media/22/diareja_mladina_1_03.jpg" class="h50 pointer" id="diareja_mladina_1_03">
+			    <div class="bottom-note w60 mb-auto">
+				  Politika izgublja podporo ljudstva
+			    </div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="heading-first-diagonal wd"></div>
+		</div>
+
+		<!------------------------------
+		//  PART 2
+		//----------------------------->
+		<div class="cover-box rel pointer" style="margin-left:-1px" id="samostojnost22"><!-- MUST use "rel" -->
+		  <div class="heading-last-diagonal wd"></div>
+		  <div class="cover-box-title">
+			<div class="frame">
+			  DEMOS</span>
+			</div>
+		  </div>
+		  <div class="intro-first-diagonal wd"></div>
+		</div>
+
+		<div class="intro-box w80" style="margin-left:-1px">
+		  <div class="h20 flex-row">
+		    <div class="intro-title"></div>
+		  </div>
+		  <div class="h60 flex-row">
+		    <div class="intro-content">
+		    Voditelji novonastalih političnih strank so bili mnenja, da se morajo opozicijske sile združiti in skupaj nastopiti na pomladnih volitvah leta 1990, saj lahko le tako premagajo dotedanjo oblast. Iz tega prepričanja je nastal Demos, demokratična opozicija Slovenije. Pogajanja o ustanovitvi skupne predvolilne koalicije so se začela sredi oktobra 1989, na njih pa so sodelovali predstavniki Slovenske kmečke zveze, Slovenske socialdemokratske zveze in Slovenske demokratične zveze. 
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="blue-last-diagonal wd"></div>
+	      <div class="flex-column ml8 mr8">
+			<div class="h80 mt-auto mb-auto">
+			  <div><img src="media/22/photo/demos.jpg" class="h80 pointer" id="photo_demos"></div>
+			  <div class="bottom-note w60 mb-auto">
+				Koalicija Demos, Ljubljana, 8. januar 1990.
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Sporazum o ustanovitvi koalicije Demos so 27. novembra 1989 podpisali dr. Jože Pučnik, dr. Hubert Požarnik, Ivan Oman in Lojze Peterle. V Demosu so sodelovale Slovenska demokratična zveza, Socialdemokratska zveza Slovenije in Slovenski krščanski demokrati, njegov program pa je podpirala tudi Slovenska kmečka zveza. Slednja je k Demosu pristopila v začetku leta 1990, ko so h koaliciji pristopili tudi Zeleni Slovenije, kmalu zatem pa sta sledili še Slovenska obrtniška stranka in Sivi panterji. V vodstvu Demosa sta bila po dva predstavnika vsake izmed članic, predsednik koalicije je postal dr. Jože Pučnik, podpredsednika pa dr. Dimitrij Rupel in Lojze Peterle.  
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8">
+			<div class="h80 mt-auto mb-auto">
+			  <div style="height:35vh">
+			    <img src="media/22/docs2/plakat_demos.jpg" class="h25 pointer" id="plakat_demos">
+			    <div class="bottom-note w30 mb-auto">
+				  Plakat Demosa
+				</div>
+			  </div>
+			  <div><img src="media/22/docs2/cas_za_demos.jpg" class="pointer" style="height:45vh" id="cas_za_demos"></div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space ml8 mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Demosov program je bil predstavljen januarja 1990 v Cankarjevem domu. Sestavljalo ga je osem točk, ki so se dotikale področja državne ureditve, gospodarstva, kmetijstva, varstva okolja, zdravstva, šolstva in kulture, socialne politike in obrambe. Temeljne zahteve je Demos gradil na osnovi Prispevkov za slovenski nacionalni program in Majniške deklaracije, najpomembnejši pa sta bili vzpostavitev <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_civilna_druzba">civilne družbe</a>, <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_pravna_drzava">pravne države</a> in pluralne demokracije ter nacionalna, politična in gospodarska samostojnost slovenskega naroda.  
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Demos se je zavzemal za miren prehod iz totalitarizma v demokratično urejeno družbo in narodno spravo. Želel je samostojno Slovenijo kot pravno državo, ki bi upoštevala človekove pravice in svoboščine ter spoštovala mednarodne obveznosti. Na gospodarskem področju se je Demos zavzemal za svobodno podjetništvo, tržne zakonitosti, večje ugodnosti za zasebno kmetijstvo in ekološko predelavo hrane. Poleg tega je koalicija želela tudi kakovostno zdravstvo in šolstvo, spodbujanje kulturne ustvarjalnosti, ohranjanje socialnih pravic in vzpostavitev slovenske vojske.  
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8">
+			<div class="h80 mt-auto mb-auto">
+			  <div><img src="media/22/docs2/sporazum_demos1.jpg" class="h80 pointer" id="docs2_demos"></div>
+			</div>
+		  </div>
+	      <div class="flex-column ml4">
+			<div class="h80 mt-auto mb-auto">
+			  <div><img src="media/22/docs2/sporazum_demos2.jpg" class="h80 pointer" id="docs2_demos"></div>
+			</div>
+		  </div>
+		</div>
+        <div class="content-box">
+          <div class="content-box-inner w25">
+            <div class="flex-row mb-auto ml1rem">
+              <div class="side-note">
+                Sporazum o ustanovitvi Demosa.
+              </div>
+            </div>
+          </div>
+        </div>
+
+		<div class="content-box">
+	      <div class="flex-column mr8">
+			<div class="h50 mt-auto mb-auto">
+			  <img src="media/22/diareja_mladina_2_01.jpg" class="h50 pointer" id="diareja_mladina_2_01">
+			  <div class="bottom-note w60">
+			    Hočemo Demos, hočemo DEM
+				<br /><br />
+				DEM oziroma nemška marka je bila nekakšna vzporedna valuta v Jugoslaviji v času hiperinflacije, ko je vrednost dinarja drastično padala.
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column">
+			<div class="h60 mt-auto mb-auto">
+			  <div><img src="media/22/docs2/demos_pogacnik.jpg" class="h60 pointer" id="demos_pogacnik"></div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box ml8">
+		  <div class="content-box-inner flex-column-space">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Takoj po ustanovitvi se je Demos začel aktivno pripravljati na prve demokratične parlamentarne volitve po 2. svetovni vojni.  
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="heading-first-diagonal wd"></div>
+		</div>
+
+		<!------------------------------
+		//  PART 3
+		//----------------------------->
+		<div class="cover-box rel pointer" style="margin-left:-1px" id="samostojnost23"><!-- MUST use "rel" -->
+		  <div class="heading-last-diagonal wd"></div>
+		  <div class="cover-box-title">
+			<div class="frame">
+			  VOLITVE</span>
+			</div>
+		  </div>
+		  <div class="intro-first-diagonal wd"></div>
+		</div>
+
+		<div class="intro-box w80" style="margin-left:-1px">
+		  <div class="h20 flex-row">
+		    <div class="intro-title"></div>
+		  </div>
+		  <div class="h60 flex-row">
+		    <div class="intro-content">
+		    Skupščina Socialistične Republike Slovenije (SRS) je decembra 1989 sprejela Zakon o volitvah v skupščine in Zakon o političnem združevanju. S tem so bile uzakonjene neposredne in tajne volitve. V istem času so bile za 8. april 1990 razpisane prve večstrankarske skupščinske volitve ter volitve predsednika in članov predsedstva. Volilna opravila so se začela januarja 1990.
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="blue-last-diagonal wd"></div>
+		  <div class="content-box-inner flex-column-space ml8">
+			<div class="mb-auto">
+		      <div class="text-level1 w60">
+				<p>Struktura Skupščine SRS se je s časom spreminjala, nazadnje z ustavo leta 1974. Ob volitvah leta 1990 je bila sestavljena iz treh zborov: Družbenopolitičnega zbora, Zbora občin in Zbora združenega dela. Zadnja skupščina je bila izvoljena po prenovljeni zakonodaji, ki je upoštevala politični pluralizem, s čimer je prišlo tudi do spremembe strukture v posameznem zboru. Vsak od zborov je imel enako število poslancev (80), skupaj jih je bilo torej izvoljenih 240. Tako strukturo je skupščina ohranila do leta 1992.</p>
+				<p>V Zbor združenega dela in Zbor občin so volivci volili na podlagi <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_vecinski_sistem">večinskega sistema</a>, v Družbenopolitični zbor pa na podlagi <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_proporcionalni_sistem">proporcionalnega sistema</a>. Postopki za kandidaturo in predlaganje kandidatov so bili zelo zapleteni in nepregledni, naslednice starih političnih sil pa so imele pri pripravah veliko prednost zaradi svoje organizacijske mreže in prepoznavnosti med ljudmi.</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml4 mr4">
+			<div class="h60 mt-auto mb-auto">
+			  <img src="media/22/docs3/volitve1.jpg" class="h40 pointer" id="docs3_volitve">
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				V začetku januarja 1990 je začel delovati Demosov volilni štab, ki ga je vodil dr. <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_pozarnik">Hubert Požarnik</a>. Volilna kampanja je potekala v neenakopravnem položaju tekmecev. Stare družbenopolitične organizacije (Zveza komunistov Slovenije – Stranka demokratične prenove, Socialistična zveza Slovenije – Socialistična zveza delovnega ljudstva, Zveza socialistične mladine Slovenije – Liberalna stranka) so imele veliko medijsko prednost in prepoznavnost, bolje so bile organizirane in imele so več finančne moči kot novoustanovljene stranke. Demos je imel manj izkušenih kadrov, šibkejšo organizacijo in neprimerljivo slabši finančni položaj.  
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8">
+			<div class="h80 mt-auto mb-auto">
+			  <img src="thumb/22/docs3/plakat_demos.jpg" class="h80 pointer" id="docs3_plakat">
+			</div>
+		  </div>
+		</div>
+		<div class="content-box flex-column ml1rem">
+		  <div class="h10"></div>
+		  <div class="h20 flex-row">
+		    <div class="side-note w70 mt-auto mb-auto">
+		      Plakat volilne kampanje Demosa.
+		    </div>
+		  </div>
+		  <div class="h50 flex-row">
+		    <div class="flex-column">
+			  <img src="thumb/22/docs3/priponka_demos.png" class="h40 pointer" id="docs3_priponka">
+			  <div class="bottom-note w70">
+				Primer priponke volilne kampanje Demosa.
+				<br /><br />
+				V volilni kampanji so Demosovi kandidati poudarjali zahteve Majniške deklaracije, posebej zahtevo po samostojni državi. Kampanja je potekala večinoma »od ust do ust« in neposredno na volilnih shodih oziroma zborovanjih na prostem. Tudi slovenski cerkveni vrh se je obrnil na javnost in pozval k volitvam za spremembe in novo razvojno pot Slovenije.
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="flex-column">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+	      <div class="flex-row ml8 mr8">
+		    <div class="news-column news_up img-vertical-scroll w40 pointer" id="news3_1">
+			  <img src="thumb/22/news3/01.jpg" class="p2">
+			  <img src="thumb/22/news3/02.jpg" class="p2">
+			  <img src="thumb/22/news3/03.jpg" class="p2">
+			  <img src="thumb/22/news3/04.jpg" class="p2">
+			  <img src="thumb/22/news3/05.jpg" class="p2">
+			  <img src="thumb/22/news3/06.jpg" class="p2">
+		    </div>
+		    <div class="news-column news_down img-vertical-scroll w40">
+			  <img src="thumb/22/news3/09.jpg" class="p2">
+			  <img src="thumb/22/news3/10.jpg" class="p2">
+			  <img src="thumb/22/news3/11.jpg" class="p2">
+			  <img src="thumb/22/news3/12.jpg" class="p2">
+			  <img src="thumb/22/news3/13.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+		</div>
+
+		<div class="content-box" id="docs3_himna">
+	      <div class="flex-column ml8">
+			<div class="h60 mt-auto mb-auto">
+			  <img src="thumb/22/docs3/himna2.jpg" class="h50 pointer">
+			  <div class="bottom-note w30">
+			    Zakon o himni
+			  </div>
+			</div>
+		  </div>
+	      <div class="flex-column ml2">
+			<div class="h60 mt-auto mb-auto">
+			  <img src="thumb/22/docs3/himna3.jpg" class="h50 pointer">
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml4 mr8">
+			<div class="text-level2 h60 w20 mt-auto mb-auto">
+			  V času priprav na volitve je bil 29. marca 1990 sprejet Zakon o himni Republike Slovenije, v Ljubljani pa je bila odprta tudi prva borza vrednostnih papirjev na območju nekdanjih socialističnih držav, ki je sledila tržnemu sistemu.
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8 mr8">
+			<div class="h60 mt-auto mb-auto">
+			  <img src="media/22/news3/21.png" class="h50 pointer" id="volitve_pred_durmi">
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Poleg Demosa in prenovljenih nekdanjih družbenopolitičnih organizacij je kandidature za republiško skupščino vložilo še 15 drugih strank in tri liste. Kandidatov za poslance je bilo 1.921, za člane občinskih skupščin 13.730, za člane predsedstva 12, štirje pa so se potegovali za predsednika predsedstva: <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_kucan">Milan Kučan</a> (Zveza komunistov Slovenije – Stranka demokratične prenove), dr. Jože Pučnik (Demos), <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_demsar">Marko Demšar</a> (ZSMS – Liberalna stranka) in <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_kramberger">Ivan Kramberger</a>, ki je kandidiral sam. Za večino strank in kandidatov je bilo značilno izrekanje za slovensko suverenost, demokracijo, spremembe v gospodarstvu in varovanje okolja.  
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-first-diagonal wd"></div>
+	      <div class="flex-column" style="margin-left:-1px">
+			<div class="h100 mt-auto mb-auto">
+			  <img src="media/22/photo/kandidati.jpg" class="h100 pointer" id="photo_kandidati">
+			</div>
+		  </div>
+		</div>
+        <div class="news-box">
+          <div class="content-box-inner w25">
+            <div class="flex-row mb-auto ml1rem">
+              <div class="news-note">
+                Vsi štirje kandidati za predsednika.
+              </div>
+            </div>
+          </div>
+        </div>
+
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="flex-column ml8">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+	      <div class="flex-row ml8 mr8">
+		    <div class="news-column news_up img-vertical-scroll w40 pointer" id="news3_2">
+			  <img src="thumb/22/news3/22.jpg" class="p2">
+			  <img src="thumb/22/news3/23.jpg" class="p2">
+			  <img src="thumb/22/news3/24.jpg" class="p2">
+			  <img src="thumb/22/news3/25.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8 mr8">
+			<div class="h60 mt-auto mb-auto">
+			  <img src="media/22/karikatura_kandidati.jpg" class="h60 pointer" id="karikatura_kandidati">
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Prve večstrankarske volitve 160 delegatov v Družbenopolitični zbor in Zbor občin Skupščine Republike Slovenije ter volitve predsednika in članov predsedstva so potekale 8. aprila 1990. Čez nekaj dni, 12. aprila, so potekale še volitve 80 delegatov v Zbor združenega dela.   
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="flex-column ml8">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+	      <div class="flex-row ml8 mr8">
+		    <div class="news-column news_up img-vertical-scroll w40 pointer" id="news3_3">
+			  <img src="thumb/22/news3/31.jpg" class="p2">
+			  <img src="thumb/22/news3/32.jpg" class="p2">
+			  <img src="thumb/22/news3/33.jpg" class="p2">
+			  <img src="thumb/22/news3/34.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space ml8">
+			<div class="mb-auto">
+		      <div class="text-level1 w60">
+				<p>Največ glasov je dobila koalicija Demos, ki je na volitvah slavila zmago. Postala je najmočnejša politična sila v slovenskem političnem prostoru. Demos je osvojil 47 mest v Družbenopolitičnem zboru (58&nbsp;%), 51 mest v Zboru občin (63,75&nbsp;%) in 29 mest v Zboru združenega dela (36,25&nbsp;%). V Skupščino Republike Slovenije so bili izvoljeni kandidati devetih strank, predstavnika italijanske in madžarske manjšine ter nekaj neodvisnih kandidatov. Od 240 članov skupščine je bilo 127 članov Demosovih poslancev (52,91&nbsp;%).</p>
+				<p>Za člane predsedstva Republike Slovenije so bili na volitvah neposredno izvoljeni <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_zlobec">Ciril Zlobec</a>, Ivan Oman, <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_kmecl">Matjaž Kmecl</a> in <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_plut">Dušan Plut</a>. V predsedniški tekmi sta v prvem krogu glasovanja izpadla Kramberger in Demšar, Pučnik in Kučan pa sta se pomerila še v drugem krogu volitev, 22. aprila 1990. Z 58,6 odstotka glasov je novi predsednik postal Milan Kučan.</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="silver-first-diagonal wd"></div>
+	      <div class="flex-column" style="margin-left:-1px">
+			<div class="h100 mt-auto mb-auto">
+			  <img src="media/22/docs3/sestava.png" class="h100 pointer" id="sestava_skupscine">
+			</div>
+		  </div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="silver-last-diagonal wd"></div>
+		  <div class="flex-column ml8">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+	      <div class="flex-row ml8 mr8">
+		    <div class="news-column news_up img-vertical-scroll w40 pointer" id="news3_4">
+			  <img src="thumb/22/news3/41.jpg" class="p2">
+			  <img src="thumb/22/news3/42.jpg" class="p2">
+			  <img src="thumb/22/news3/43.jpg" class="p2">
+			  <img src="thumb/22/news3/44.jpg" class="p2">
+			  <img src="thumb/22/news3/45.jpg" class="p2">
+			  <img src="thumb/22/news3/46.jpg" class="p2">
+			  <img src="thumb/22/news3/47.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column ml8 mr4">
+			<div class="h80 mt-auto mb-auto">
+			  <img src="media/22/photo/pucnik_kucan.jpg" class="h80 pointer" id="photo_pucnik_kucan">
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-column mr8">
+			<div class="h70 mt-auto mb-auto">
+			  <img src="media/22/karikatura_kucan_pucnik.jpg" class="h70 pointer" id="karikatura_kucan_pucnik">
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="flex-column">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+	      <div class="flex-row ml8 mr8">
+		    <div class="news-column news_up img-vertical-scroll w40 pointer" id="news3_5">
+			  <img src="thumb/22/news3/50.jpg" class="p2">
+			  <img src="thumb/22/news3/51.jpg" class="p2">
+			  <img src="thumb/22/news3/52.jpg" class="p2">
+			  <img src="thumb/22/news3/53.jpg" class="p2">
+			  <img src="thumb/22/news3/54.jpg" class="p2">
+		    </div>
+		    <div class="news-column news_down img-vertical-scroll w40">
+			  <img src="thumb/22/news3/55.jpg" class="p2">
+			  <img src="thumb/22/news3/56.jpg" class="p2">
+			  <img src="thumb/22/news3/57.jpg" class="p2">
+			  <img src="thumb/22/news3/58.jpg" class="p2">
+			  <img src="thumb/22/news3/59.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+		</div>
+
+		<div class="content-box">
+		  <div class="content-box-inner flex-column-space ml8 mr8">
+			<div class="mb-auto">
+		      <div class="text-level1 w50">
+				Novoizvoljena slovenska skupščina se je konstituirala 17. maja 1990. Za predsednika skupščine je bil v začetku maja izvoljen eden najpomembnejših članov Slovenske demokratične zveze dr. <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_bucar">France Bučar</a>. Na drugem zasedanju skupščine sredi maja 1990 so poslanci volili mandatarja, tri podpredsednike in 23 članov vlade. Predsednik le-te je postal Lojze Peterle. Slovenski krščanski demokrati so namreč med članicami Demosa na volitvah dobili največ glasov, zato jim je po predvolilnem dogovoru pripadel položaj predsednika slovenske vlade. Ministri v vladi so bili izbrani glede na strankarsko uvrstitev na volitvah in strokovnost.  
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="flex-column">
+			<div class="news-title float-right">
+			ODMEVI V<br />ČASOPISJU
+			</div>
+		  </div>
+	      <div class="flex-row ml8 mr8">
+		    <div class="news-column news_up img-vertical-scroll w40 pointer" id="news3_6">
+			  <img src="thumb/22/news3/61.jpg" class="p2">
+			  <img src="thumb/22/news3/62.jpg" class="p2">
+			  <img src="thumb/22/news3/63.jpg" class="p2">
+			  <img src="thumb/22/news3/64.jpg" class="p2">
+			  <img src="thumb/22/news3/65.jpg" class="p2">
+			  <img src="thumb/22/news3/66.jpg" class="p2">
+			  <img src="thumb/22/news3/67.jpg" class="p2">
+		    </div>
+		  </div>
+		</div>
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+		</div>
+
+		<div class="content-box">
+	      <div class="flex-row ml8">
+			<div class="h100 mb-auto">
+			  <img src="media/22/photo/prva_vlada.jpg" class="h100 pointer" id="prva_vlada_imagemap" usemap="#map">
+			  <map name="map">
+				<area shape="circle" coords="136,485,20" title="Viktor Brezar" onclick="showPerson('oseba01')" />
+				<area shape="circle" coords="202,470,20" title="Miha Tomšič" onclick="showPerson('oseba02')" />
+				<area shape="circle" coords="228,509,20" title="Izidor Rejc" onclick="showPerson('oseba03')" />
+				<area shape="circle" coords="256,480,20" title="Jožef Osterc" onclick="showPerson('oseba04')" />
+				<area shape="circle" coords="297,491,20" title="Ingo Paš" onclick="showPerson('oseba05')" />
+				<area shape="circle" coords="348,479,20" title="Peter Vencelj" onclick="showPerson('oseba06')" />
+				<area shape="circle" coords="375,508,20" title="Marko Kranjec" onclick="showPerson('oseba07')" />
+				<area shape="circle" coords="429,497,20" title="Andrej Capuder" onclick="showPerson('oseba08')" />
+				<area shape="circle" coords="485,509,20" title="Jožefa Puhar" onclick="showPerson('oseba09')" />
+				<area shape="circle" coords="510,479,20" title="Janez Janša" onclick="showPerson('oseba10')" />
+				<area shape="circle" coords="545,498,20" title="Lojze Peterle" onclick="showPerson('oseba11')" />
+				<area shape="circle" coords="578,493,19" title="Peter Tancig" onclick="showPerson('oseba12')" />
+				<area shape="circle" coords="599,464,20" title="Igor Bavčar" onclick="showPerson('oseba13')" />
+				<area shape="circle" coords="611,515,20" title="Katja Boh" onclick="showPerson('oseba14')" />
+				<area shape="circle" coords="642,476,20" title="Marjan Kranjc" onclick="showPerson('oseba15')" />
+				<area shape="circle" coords="665,508,20" title="Matija Malešič" onclick="showPerson('oseba16')" />
+				<area shape="circle" coords="713,473,20" title="Miha Jazbinšek" onclick="showPerson('oseba17')" />
+				<area shape="circle" coords="718,513,20" title="Franc Godeša" onclick="showPerson('oseba18')" />
+				<area shape="circle" coords="774,498,20" title="Leopold Šešerko" onclick="showPerson('oseba19')" />
+				<area shape="circle" coords="814,496,20" title="Igor Umek" onclick="showPerson('oseba20')" />
+				<area shape="circle" coords="853,486,20" title="Dimitrij Rupel" onclick="showPerson('oseba21')" />
+				<area shape="circle" coords="867,527,20" title="Maks Bastl" onclick="showPerson('oseba22')" />
+				<area shape="circle" coords="893,496,20" title="Rajko Pirnat" onclick="showPerson('oseba23')" />
+				<area shape="circle" coords="934,510,20" title="Alojz Janko" onclick="showPerson('oseba24')" />
+				<area shape="circle" coords="1022,502,20" title="Jože Mencinger" onclick="showPerson('oseba25')" />
+				<area shape="circle" coords="1076,504,20" title="Stane Stanič" onclick="showPerson('oseba26')" />
+			  </map>
+			</div>
+		  </div>
+	      <div class="flex-column ml1rem mr8">
+		    <div class="h30 content-box-inner">
+			  <div class="side-note w25 mb-auto">
+			  Člani prve demokratične slovenske vlade.
+			  </div>
+			</div>
+			<div>
+			  <div class="text-level2 h30 w25">
+			  S klikom na posameznega člana nove vlade, spoznaj njegovo ime in funkcijo, ki jo je opravljal. 
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="heading-box">
+		  <div class="beige-last-diagonal wd"></div>
+		  <div class="heading-next flex-row float-right" id="naprej">
+			<div class="w60">RAZGLASITEV<br />SAMOSTOJNOSTI</div>
+		    <img src="img/naprej.svg" id="start">
+		  </div>
+		</div>
+
+    </div>
+
+	<!------------------------------
+	//  FIXED FOOTER
+	//----------------------------->
+	<div class="progress-container">
+	  <div class="progress-bar" id="progressBar"></div>
+	</div>
+
+	<div id="bottombar" class="bt navbar-dark">
+	  <button class="bottombar-toggler" type="button" data-toggle="collapse" data-target="#navbarBottomMenu" aria-controls="navbarBottomMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="bottombar-title"><span class="dimmed">OSAMOSVOJITEV / </span>5. PROCESI DEMOKRATIZACIJE</div>
+        <span id="btmbar-hamburger" class="navbar-toggler-icon"></span>
+        <span id="btmbar-cheeseburger" class="hidden" style="padding-top:0.1rem;">&#x2573;</span>
+      </button>
+	  <div class="paging">
+	    <table width="100%" border="0">
+		  <tr align="center">
+		    <td width="25%"><a href="samostojnost1.html">&#x3008;</a></td>
+			<td width="50%">5</td>
+			<td width="25%"><a href="samostojnost3.html">&#x3009;</a></td>
+		  </tr>
+		</table>
+	  </div>
+	</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Slick Carousel JavaScript -->
+<script src="js/slick.min.js"></script>
+
+<!-- FancyBox 3 JavaScript -->
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/fancybox-22-parts.js"></script>
+<script src="js/fancybox-22-video.js"></script>
+
+<!-- Navigacija -->
+<script src="js/navigation.js"></script>
+
+<!-- Custom JavaScript for this site -->
+<script>
+/*
+ *  Hide loading box when page load complete
+ */
+window.onload = function(){
+	document.getElementById('content-loading').style.visibility = 'hidden';
+};
+
+function hideToggleMenu() {
+	$('#navbar-hamburger').removeClass('hidden');
+	$('#navbar-cheeseburger').addClass('hidden');        
+	$('#navbarToggleMenu').addClass('hidden');		  
+}
+
+function hideBottomMenu() {
+	$('#btmbar-hamburger').removeClass('hidden');
+	$('#btmbar-cheeseburger').addClass('hidden');        
+	$('#navbarBottomMenu').addClass('hidden');		  
+}
+
+
+$(function() {
+	  
+	/*
+	 *  Advance to next part
+	 */
+	$('#naprej').click(function(event){
+		window.location.href = 'samostojnost3.html';
+	});
+
+});
+</script>
+
+<!-- Interaktivnost: prva vlada -->
+<!----- Image map JavaScript ----->
+<script src="js/image-map.js"></script>
+<script>
+/* JavaScript */
+ImageMap('img[usemap]', 0);
+
+/* jQuery */
+//$('img[usemap]').imageMap(500);
+
+/* Podatki o osebah v vladi */
+var osebe = {
+	'oseba01': ['Viktor Brezar', 'predsednik Republiškega komiteja za drobno gospodarstvo'],
+	'oseba02': ['Miha Tomšič', 'predsednik Republiškega komiteja za energetiko'],
+	'oseba03': ['Izidor Rejc', 'predsednik Republiškega komiteja za industrijo in gradbeništvo'],
+	'oseba04': ['Jožef Osterc', 'predsednik Republiškega komiteja za kmetijstvo', 'gozdarstvo in prehrano'],
+	'oseba05': ['Ingo Paš', 'predsednik Republiškega komiteja za turizem in gostinstvo'],
+	'oseba06': ['Peter Vencelj', 'predsednik Republiškega komiteja za vzgojo in izobraževanje'],
+	'oseba07': ['Marko Kranjec', 'republiški sekretar za finance'],
+	'oseba08': ['Andrej Capuder', 'predsednik Republiškega komiteja za kulturo'],
+	'oseba09': ['Jožefa Puhar', 'predsednica Republiškega komiteja za delo'],
+	'oseba10': ['Janez Janša', 'republiški sekretar za ljudsko obrambo'],
+	'oseba11': ['Lojze Peterle', 'predsednik izvršnega sveta (vlade)'],
+	'oseba12': ['Peter Tancig', 'predsednik Republiškega komiteja za raziskovalno dejavnost in tehnologijo'],
+	'oseba13': ['Igor Bavčar', 'republiški sekretar za notranje zadeve'],
+	'oseba14': ['Katja Boh', 'predsednica Republiškega komiteja za zdravstvo in socialno varstvo'],
+	'oseba15': ['Marjan Kranjc', 'predsednik Republiškega komiteja za promet in zveze'],
+	'oseba16': ['Matija Malešič', 'podpredsednik izvršnega sveta (vlade), predsednik Republiškega komiteja za družbene dejavnosti'],
+	'oseba17': ['Miha Jazbinšek', 'predsednik Republiškega komiteja za varstvo okolja in urejanje prostora'],
+	'oseba18': ['Franc Godeša', 'predsednik Republiškega komiteja za borce in vojaške invalide'],
+	'oseba19': ['Leopold Šešerko', 'podpredsednik izvršnega sveta (vlade), predsednik Republiškega komiteja za varstvo okolja in regionalni razvoj'],
+	'oseba20': ['Igor Umek', 'predsednik Republiškega komiteja za družbeno planiranje'],
+	'oseba21': ['Dimitrij Rupel', 'predsednik Republiškega komiteja za mednarodno sodelovanje'],
+	'oseba22': ['Maks Bastl', 'predsednik Republiškega komiteja za trgovino'],
+	'oseba23': ['Rajko Pirnat', 'republiški sekretar za pravosodje in upravo'],
+	'oseba24': ['Alojz Janko', 'predsednik Republiškega komiteja za zakonodajo'],
+	'oseba25': ['Jože Mencinger', 'podpredsednik izvršnega sveta (vlade), predsednik Republiškega komiteja za gospodarstvo'],
+	'oseba26': ['Stane Stanič', 'predsednik Republiškega komiteja za informiranje']
+};
+
+function showPerson(oseba) {
+	//if oseba != 'info' {
+		var name = osebe[oseba][0];
+		var func = osebe[oseba][1];
+		$('#oseba_ime').html(name);
+		$('#oseba_funkcija').html(func);
+		$('#prva_vlada').modal('show');
+	/*}
+	else {
+		alert('clicked');
+	}*/
+}
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-66REXS9BK3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-66REXS9BK3');
+</script>
+
+</body>
+</html>

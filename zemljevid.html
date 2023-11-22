@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="sl"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+	<!-- Force landscape mode -->
+	<link rel="manifest" href="manifest.json">
+
+    <title>Zbrali smo pogum</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Slick Carousel CSS -->
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+
+	<!-- FancyBox 3 CSS -->
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+	<!-- FancyBox 3 customizations -->
+    <link href="css/fancybox.css" rel="stylesheet">
+
+    <!-- Custom styles for this site -->
+    <link href="css/landing.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/elements.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+	<!-- Leaflet CSS -->
+    <!--<link href="leaflet/leaflet.css" rel="stylesheet" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+	<!-- Leaflet CSS style overrides -->
+	<style>
+	.leaflet-container {
+	  font-family: 'Rubik', sans-serif;
+	  font-size: 1.5vh;
+	}
+	.leaflet-container b {
+	  color: #48AC33;
+	}
+	</style>
+</head>
+
+<body>
+
+	<!-- Modal -->
+	<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+		  <div class="modal-body">
+			<div class="close-icon">
+			  <span data-dismiss="modal" aria-label="Zapri">
+				<img src="img/icon_zapri_siva.svg">
+			  </span>
+			</div>
+			<div class="flex-row">
+			  <div class="flex-column" style="width:45%;margin-bottom:2rem">
+				<a href="https://www.gov.si/drzavni-organi/organi-v-sestavi/arhiv/" target="_blank"><img src="img/logo_MK_arhivSL.png" class="flex-item"></a>
+				<a href="https://www.zrss.si/" target="_blank"><img src="img/logo_ZRSS.png" class="flex-item"></a>
+				<a href="https://www.parkvojaskezgodovine.si/" target="_blank"><img src="img/logo_PVZ.png" class="flex-item"></a>
+			  </div>
+			  <div class="flex-item green-line credits-box" style="width:55%;padding:0 2vh">
+				<p>
+				  <b>Partnerji</b><br>
+				  Arhiv Republike Slovenije, direktor dr. Bojan Cvelfar<br>
+				  Zavod Republike Slovenije za šolstvo, direktor dr. Vinko Logaj<br>
+				  Park vojaške zgodovine Pivka, direktor mag. Janko Boštjančič
+				</p>
+				<p>
+				  <b>Avtorji</b><br>
+				  mag. Alenka Starman Alič, Arhiv Republike Slovenije<br>
+				  Ana Čič, Park vojaške zgodovine<br>
+				  dr. Vilma Brodnik, Zavod Republike Slovenije za šolstvo
+				</p>
+				<p>
+				  <b>Strokovni sodelavci projekta</b><br>
+				  dr. Bojan Cvelfar, Arhiv Republike Slovenije<br>
+				  mag. Janko Boštjančič, Park vojaške zgodovine<br>
+				  dr. Andrej Brodnik, Fakulteta za matematiko, naravoslovje in informacijske tehnologije, Univerza na Primorskem<br>
+				  Gregor Anželj, Gimnazija Bežigrad<br>
+				  Peter Požar in Žiga Požar
+				</p>
+				<p>
+				  <b>Avtorice učnega gradiva za osnovno šolo</b><br>
+				  Jana Bec, Osnovna šola Prule<br>
+				  Bojana Mlinar Podobnik, Osnovna šola Prule<br />
+				  Tjaša Petrič, Osnovna šola Koseze
+				</p>
+				<p>
+				  <b>Jezikovni pregled</b><br />
+				  Tine Logar
+				</p>
+				<p>
+				  <b>Institucije in drugi zunanji sodelavci</b><br>
+				  Urad predsednika Republike Slovenije<br>
+				  Predsednik RS Borut Pahor<br>
+				  Ministrstvo za obrambo<br>
+				  Ministrstvo za zunanje zadeve<br>
+				  Ministrstvo za notranje zadeve<br>
+				  Državni zbor RS<br>
+				  Muzej novejše zgodovine Slovenije<br>
+				  Slovenski etnografski muzej<br>
+				  Narodni muzej Slovenije<br>
+				  RTV Slovenija<br>
+				  Narodna univerzitetna knjižnica<br>
+				  Pošta Slovenije<br>
+				  Skupina Futura<br>
+				  Časopisi: Delo, Družina, Primorske novice, Večer<br>
+				  Posamezniki: Franco Juri, Tomaž Lavrič (Mladina), Helena Race
+				</p>
+				<p>
+				  <b>Videoprodukcija</b><br>
+				  Koprodukcija: RTV Slovenija<br>
+				  Izvedbena produkcija: Studio Virc d.o.o.
+				</p>
+				<p>
+				  <b>Oblikovanje</b><br>
+				  Matic Leban
+				</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Copyright -->
+	<div class="modal fade" id="copyright" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Obvestilo o avtorskih pravicah</span></b></p>
+					<p>Vse pravice pridržane. Brez pisnega dovoljenja ni dovoljeno nobenega dela virtualnega učnega gradiva (razstava, video film) na kakršenkoli način reproducirati, kopirati ali kako drugače razširjati. Ta prepoved se nanaša tako na mehanske oblike reprodukcije (fotokopiranje) kot na elektronske (snemanje ali prepisovanje na kakršenkoli pomnilniški medij). Izjemo predstavlja uporaba virtualnega učnega gradiva v šolske namene neposredno pri pouku.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Legenda -->
+	<div class="modal fade" id="legenda" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Legenda zemljevida</span></b></p>
+					<p>
+					</p><table border="0" width="100%">
+					<tbody><tr>
+					  <td><img src="leaflet/icons/icons8-stop-40.png"></td>
+					  <td>mednarodni mejni prehod pred 26. junijem 1991</td>
+					</tr>
+					<tr>
+					  <td><img src="leaflet/icons/icons8-stop-new-40.png"></td>
+					  <td>novi mejni prehod</td>
+					</tr>
+					<tr>
+					  <td><img src="leaflet/icons/icons8-plane-40.png"></td>
+					  <td>civilno letališče</td>
+					</tr>
+					<tr>
+					  <td><img src="leaflet/icons/icons8-fighter-jet-40.png"></td>
+					  <td>vojaško letališče</td>
+					</tr>
+					<tr>
+					  <td><img src="leaflet/icons/icons8-radio-tower-40.png"></td>
+					  <td>radijski/televizijski oddajnik</td>
+					</tr>
+					<!--<tr>
+					  <td><img src="leaflet/icons/icons8-soldier-new-40.png"></td>
+					  <td>enote TO</td>
+					</tr>-->
+					<tr>
+					  <td><img src="leaflet/icons/icons8-tank-40.png"></td>
+					  <td>enote JLA</td>
+					</tr>
+					<tr>
+					  <td><img src="leaflet/icons/icons8-restrict-40.png"></td>
+					  <td>cestna zapora</td>
+					</tr>
+					<tr>
+					  <td><img src="leaflet/icons/icons8-missile-40.png"></td>
+					  <td>zračni napad</td>
+					</tr>
+					<tr>
+					  <td><img src="leaflet/icons/icons8-bang-40.png"></td>
+					  <td>spopad</td>
+					</tr>
+					<tr>
+					  <td><img src="leaflet/icons/icons8-marker-storm-40.png"></td>
+					  <td>pričakovani spopad</td>
+					</tr>
+					</tbody></table>
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Device orientation -->
+    <div id="device-orientation">
+	  <center>
+	    <div id="orientation-box">
+	      <p><img src="img/list_desno.svg" style="height:20vh"></p>
+	      <p>Ta stran se vidi najbolje, če
+		  <br>je naprava obrnjena vodoravno.</p>
+	    </div>
+	  </center>
+	</div>
+
+	<!-- Loading box -->
+    <div id="content-loading" style="visibility: hidden;">
+	  <center>
+	    <div id="loading-box">
+	      <img src="img/nalaganje_opt.gif">
+	      <br>Nalaganje v teku ...
+	    </div>
+	  </center>
+	</div>
+
+	<!-- Main page content -->
+    <div class="main-content">
+
+	  <table style="width:100vw; height:100vh;">
+	    <tbody><tr>
+		  <td width="16%" valign="top" class="menu-main-column" style="padding:1.3em">
+		    <img src="img/logo_menu.svg" width="60%">
+			<div class="menu-items" style="padding-left:1.3em;padding-top:1.3em">
+			  <a href="index.html">Vstopna stran</a><br>
+			  <a href="gradiva.html">Učna gradiva</a><br>
+			  <a href="viri.html">Viri</a><br>
+			  <a href="#" data-toggle="modal" data-target="#about">O projektu</a><br>
+			  <a href="#" data-toggle="modal" data-target="#copyright">Avtorske pravice</a><br>
+			</div>
+			<div class="menu-items" style="padding-left:1.3em;padding-top:10%;">
+			  <a href="#" onclick="gotoSlovenija()">Slovenija</a><br>
+			  <a href="#" onclick="gotoLjubljana()">- Ljubljana (5. PŠTO)</a><br>
+			  <a href="#" onclick="gotoDolenjska()">- Dolenjska (2. PŠTO)</a><br>
+			  <a href="#" onclick="gotoGorenjska()">- Gorenjska (3. PŠTO)</a><br>
+			  <a href="#" onclick="gotoPrimorska()">- Primorska (4. in 6. PŠTO)</a><br>
+			  <a href="#" onclick="gotoStajerska()">- Štajerska (7. in 8. PŠTO)</a><br>
+			  <a href="#" onclick="gotoBrioni()">Brioni</a><br>
+			  <br />
+			  <a href="#" data-toggle="modal" data-target="#legenda">Legenda zemljevida</a><br>
+			</div>
+		  </td>
+		  <td>
+		    <div id="map" style="width:100%; height:100%;"></div>
+		  </td>
+		</tr>
+	  </tbody></table>
+
+	</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Slick Carousel JavaScript -->
+<script src="js/slick.min.js"></script>
+
+<!-- FancyBox 3 JavaScript -->
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/fancybox-12-parts.js"></script>
+<script src="js/fancybox-12-video.js"></script>
+
+<!-- Navigacija -->
+<script src="js/navigation.js"></script>
+
+<!-- Leaflet JavaScript -->
+<!--<script src="leaflet/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>-->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | Icons by <a href="https://icons8.com/icons/stickers">Icons8</a>'
+	});
+
+	// Ikone za mejne prehode
+/*
+	var LeafIconStop = L.Icon.extend({
+		options: {
+			shadowUrl: 'leaflet/icons/empty-30.png', // no shadow; empty icon
+			iconSize:     [30, 30],
+			shadowSize:   [30, 30],
+			iconAnchor:   [15, 15],
+			shadowAnchor: [15, 15],
+			popupAnchor:  [0, -15]
+		}
+	});
+
+	var stop1Icon = new LeafIconStop({iconUrl: 'leaflet/icons/icons8-stop-30.png'}),
+		stop2Icon = new LeafIconStop({iconUrl: 'leaflet/icons/icons8-stop-new-30.png'});
+*/
+	var LeafIconStop = L.Icon.extend({
+		options: {
+			shadowUrl: 'leaflet/icons/empty-20.png', // no shadow; empty icon
+			iconSize:     [20, 20],
+			shadowSize:   [20, 20],
+			iconAnchor:   [10, 10],
+			shadowAnchor: [10, 10],
+			popupAnchor:  [0, -10]
+		}
+	});
+
+	var stop1Icon = new LeafIconStop({iconUrl: 'leaflet/icons/icons8-stop-20.png'}),
+		stop2Icon = new LeafIconStop({iconUrl: 'leaflet/icons/icons8-stop-new-20.png'});
+
+	// Ikone za razne markerje
+	var LeafIcon = L.Icon.extend({
+		options: {
+			shadowUrl: 'leaflet/icons/empty-40.png', // no shadow; empty icon
+			iconSize:     [40, 40],
+			shadowSize:   [40, 40],
+			iconAnchor:   [20, 20],
+			shadowAnchor: [20, 20],
+			popupAnchor:  [0, -20]
+		}
+	});
+
+	var planeIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-plane-40.png'}),
+		fighterIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-fighter-jet-40.png'}),
+		towerIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-radio-tower-40.png'}),
+		powerIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-power-plant-40.png'}),
+		tankIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-tank-40.png'}),
+		blockIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-restrict-40.png'}),
+		missileIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-missile-40.png'}), 
+		battleIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-bang-40.png'}),
+		flagIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-slovenia-40.png'}),
+		peaceIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-peace-40.png'}),
+		shipIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-battleship-40.png'});
+		copterIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-helicopter-40.png'});
+		markerIcon = new LeafIcon({iconUrl: 'leaflet/icons/icons8-marker-storm-40.png'});
+
+
+	// Mejni prehodi z Italijo
+	var pre_lazaret = L.marker([45.59470, 13.72409], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Lazaret</b></p>");
+	var pre_skofije = L.marker([45.58227, 13.79747], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Škofije</b></p>");
+	var pre_kozina = L.marker([45.62294, 13.90283], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Kozina</b></p>");
+	var pre_lipica = L.marker([45.65221, 13.87957], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Lipica</b></p>");
+	var pre_fernetici = L.marker([45.69989, 13.83579], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Fernetiči</b></p>");
+	var pre_klarici = L.marker([45.81473, 13.59666], {icon: stop1Icon}).bindPopup("<p><b>Mejni prehod<br />Klariči</b></p>");
+	var pre_vrtojba = L.marker([45.91921, 13.62180], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Vrtojba</b></p>");
+	var pre_rozna_dolina = L.marker([45.94183, 13.63613], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Rožna Dolina</b></p>");
+	var pre_robic = L.marker([46.21768, 13.49747], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Robič</b></p>");
+	var pre_ucja = L.marker([46.30557, 13.41739], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Učja</b></p>");
+	var pre_predel = L.marker([46.41855, 13.57817], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Predel</b></p>");
+	var pre_ratece = L.marker([46.49723, 13.70411], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Rateče</b></p>");
+
+	var prehodi_it = L.layerGroup([pre_lazaret, pre_skofije, pre_kozina, pre_lipica, pre_fernetici, pre_klarici, pre_vrtojba, pre_rozna_dolina, pre_robic, pre_ucja, pre_predel, pre_ratece]);
+
+
+	// Mejni prehodi z Avstrijo
+	var pre_korensko_sedlo = L.marker([46.51808, 13.75158], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Korensko sedlo</b></p>");
+	var pre_karavanke = L.marker([46.48126, 14.00762], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Karavanke</b></p>");
+	var pre_ljubelj = L.marker([46.43917, 14.26671], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Ljubelj</b></p>");
+	var pre_jezersko = L.marker([46.41910, 14.52707], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Jezersko</b></p>");
+	var pre_holmec = L.marker([46.56747, 14.83922], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Holmec</b></p>");
+	var pre_libelice = L.marker([46.62347, 14.94389], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Libeliče</b></p>");
+	var pre_vic = L.marker([46.60472, 14.98507], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Vič</b></p>");
+	var pre_radelj = L.marker([46.64476, 15.20755], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Radelj</b></p>");
+	var pre_jurij = L.marker([46.64778, 15.55167], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Jurij</b></p>");
+	var pre_sentilj = L.marker([46.69052, 15.64629], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Šentilj</b></p>");
+	var pre_gornja_radgona = L.marker([46.68372, 15.98715], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Gornja Radgona</b></p>");
+	var pre_gederovci = L.marker([46.67906, 16.04081], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Gederovci</b></p>");
+	var pre_kuzma = L.marker([46.83936, 16.05713], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Kuzma</b></p>");
+
+	var prehodi_at = L.layerGroup([pre_korensko_sedlo, pre_karavanke, pre_ljubelj, pre_jezersko, pre_holmec, pre_libelice, pre_vic, pre_radelj, pre_jurij, pre_sentilj, pre_gornja_radgona, pre_gederovci, pre_kuzma]);
+
+
+	// Mejna prehoda z Madžarsko
+	var pre_hodos = L.marker([46.82196, 16.34353], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Hodoš</b></p>");
+	var pre_dolga_vas = L.marker([46.59692, 16.46145], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Dolga vas</b></p>");
+	var pre_pince = L.marker([46.51985, 16.52292], {icon: stop1Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Pince</b></p>");
+
+	var prehodi_hu = L.layerGroup([pre_hodos, pre_dolga_vas, pre_pince]);
+
+
+	// Mejni prehodi s Hrvaško
+	var pre_petisovci = L.marker([46.51511, 16.44080], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Petišovci</b></p>");
+	var pre_razkrizje = L.marker([46.51607, 16.27471], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Razkrižje</b></p>");
+	var pre_sredisce_ob_dravi = L.marker([46.38694, 16.30364], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Središče ob Dravi</b></p>");
+	var pre_ormoz = L.marker([46.40307, 16.15447], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Ormož</b></p>");
+	var pre_zavrc = L.marker([46.38659, 16.05542], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Zavrč</b></p>");
+	var pre_gruskovje = L.marker([46.27092, 15.86714], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Gruškovje</b></p>");
+	var pre_dobovec = L.marker([46.20927, 15.76778], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Dobovec</b></p>");
+	var pre_rogatec = L.marker([46.22298, 15.70010], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Rogatec</b></p>");
+	var pre_imeno = L.marker([46.12861, 15.61166], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Imeno</b></p>");
+	var pre_bistrica_ob_sotli = L.marker([46.07045, 15.66100], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Bistrica ob Sotli</b></p>");
+	var pre_oresje = L.marker([46.04516, 15.73012], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Orešje</b></p>");
+	var pre_rigonce = L.marker([45.89209, 15.68408], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Rigonce</b></p>");
+	var pre_obrezje = L.marker([45.84523, 15.69441], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Obrežje</b></p>");
+	var pre_metlika = L.marker([45.63438, 15.32288], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Metlika</b></p>");
+	var pre_vinica = L.marker([45.45598, 15.24916], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Vinica</b></p>");
+	var pre_petrina = L.marker([45.46386, 14.85309], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Petrina</b></p>");
+	var pre_babno_polje = L.marker([45.64587, 14.56048], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Babno Polje</b></p>");
+	var pre_jelsane = L.marker([45.48948, 14.27806], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Jelšane</b></p>");
+	var pre_starod = L.marker([45.49196, 14.21352], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Starod</b></p>");
+	var pre_socerga = L.marker([45.45341, 13.92476], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Sočerga</b></p>");
+	var pre_dragonja = L.marker([45.45259, 13.65475], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Dragonja</b></p>");
+	var pre_secovlje = L.marker([45.46383, 13.62190], {icon: stop2Icon}).bindPopup("<p><b>Mednarodni mejni prehod<br />Sečovlje</b></p>");
+
+	var prehodi_hr = L.layerGroup([pre_petisovci, pre_razkrizje, pre_sredisce_ob_dravi, pre_ormoz, pre_zavrc, pre_gruskovje, pre_dobovec, pre_rogatec, pre_imeno, pre_bistrica_ob_sotli, pre_oresje, pre_rigonce, pre_obrezje, pre_metlika, pre_vinica, pre_petrina, pre_babno_polje, pre_jelsane, pre_starod, pre_socerga, pre_dragonja, pre_secovlje]);
+
+
+	// Civilna in vojaška letališča
+	var let_pow = L.marker([45.47342, 13.61496], {icon: planeIcon}).bindPopup("<p><b>Letališče Portorož</b></p>");
+	var let_lju = L.marker([46.22542, 14.45594], {icon: planeIcon}).bindPopup("<p><b>Letališče Jožeta Pučnika (Brnik)</b></p>");
+	var let_mbx = L.marker([46.48123, 15.68549], {icon: planeIcon}).bindPopup("<p><b>Letališče Edvarda Rusjana (Maribor)</b></p>");
+	var let_cek = L.marker([45.89622, 15.53085], {icon: fighterIcon}).bindPopup("<p><b>Vojaško letališče Cerklje ob Krki</b></p>");
+	var let_zag = L.marker([45.74332, 16.06942], {icon: planeIcon}).bindPopup("<p><b>Letališče Franjo Tuđman (Zagreb)</b></p>");
+	var let_ple = L.marker([45.71783, 16.08963], {icon: fighterIcon}).bindPopup("<p><b>Vojaško letališče Pleso (Zagreb)</b></p>");
+	var let_golte = L.marker([46.37334, 14.89580], {icon: copterIcon}).bindPopup("<p><b>Golte</b></p><p>Helikopterski oddelek JLA na Brniku je bil premeščen v vojašnico v ljubljanskem Šentvidu. Pilot in kapetan (stotnik) 1. stopnje Jože Kalan in letalec tehnik in praporščak 1. stopnje Bogo Šuštar sta bila nato s helikopterjem premeščena v Maribor, od koder bi morala nadzirati slovensko-hrvaško mejo.</p><p>28. junija sta se odločila, da bosta s helikopterjem prebegnila v TO. Uspešno sta pristala na Golteh in tudi formalno prestopila v TO. Helikopter pa so teritorialci označili s slovenskim grbom in znakom TO ter oznako TO-001 Velenje.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#golte'>Več &gt;</a></p>");
+
+	var letalisca = L.layerGroup([let_pow, let_lju, let_mbx, let_cek, let_zag, let_ple, let_golte]);
+
+
+	// 	Radijski/televizijski oddajniki
+	var odd_nanos = L.marker([45.77152, 14.05281], {icon: towerIcon}).bindPopup("<p><b>Oddajnik Nanos</b></p>");
+	var odd_krim = L.marker([45.92836, 14.47104], {icon: towerIcon}).bindPopup("<p><b>Oddajnik Krim</b></p>");
+	var odd_sance = L.marker([46.04628, 14.51115], {icon: towerIcon}).bindPopup("<p><b>Oddajnik Ljubljana - Šance</b></p>");
+	var odd_domzale = L.marker([46.12717, 14.58638], {icon: towerIcon}).bindPopup("<p><b>Oddajnik Domžale</b></p>");
+	var odd_krvavec = L.marker([46.29772, 14.53359], {icon: towerIcon}).bindPopup("<p><b>Oddajnik Krvavec</b></p>");
+	var odd_plesivec = L.marker([46.48501, 14.96381], {icon: towerIcon}).bindPopup("<p><b>Oddajnik Plešivec</b></p>");
+	var odd_kum = L.marker([46.08834, 15.07396], {icon: towerIcon}).bindPopup("<p><b>Oddajnik Kum</b></p>");
+	var odd_trdinov_vrh = L.marker([45.75987, 15.31767], {icon: towerIcon}).bindPopup("<p><b>Oddajnik Trdinov vrh</b></p>");
+	var odd_boc = L.marker([46.28937, 15.59969], {icon: towerIcon}).bindPopup("<p><b>Oddajnik Boč</b></p>");
+	var odd_pohorje = L.marker([46.51478, 15.57787], {icon: towerIcon}).bindPopup("<p><b>Oddajnik Pohorje</b></p>");
+	
+	var oddajniki = L.layerGroup([odd_nanos, odd_krim, odd_sance, odd_domzale, odd_krvavec, odd_plesivec, odd_kum, odd_trdinov_vrh, odd_boc, odd_pohorje]);
+
+
+	// 	Enote JLA
+	var jla_ankaran = L.marker([45.56919, 13.74714], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Ankaran</b></p>");
+	var jla_ajsevica = L.marker([45.95102, 13.68951], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Ajševica</b></p>"); // Pri Novi Gorici
+	var jla_bovec = L.marker([46.33830, 13.60489], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Bovec</b></p>");
+	var jla_tolmin = L.marker([46.21942, 13.79703], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Tolmin</b></p>");
+	var jla_sezana = L.marker([45.7263, 13.8544], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Sežana</b></p>"); // ni vojašnica
+	var jla_ajdovscina = L.marker([45.88730, 13.91794], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Ajdovščina</b></p>"); // ni vojašnica
+	var jla_vipava = L.marker([45.84974, 13.95883], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Vipava</b></p>");
+	var jla_karavanke = L.marker([46.44881, 14.00037], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Karavanški predor</b></p>"); // ni vojašnica
+	var jla_bbela = L.marker([46.33775, 14.06164], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Bohinjska Bela</b></p>");
+	var jla_postojna = L.marker([45.77545, 14.21385], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Postojna</b></p>"); // ni vojašnica
+	var jla_pivka = L.marker([45.66489, 14.18393], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Pivka</b></p><p>Iz vojašnice v Pivki, ki je spadala pod poveljstvo 14. ljubljanskega korpusa pod poveljstvom generala Jovana Pavlova, je 26. junija 1991 odpeljala kolona oklepnih vozil proti Vipavi. Zaradi barikade na Rebrnicah, se je usmerila proti Hrušovju in Landolu ter naprej skozi Bukovje. Pred Colom se je spustila v dolino Bele, skozi Sanabor proti Vrhpolju, kjer so zasedo pripravili domačini. Zvečer je uspela priti v Vipavo, od koder je pot proti mejnima prehodoma Rožna Dolina in Vrtojba nadaljevala naslednji dan.</p><p><a class='btn btn-success btn-sm text-white' href='https://www.parkvojaskezgodovine.si/dan-prej-30-let/'>Več &gt;</button></p>");
+	var jla_ibistrica = L.marker([45.56778, 14.23779], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Ilirska Bistrica.</b></p><p>Vojašnica v Ilirski Bistrici je spadala pod 13. reški korpus pod poveljstvom slovenskega generala Marijana Čada. S ciljem zasedbe mejnih prehodov z Italijo sta iz vojašnice 26. junija 1991 krenili dve koloni oklepnih vozil. Ena od kolon je peljala proti Postojni in Divači ter mejnima prehodoma Lipica in Fernetiči, druga pa proti Podgradu in Kozini do mejnega prehoda Krvavi Potok. Oklepnim enotam JLA so se zoperstavili domačini s protesti in cestnimi ovirami iz avtomobilov. Slovenske obrambne enote pa so skušale kolone zaustaviti z barikadami, ki so jih sestavljale gradbena mehanizacija in tovornjaki.</p><p><a class='btn btn-success btn-sm text-white' href='https://www.parkvojaskezgodovine.si/dan-prej-30-let/'>Več &gt;</button></p>");
+	var jla_vrhnika = L.marker([45.95004, 14.27964], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Vrhnika</b></p>");
+	var jla_kranj = L.marker([46.25737, 14.35687], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Kranj</b></p>");
+	var jla_ljubljana1 = L.marker([46.10006, 14.47493], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Ljubljana Šentvid</b></p>");
+	var jla_ljubljana2 = L.marker([46.06620, 14.56350], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Ljubljana</b></p>");
+	var jla_ribnica = L.marker([45.73988, 14.72556], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Ribnica</b></p>"); // ni vojašnica
+	var jla_dravograd = L.marker([46.58995, 15.01929], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Dravograd</b></p>"); // ni vojašnica
+	var jla_nmesto = L.marker([45.81563, 15.14709], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Novo mesto</b></p>");
+	var jla_celje = L.marker([46.23722, 15.27126], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Celje</b></p>");
+	var jla_maribor = L.marker([46.54647, 15.63012], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Maribor</b></p>");
+	var jla_sentilj = L.marker([46.67456, 15.65735], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Šentilj</b></p>"); // ni vojašnica
+	var jla_ptuj = L.marker([46.42183, 15.87894], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Ptuj</b></p>"); // ni vojašnica
+	var jla_msobota = L.marker([46.66703, 16.16154], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Murska Sobota</b></p>");
+	var jla_dvas = L.marker([46.59645, 16.46102], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Dolga vas</b></p>"); // ni vojašnica
+	// Enote JLA, ki so prišle iz Hrvaške
+	var jla_reka = L.marker([45.33127, 14.43529], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Reka</b></p>");
+	var jla_delnice = L.marker([45.40855, 14.80052], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Delnice</b></p>");
+	var jla_karlovec = L.marker([45.47426, 15.59786], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Karlovec</b></p>");
+	var jla_jastrebarsko = L.marker([45.67278, 15.64158], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Jastrebarsko</b></p>");
+	var jla_zagreb = L.marker([45.81552, 15.93983], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Zagreb</b></p>");
+	var jla_varazdin = L.marker([46.31893, 16.32141], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Varaždin</b></p>");
+	var jla_cakovec = L.marker([46.39043, 16.45333], {icon: tankIcon}).bindPopup("<p><b>Enote JLA: Čakovec</b></p>");
+	
+	var enote_jla = L.layerGroup([jla_ankaran, jla_ajsevica, jla_bovec, jla_tolmin, jla_sezana, jla_ajdovscina, jla_vipava, jla_karavanke, jla_bbela, jla_postojna, jla_pivka, jla_ibistrica, jla_vrhnika, jla_kranj, jla_ljubljana1, jla_ljubljana2, jla_ribnica, jla_dravograd, jla_nmesto, jla_celje, jla_maribor, jla_sentilj, jla_ptuj, jla_msobota, jla_dvas, jla_reka, jla_delnice, jla_karlovec, jla_jastrebarsko, jla_zagreb, jla_varazdin, jla_cakovec]);
+
+
+	// Strateška infrastruktura
+	var je_krsko = L.marker([45.93836, 15.51518], {icon: powerIcon}).bindPopup("<p><b>Jedrska elektrarna Krško</b></p>");
+
+	var infrastruktura = L.layerGroup([je_krsko]);
+
+
+	// Cestne zapore
+	var zap_kozina = L.marker([45.60375, 13.93052], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Kozini</b></p>");
+	var zap_razdrto = L.marker([45.75834, 14.07022], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Razdrtem</b></p>");
+	var zap_ibistrica = L.marker([45.53261, 14.25223], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Ilirski Bistrici</b></p>");
+	var zap_naklo = L.marker([46.27820, 14.29688], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Naklem</b></p>");
+	var zap_vodice = L.marker([46.17714, 14.48608], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Vodicah</b></p>");
+	var zap_trzin = L.marker([46.13238, 14.56539], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Trzinu</b></p>");
+	var zap_lavrica = L.marker([46.01309, 14.54307], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Lavrici</b></p>");
+	var zap_malence = L.marker([46.00724,14.56785], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Malencah</b></p>");
+	var zap_trebnje = L.marker([45.90453, 14.98264], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Trebnjem</b></p>");
+	var zap_poganci = L.marker([45.77766, 15.18088], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Novem mestu</b></p>");
+	var zap_sbistrica = L.marker([46.36642, 15.51981], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Slovenski Bistrici</b></p>");
+	var zap_maribor = L.marker([46.43455, 15.63799], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Mariboru</b></p>");
+	var zap_ormoz = L.marker([46.40978, 16.13819], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Ormožu</b></p>");
+	var zap_lendava = L.marker([46.51609, 16.44116], {icon: blockIcon}).bindPopup("<p><b>Cestna zapora pri Lendavi</b></p>");
+
+	var zapore = L.layerGroup([zap_kozina, zap_razdrto, zap_ibistrica, zap_naklo, zap_vodice, zap_trzin, zap_lavrica, zap_malence, zap_trebnje, zap_poganci, zap_sbistrica, zap_maribor, zap_ormoz, zap_lendava]);
+
+
+	// Zračni napadi
+	var nap_koper = L.marker([45.55803, 13.76374], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_karavanke = L.marker([46.44838, 14.00243], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_nanos = L.marker([45.77142, 14.05290], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_vrhnika = L.marker([45.96636, 14.29945], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_kranj = L.marker([46.2434, 14.3570], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_brnik = L.marker([46.21841, 14.46878], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_krim = L.marker([45.92849, 14.47046], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_sance = L.marker([46.04620, 14.51130], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_domzale = L.marker([46.12583, 14.58702], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_krvavec = L.marker([46.29776, 14.53397], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_kocevska_reka = L.marker([45.57562, 14.80028], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_medvedjek = L.marker([45.93143, 14.91462], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_kum = L.marker([46.08825, 15.07396], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_trdinov_vrh = L.marker([45.75985, 15.31750], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_krakovski_gozd = L.marker([45.89093, 15.36933], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_prilipe = L.marker([45.87900, 15.62879], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_boc = L.marker([46.28929, 15.59975], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+	var nap_sentilj = L.marker([46.68765, 15.64923], {icon: missileIcon}).bindPopup("<p><b>Zračni napad</b></p>");
+
+	var napadi = L.layerGroup([nap_koper, nap_karavanke, nap_nanos, nap_vrhnika, nap_kranj, nap_brnik, nap_krim, nap_sance, nap_domzale, nap_krvavec, nap_kocevska_reka, nap_medvedjek, nap_kum, nap_trdinov_vrh, nap_krakovski_gozd, nap_prilipe, nap_boc, nap_sentilj]);
+
+
+	// Spopadi - Vitrualna učna pot: Vipavska dolina
+	var spop_rebrnice = L.marker([45.79657, 13.99323], {icon: markerIcon}).bindPopup("<p><b>Rebrnice</b></p><p>Iz vojašnice v Pivki je že 26. junija 1991 odpeljala kolona oklepnih vozil proti Vipavi. Stična točka je bil vrh Rebrnic, od koder bi nato krenile v dolino. Prve barikade slovenskih obrambnih enot, ki so bile postavljene pri Razdrtem, so zaustavile kolono. Pot je nadaljevala tankovska enota, ki se je zaradi barikade na Rebrnicah usmerila proti Hrušovju in Landolu ter naprej skozi Bukovje. Pred Colom se je spustila v dolino Bele, skozi Sanabor proti Vrhpolju, kjer so zasedo pripravili domačini. Zvečer je uspela priti v Vipavo, od koder je naslednji dan nadaljevala pot proti mejnima prehodoma Rožna Dolina in Vrtojba.</p><p><a class='btn btn-success btn-sm text-white' href='ucna_pot1.html#rebrnice'>Več &gt;</a></p>");
+	var spop_vrhpolje = L.marker([45.86815, 13.96576], {icon: markerIcon}).bindPopup("<p><b>Vrhpolje</b></p><p>Kolona tankov iz Pivke se je pomikala iz Bukovja naprej proti Vipavi. Miličniki iz postaje v Ajdovščini so zato postavili dve zapori: prvo iz kmetijskih strojev pri Zavetnikih pri Sanaboru, drugo iz tovornjakov pa v Orešju pri Colu. Blokadi nista bili uspešni, tankovsko kolono pa so skušali domačini in miličniki še nekajkrat ustaviti pred Vrhpoljem in na drugih lokacijah.</p><p><a class='btn btn-success btn-sm text-white' href='ucna_pot1.html#vrhpolje'>Več &gt;</a></p>");
+	var spop_vipava = L.marker([45.84733, 13.96091], {icon: battleIcon}).bindPopup("<p><b>Vipava</b></p><p>V Vipavi je stanovalo veliko oficirjev JLA, ki so oboroženi zahajali v svoja stanovanja kljub prepovedi izhoda iz vojašnic in zelo vznemirjali domačine. Ponoči so celo ustavljali avtomobile in ustrahovali domačine, znani pa so tudi primeri pretepanja domačinov.</p><p><a class='btn btn-success btn-sm text-white' href='ucna_pot1.html#vipava'>Več &gt;</a></p>");
+	var spop_ajdovscina = L.marker([45.88698, 13.90707], {icon: markerIcon}).bindPopup("<p><b>Ajdovščina</b></p><p>Že 26. junija je bila postavljena barikada pri Snici v Ajdovščini na križišču ceste, ki pelje na Col. Zvečer istega dne je bila prestavljena na most čez reko Hubelj. Predstavljala je veliko oviro za JLA, ki je zato grozila z letalskimi napadi na mesto. Barikado so varovali miličniki, vozniki tovornjakov in pripadniki TO.</p><p><a class='btn btn-success btn-sm text-white' href='ucna_pot1.html#ajdovscina'>Več &gt;</a></p>");
+	var spop_pale = L.marker([45.90210, 13.90715], {icon: markerIcon}).bindPopup("<p><b>Pale</b></p><p>Pale so zaselek pri Ajdovščini, v katerem je bila nameščena vojašnica JLA, v bližini, v kraju Fužine pri izviru Hublja, pa še skladišče orožja in streliva, okolica je bila minirana. Predsednik občinskega izvršnega sveta Silvo Premrl si je neuspešno prizadeval izprazniti skladišče iz varnostnih razlogov.</p><p><a class='btn btn-success btn-sm text-white' href='ucna_pot1.html#pale'>Več &gt;</a></p>");
+	var spop_crnice = L.marker([45.90827, 13.77748], {icon: battleIcon}).bindPopup("<p><b>Črniče</b></p><p>V Črničah je potekal prvi spopad med TO in JLA na severnem Primorskem. Protidiverzantski vod TO je moral glede na ukaz 61. območnega štaba TO postaviti zasedo na viaduktu v vasi Črniče in tako preprečiti povezavo in oskrbo med vojašnico v Vipavi in enotami JLA na državni meji. Iz smeri Nove Gorice sta se pripeljali dve tovorni vozili JLA, častnika JLA pa sta ukazala streljanje proti poveljniku voda TO. TO je odgovorila na napad, posledice pa so bile dva mrtva in osem ranjenih vojakov JLA.</p><p><a class='btn btn-success btn-sm text-white' href='ucna_pot1.html#crnice'>Več &gt;</a></p>");
+	var spop_dornberk = L.marker([45.88789, 13.73775], {icon: battleIcon}).bindPopup("<p><b>Dornberk</b></p><p>Tanki in druga oklepna vozila JLA iz Vipave so 27. junija nadaljevali pot proti Novi Gorici. Ker so bile na glavni cesti številne barikade, so se pomikale po stranskih poteh. Na barikadah pri Dornberku je izbruhnil spopad med TO in JLA, JLA pa se je kljub temu uspela prebiti do mejnih prehodov Rožna Dolina in Vrtojba. Med spopadom in protesti civilistov v Dornberku je bil ranjen prvi civilist na severnem Primorskem.</p><p><a class='btn btn-success btn-sm text-white' href='ucna_pot1.html#dornberk'>Več &gt;</a></p>");
+	var spop_vrtojba = L.marker([45.91189, 13.63523], {icon: markerIcon}).bindPopup("<p><b>Vrtojba</b></p><p>V Vrtojbi je imela JLA na voljo številčnejše enote kot v Rožni Dolini in tudi sedem tankov. Morala vojakov pa je bila nizka, še zlasti po spopadu v Rožni Dolini. Izrazili so željo po predaji. Pripadniki TO in milice so z njimi 29. junija vzpostavili stik, pogajanja je vodila milica, sledila je brezpogojna predaja, nadzor nad mejnim prehodom pa sta prevzeli slovenska TO in milica.</p><p><a class='btn btn-success btn-sm text-white' href='ucna_pot1.html#vrtojba'>Več &gt;</a></p>");
+	var spop_nova_vas = L.marker([45.84337, 13.58286], {icon: battleIcon}).bindPopup("<p><b>Nova vas</b></p><p>V Novi vasi pri Opatjem selu je imela JLA stražnico, katere poveljnik je 1. julija grozil, da bo naselje razstrelil. Na prošnjo domačinov so na pomoč prišli diverzantska skupina 6. pokrajinskega štaba TO s poveljnikom Srečkom Lisjakom, protidiverzantski vod 61. območnega štaba TO in oddelek posebne enote milice. Prišlo je do spopada, med katerim je bil poveljnik stražnice ubit, posadka stražnice pa se predala TO.</p><p><a class='btn btn-success btn-sm text-white' href='ucna_pot1.html#nova-vas'>Več &gt;</a></p>");
+	var spop_nanos = L.marker([45.77117, 14.05323], {icon: battleIcon}).bindPopup("<p><b>Nanos</b></p><p>Letala Jugoslovanskega vojnega letalstva so RTV-oddajnik na Nanosu napadla kar trikrat, prvič 28. junija, drugič in tretjič pa 2. julija. Niso ga uspela povsem onesposobiti, poleg tega pa so ga prišli delavci tudi popravit.</p><p><a class='btn btn-success btn-sm text-white' href='ucna_pot1.html#nanos'>Več &gt;</a></p>");
+	var spop_crni_vrh = L.marker([45.92568, 14.04362], {icon: markerIcon}).bindPopup("<p><b>Črni Vrh nad Idrijo</b></p><p>Na Črnem Vrhu nad Idrijo je bilo skladišče, v katerem so orožje hranili novogoriški, idrijski in ajdovski občinski štabi TO ter JLA. 1. julija je skladišče zajel ogenj, močna eksplozija pa ga je povsem uničila in naredila 6 metrov velik krater. Uničenih je bilo tudi 80 % okoliških hiš. Na koncu se je pokazalo, da je skupina teritorialcev delovala na lastno pest in povzročila eksplozijo.</p><p><a class='btn btn-success btn-sm text-white' href='ucna_pot1.html#crni-vrh'>Več &gt;</a></p>");
+
+    // Spopadi
+	var spop_poganci = L.marker([45.77539, 15.18500], {icon: battleIcon}).bindPopup("<p><b>Poganci</b></p><p>Kolona vojaških vozil JLA iz hrvaškega Karlovca se je 27. junija 1991 odpravila skozi Metliko proti Novemu mestu. Enote slovenske TO so pri Pogancih pred vstopom v Novo mesto postavile barikade. Pogajanja med obema stranema, med katerimi je prišlo tudi do streljanja, so bila neuspešna. TO je ob podpori slovenske milice vojaško kolono usmerila na cesto M-1 proti Ljubljani s ciljem, da bi jih zaustavila na primernejšem terenu.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#poganci'>Več &gt;</a></p>");
+	var spop_medvedjek = L.marker([45.92930, 14.91534], {icon: battleIcon}).bindPopup("<p><b>Medvedjek</b></p><p>Enote slovenske TO, milice in kriminalistov so pri Medvedjeku pri vasi Veliki Gaber med Trebnjem in Ivančno Gorico postavile novo barikado, da bi zaustavile enote JLA, ki so nadaljevale pot od Pogancev proti Ljubljani. 27. junija so potekala pogajanja, ki niso bila uspešna. Naslednji dan pa je izbruhnil vojaški spopad, med katerim so položaje TO trikrat bombardirala tudi letala Jugoslovanskega vojnega letalstva, ubitih je bilo sedem civilistov. Enote TO so zadržale položaje, barikada ni bila prebita, enote JLA pa so se 30. junija začele umikati proti Zagrebu na Hrvaškem.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#medvedjek'>Več &gt;</a></p>");
+	var spop_trzin = L.marker([46.12983, 14.56145], {icon: battleIcon}).bindPopup("<p><b>Trzin</b></p><p>27. junija se je ena od dveh kolon JLA iz vojašnice na Vrhniki odpeljala proti Trzinu, njen cilj pa je bil zasedba letališča na Brniku. Enote TO in milice so pripravile barikado iz avtomobilov in tovornjakov pri mostu čez potok Pšata v Trzinu. Po neuspešnih pogajanjih se je začel spopad, med katerim je padel pripadnik TO Edvard Peperko. Spopad se je končal s predajo JLA.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#trzin'>Več &gt;</a></p>");
+	var spop_sentilj = L.marker([46.67237, 15.66083], {icon: battleIcon}).bindPopup("<p><b>Šentilj</b></p><p>Tankovska enota JLA iz vojašnic v Mariboru je 27. junija krenila proti strateško pomembnemu mejnemu prehodu Šentilj. Enote TO in milice so pripravile barikade v smeri Pesnica–Šentilj in Maribor–Ruše in zavarovale mariborsko letališče in carino.</p><p>Pri Pesnici je JLA 28. junija prebila blokado in nadaljevala proti Šentilju. Kilometer pred ciljem je bila dokončno ustavljena. Začel se je spopad med slovensko TO in milico ter JLA, območje so napadala tudi letala Jugoslovanskega vojnega letalstva, ubiti so bili štirje civilisti. JLA so se priključili tudi zvezni miličniki, ki so začasno prevzeli nadzor meje.</p><p>29. junija so potekala pogajanja o predaji. Enote JLA pri Štrihovcu so se predale, TO pa je iz zajetih tankov ustanovila tankovsko četo 7. pokrajinskega štaba TO. 2. junija so z njo izvedli uspešen napad na Šentilj, po katerem se je JLA umaknila in predala milici.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#sentilj'>Več &gt;</a></p>");
+	var spop_dravograd = L.marker([46.58990, 15.02256], {icon: battleIcon}).bindPopup("<p><b>Dravograd</b></p><p>27. junija je proti mejnima prehodoma Vič in Holmec krenila oklepno-motorizirana kolona JLA iz Maribora. Enote TO in civilistov so jo skušale zaustaviti z barikado pred Dravogradom, kamor se je JLA prebila 28. junija. Izbruhnil je spopad, med katerim je ostrostrelec iz vojašnice Bukovje ubil pripadnika TO Vincenca Repnika. Med spopadi so Dravograd (neuspešno) bombardirala tudi letala Jugoslovanskega vojnega letalstva. Po pogajanjih je bil dosežen dogovor, po katerem se je JLA 3. julija umaknila na Hrvaško.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#dravograd'>Več &gt;</a></p>");
+	var spop_karavanke = L.marker([46.44747, 14.00298], {icon: battleIcon}).bindPopup("<p><b>9.	Mejni prehod Karavanke</b></p><p>Mejni prehod Karavanke je bil zgrajen tik pred osamosvojitvijo. Proti mejnima prehodoma Karavanke in Ljubelj so se 27. junija odpravile enote JLA iz vojašnice v Kranju. Kljub cestnim barikadam so se prebile do platoja na mejnem prehodu Karavanke, kjer so položaje nad samim prehodom zasedli predstavniki slovenske TO. Nadzor nad prehodom so začasno prevzeli zvezni miličniki. Po začasnem premirju se je 30. junija začel odločilni spopad, sledila so pogajanja, 1. julija pa je bil podpisan dogovor o umiku enot JLA.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#karavanke'>Več &gt;</a></p>");
+	var spop_brnik = L.marker([46.21635, 14.47369], {icon: battleIcon}).bindPopup("<p><b>Brnik</b></p><p>27. junija se je iz vojašnice na Vrhniki proti letališču na Brniku odpeljala oklepna kolona JLA. Zasesti je nameravala širše območje letališča, kontrolo letenja, carinsko službo in mejno milico. Območje letališča je varovalo ok. 600 pripadnikov slovenske TO. Istega dne je prišlo do spopada med TO in JLA, območje so preletavala tudi letala Jugoslovanskega vojnega letalstva. Med spopadi je bil ubit pripadnik TO Peter Petrič. Naslednji dan so se spopadi nadaljevali, med njimi pa sta bila ubita avstrijska fotoreporterja. </p><p>29. junija so se začela pogajanja, saj se je JLA znašla v težkem položaju. TO je uničila njeno poveljniško vozilo in prekinila preskrbo z vodo in hrano. 4. julija je bil dosežen dogovor o umiku.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#brnik'>Več &gt;</a></p>");
+	var spop_rozna_dolina = L.marker([45.94171, 13.64679], {icon: battleIcon}).bindPopup("<p><b>Rožna Dolina</b></p><p>Generalu Konradu Kolšku, poveljniku 5. vojaškega območja JLA, je jugoslovansko vojaško poveljstvo ukazalo zasedbo obmejnega pasu od Sežane do Obale. Proti mejnim prehodom pri Novi Gorici so se tanki JLA iz pivške vojašnice odpeljali že 26. junija, zaradi blokad in okvar pa prispeli do mejnega prehoda Rožna Dolina naslednji dan in ga zasedli.</p><p>28. junija so mejni prehod napadli samostojna bojna skupina TO, oddelek posebne enote milice in kriminalisti. Med spopadom je civilist Drago Kosmač razorožil skupino starešin JLA in zveznih miličnikov ter jih prepričal, da so se vdali. Nato so se začeli predajati tudi preostali vojaki JLA. Spopadi so terjali tri ubite vojake JLA, več je bilo ranjenih, uničena sta bila dva tanka. Na slovenski strani žrtev ni bilo. Slovenskim enotam se je kmalu predala tudi JLA na mejnem prehodu Vrtojba.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#rozna-dolina'>Več &gt;</a></p>");
+	var spop_limbus = L.marker([46.55490, 15.58173], {icon: battleIcon}).bindPopup("<p><b>Limbuš</b></p><p>Iz Maribora je 27. junija proti Rušam krenila manjša oklepna kolona JLA. Del kolone s protiletalskimi oklepnimi vozili BOV je prodrl do Fale, del pa je obtičal na ruškem mostu, kjer se je brez boja predal TO. Tej koloni sta iz Maribora krenila na pomoč dva tanka in vojaška policija, a jih je blokada zadržala pri Limbušu, kjer so jih 28. junija napadli pripadniki TO ter zajeli oba tanka in vojaško posadko.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#limbus'>Več &gt;</a></p>");
+	var spop_gornja_radgona = L.marker([46.67563, 15.99003], {icon: battleIcon}).bindPopup("<p><b>Gornja Radgona</b></p><p>Iz hrvaškega Varaždina je 27. junija proti mejnemu prehodu v Gornji Radgoni krenila kolona JLA, ki jo je pri mostu čez Dravo v Ormožu ustavila minirana barikada. Po neuspešnih pogajanjih je sledil spopad, a barikada ni bila prebita. Na pomoč JLA je iz Varaždina krenila druga kolona JLA, ki so jo v Ormožu pri minirani barikadi zaustavili pripadniki TO. Kolona JLA pa se je umaknila proti Ljutomeru. Iz Varaždina je nato krenila še tretja kolona JLA, ki je prek Veržeja prispela do Gornje Radgone. Med prodiranjem te kolone je bil ubit civilist Janez Svetina. V Gornji Radgoni so kolono napadle enote TO. Po sklenjenem premirju se je JLA 4. julija umaknila nazaj na Hrvaško. Med temi spopadi je bilo poškodovanih veliko poslopij v Ormožu in Gornji Radgoni.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#gornja-radgona'>Več &gt;</a></p>");
+	var spop_holmec = L.marker([46.56681, 14.84119], {icon: battleIcon}).bindPopup("<p><b>Holmec</b></p><p>Mejni prehod Holmec so branili pripadniki TO in milica, napadli pa so jih pripadniki JLA in zvezna milica. Slovenske obrambne sile so pridobile pomembne informacije od zajetih zveznih miličnikov v Dravogradu. Zato so oblikovale štiri udarne skupine, ki bi prisilile enoto JLA k vdaji. 28. junija je potekal večji spopad, med katerim je JLA napadla TO z vsem razpoložljivim orožjem in zadela objekt mejnega prehoda, ki so ga branili pripadniki TO. Kljub temu da so se iz objekta umaknili, se je spopad končal s predajo JLA. V spopadu je bilo več mrtvih in ranjenih, med njimi tudi slovenska miličnika Bojan Štumberger in Željko Ernoič.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#holmec'>Več &gt;</a></p>");
+	var spop_krakovski_gozd = L.marker([45.88905, 15.36911], {icon: battleIcon}).bindPopup("<p><b>Krakovski gozd</b></p><p>Oklepna kolona JLA iz Medvedjeka se je 30. junija začela umikati proti Novemu mestu in Hrvaški. Naslednji dan je prispela v Krakovski gozd, kjer so jo pričakale enote TO. Po neuspešnih pogajanjih je sledil spopad, med katerim je JLA napadla tudi z letali, a so zmagali teritorialci in zajeli vojake JLA skupaj s poveljnikom, ko so se skušali peš čez Gorjance umakniti na Hrvaško.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#krakovski-gozd'>Več &gt;</a></p>");
+	var spop_prilipe = L.marker([45.87806, 15.62493], {icon: battleIcon}).bindPopup("<p><b>Prilipe</b></p><p>Obkoljeni oklepni koloni JLA v Krakovskem gozdu je krenila na pomoč nova oklepna enota JLA iz Hrvaške z več kot 30 tanki in oklepnimi vozili. Pripadniki TO so postavili barikado pri Prilipah, na ozkem vhodu v Čateško polje. Sledil je spopad, JLA je napadla tudi z letali, pripadniki TO pa so bili uspešni in ubili poveljnika JLA, nakar se je JLA brez poveljujočega umaknila. Zaustavitev kolone JLA pri Prilipah je bila odločilna za zmago TO v Jugovzhodni Sloveniji.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#prilipe'>Več &gt;</a></p>");
+	var spop_vrhnika = L.marker([45.96405, 14.29682], {icon: battleIcon}).bindPopup("<p><b>Vrhnika</b></p><p>Del enot JLA z Vrhnike je 2. julija krenil proti Logatcu. Zato je TO postavila barikadi pri bencinski črpalki na Vrhniki in v Sinji Gorici. Barikado na Vrhniki so raketirala letala JLA, pri čemer so bili ranjeni štirje domačini. Teritorialci so postavili še barikado na magistralni cesti Vrhnika–Logatec pri Cesarskem vrhu, pri kateri so se spopadli z JLA in jo prisilili k umiku nazaj v vojašnico na Vrhniki. Do spopada je prišlo tudi pri barikadi v Sinji Gorici, s katerim so pripadniki TO prisili JLA k umiku proti vojašnici.</p><p><a class='btn btn-success btn-sm text-white' href='vojna2.html#vrhnika'>Več &gt;</a></p>");
+	
+/*	
+	var spop_ = L.marker([TODO], {icon: battleIcon}).bindPopup("<p><b>Spopad</b></p>");
+*/
+
+	var spopadi = L.layerGroup([spop_rebrnice, spop_vrhpolje, spop_vipava, spop_ajdovscina, spop_pale, spop_crnice, spop_dornberk, spop_vrtojba, spop_nova_vas, spop_nanos, spop_crni_vrh,
+	spop_poganci, spop_medvedjek, spop_trzin, spop_sentilj, spop_dravograd, spop_karavanke, spop_brnik, spop_rozna_dolina, spop_limbus, spop_gornja_radgona, spop_holmec, spop_krakovski_gozd, spop_prilipe, spop_vrhnika]);
+
+
+	// Pomembni dogodki
+	var rojstvo_slo = L.marker([46.05061, 14.50044], {icon: flagIcon}).bindPopup("<p><b>Razglasitev samostojne slovenske države</b></p><p>Dne 25. junija 1991 je bila v slovenski skupščini razglašena samostojna slovenska država Republika Slovenija. Naslednji dan, ko je na Trgu republike potekala državna slovesnost ob razglasitvi samostojnosti, pa se je začel napad JLA na samostojno Slovenijo, saj so prve tankovske enote zapustile vojašnici v Pivki in Ilirski Bistrici in se odpravile proti mejnim prehodom.</p><p>Za uradni začetek vojaškega napada na Slovenijo velja 27. junij, zaradi prvih premikov vojaških enot JLA 26. junija pa se je dejanski napad začel <i>»dan prej«</i>.</p>");
+	var konec_vojne = L.marker([44.91608, 13.76608], {icon: peaceIcon}).bindPopup("<p><b>Mirovna pogajanja na Brionih</b></p><p>Vojna za Slovenijo je potekala izjemno intenzivno med 26. oz. 27. junijem in 7. julijem 1991. Povzročila je smrtne žrtve in veliko ranjenih ter veliko gmotno škodo.</p><p>Na Brionih so se pod pokroviteljstvom Evropske unije začela pogajanja med Slovenijo (ter Hrvaško) in zveznimi jugoslovanskimi oblastmi. Rezultat pogajanj je bila Brionska deklaracija, po kateri so bile prekinjene vojaške operacije in sprejet trimesečni moratorij na slovenska osamosvojitvena prizadevanja.</p><p>Po preteku treh mesecev je JLA 25. oktobra 1991 zapustila slovensko ozemlje, slovenska osamosvojitev pa je bila uspešno končana. V letih 1991/1992 je postala Republika Slovenija mednarodno priznana država.</p>");
+	var odhod_jla = L.marker([45.54895, 13.72222], {icon: shipIcon}).bindPopup("<p><b>Odhod zadnje enote JLA iz Slovenije.</b></p><p>Zadnja enota JLA je 25. oktobra 1991 odplula iz pristanišča v Kopru.</p>");
+
+	var dogodki = L.layerGroup([rojstvo_slo, konec_vojne, odhod_jla]);
+
+
+	// Zemljevid z vsemi plastmi
+	const map = L.map('map', {
+	  center: [46.09, 14.99],
+	  zoom: 9,
+	  // privzeto vključene plasti
+	  layers: [tiles, prehodi_it, prehodi_at, prehodi_hu, prehodi_hr, letalisca, oddajniki, infrastruktura, enote_jla, zapore, napadi, spopadi, dogodki]
+	});
+
+
+	var overlayMaps = {
+		"Mednarodni mejni prehodi z Italijo": prehodi_it,
+		"Mednarodni mejni prehodi z Avstrijo": prehodi_at,
+		"Mednarodni mejni prehodi z Madžarsko": prehodi_hu,
+		"Mednarodni mejni prehodi s Hrvaško": prehodi_hr,
+		"Civilna in vojaška letališča": letalisca,
+		"Radijski/televizijski oddajniki": oddajniki,
+		"Strateška infrastruktura": infrastruktura,
+		"Enote JLA": enote_jla,
+		"Cestne zapore": zapore,
+		"Zračni napadi": napadi,
+		"Spopadi": spopadi,
+		"Pomembni dogodki": dogodki
+	};
+
+	var layerControl = L.control.layers({}, overlayMaps).addTo(map);
+
+	// Odhod JLA iz Kopra
+	//L.marker([45.54895, 13.72222], {icon: shipIcon}).bindPopup("<p><b><b>25. oktober 1991</b><br />Odhod zadnje enote JLA iz Slovenije.").addTo(map);
+
+
+
+/*
+	// Force zIndex of Leaflet
+	(function(global){
+	  var MarkerMixin = {
+		_updateZIndex: function (offset) {
+		  this._icon.style.zIndex = this.options.forceZIndex ? (this.options.forceZIndex + (this.options.zIndexOffset || 0)) : (this._zIndex + offset);
+		},
+		setForceZIndex: function(forceZIndex) {
+		  this.options.forceZIndex = forceZIndex ? forceZIndex : null;
+		}
+	  };
+	  if (global) global.include(MarkerMixin);
+	})(L.Marker);
+*/
+
+function gotoSlovenija() {
+  map.flyTo([46.09, 14.99], 9);
+}
+
+function gotoLjubljana() {
+  map.flyTo([46.0573, 14.5267], 12);
+}
+
+function gotoDolenjska() {
+  map.flyTo([45.91, 15.52], 10);
+}
+
+function gotoGorenjska() {
+  map.flyTo([46.36, 14.31], 11);
+}
+
+function gotoPrimorska() {
+  map.flyTo([45.65, 13.75], 10);
+}
+
+function gotoStajerska() {
+  map.flyTo([46.55, 15.75], 10);
+}
+
+function gotoBrioni() {
+  map.flyTo([45.20, 13.75], 10);
+}
+</script>
+
+
+<!-- Custom JavaScript for this site -->
+<script>
+/*
+ *  Hide loading box when page load complete
+ */
+window.onload = function(){
+	document.getElementById('content-loading').style.visibility = 'hidden';
+};
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-66REXS9BK3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-66REXS9BK3');
+</script>
+
+
+
+</body></html>

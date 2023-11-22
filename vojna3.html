@@ -1,0 +1,1939 @@
+<!doctype html>
+<html lang="sl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+	<!-- Force landscape mode -->
+	<link rel="manifest" href="manifest.json">
+
+    <title>Zbrali smo pogum</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Slick Carousel CSS -->
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+	<!-- Slick Carousel customization for vertical down direction -->
+    <link href="css/slick-down.css" rel="stylesheet">
+
+	<!-- FancyBox 3 CSS -->
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+	<!-- FancyBox 3 customizations -->
+    <link href="css/fancybox.css" rel="stylesheet">
+
+    <!-- Custom styles for this site -->
+    <link href="css/landing.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/elements.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Modal -->
+	<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+		  <div class="modal-body">
+			<div class="close-icon">
+			  <span data-dismiss="modal" aria-label="Zapri">
+				<img src="img/icon_zapri_siva.svg">
+			  </span>
+			</div>
+			<div class="flex-row">
+			  <div class="flex-column" style="width:45%;margin-bottom:2rem">
+				<a href="https://www.gov.si/drzavni-organi/organi-v-sestavi/arhiv/" target="_blank"><img src="img/logo_MK_arhivSL.png" class="flex-item"></a>
+				<a href="https://www.zrss.si/" target="_blank"><img src="img/logo_ZRSS.png" class="flex-item"></a>
+				<a href="https://www.parkvojaskezgodovine.si/" target="_blank"><img src="img/logo_PVZ.png" class="flex-item"></a>
+			  </div>
+			  <div class="flex-item green-line credits-box" style="width:55%;padding:0 2vh">
+				<p>
+				  <b>Partnerji</b><br />
+				  Arhiv Republike Slovenije, direktor dr. Bojan Cvelfar<br />
+				  Zavod Republike Slovenije za šolstvo, direktor dr. Vinko Logaj<br />
+				  Park vojaške zgodovine Pivka, direktor mag. Janko Boštjančič
+				</p>
+				<p>
+				  <b>Avtorji</b><br />
+				  mag. Alenka Starman Alič, Arhiv Republike Slovenije<br />
+				  Ana Čič, Park vojaške zgodovine<br />
+				  dr. Vilma Brodnik, Zavod Republike Slovenije za šolstvo
+				</p>
+				<p>
+				  <b>Strokovni sodelavci projekta</b><br />
+				  dr. Bojan Cvelfar, Arhiv Republike Slovenije<br />
+				  mag. Janko Boštjančič, Park vojaške zgodovine<br />
+				  dr. Andrej Brodnik, Fakulteta za matematiko, naravoslovje in informacijske tehnologije, Univerza na Primorskem<br />
+				  Gregor Anželj, Gimnazija Bežigrad<br />
+				  Peter Požar in Žiga Požar
+				</p>
+				<p>
+				  <b>Avtorice učnega gradiva za osnovno šolo</b><br />
+				  Jana Bec, Osnovna šola Prule<br />
+				  Bojana Mlinar Podobnik, Osnovna šola Prule<br />
+				  Tjaša Petrič, Osnovna šola Koseze
+				</p>
+				<p>
+				  <b>Jezikovni pregled</b><br />
+				  Tine Logar
+				</p>
+				<p>
+				  <b>Institucije in drugi zunanji sodelavci</b><br />
+				  Urad predsednika Republike Slovenije<br />
+				  Predsednik RS Borut Pahor<br />
+				  Ministrstvo za obrambo<br />
+				  Ministrstvo za zunanje zadeve<br />
+				  Ministrstvo za notranje zadeve<br />
+				  Državni zbor RS<br />
+				  Muzej novejše zgodovine Slovenije<br />
+				  Slovenski etnografski muzej<br />
+				  Narodni muzej Slovenije<br />
+				  RTV Slovenija<br />
+				  Narodna univerzitetna knjižnica<br />
+				  Pošta Slovenije<br />
+				  Skupina Futura<br />
+				  Časopisi: Delo, Družina, Primorske novice, Večer<br />
+				  Posamezniki: Franco Juri, Tomaž Lavrič (Mladina), Helena Race
+				</p>
+				<p>
+				  <b>Videoprodukcija</b><br />
+				  Koprodukcija: RTV Slovenija<br />
+				  Izvedbena produkcija: Studio Virc d.o.o.
+				</p>
+				<p>
+				  <b>Oblikovanje</b><br />
+				  Matic Leban
+				</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Copyright -->
+	<div class="modal fade" id="copyright" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body text-level1">
+					<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<p><b><span class="green">Obvestilo o avtorskih pravicah</b></p>
+					<p>Vse pravice pridržane. Brez pisnega dovoljenja ni dovoljeno nobenega dela virtualnega učnega gradiva (razstava, video film) na kakršenkoli način reproducirati, kopirati ali kako drugače razširjati. Ta prepoved se nanaša tako na mehanske oblike reprodukcije (fotokopiranje) kot na elektronske (snemanje ali prepisovanje na kakršenkoli pomnilniški medij). Izjemo predstavlja uporaba virtualnega učnega gradiva v šolske namene neposredno pri pouku.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    <nav class="br navbar navbar-dark fixed-top">
+      <a class="navbar-brand" href="index.html">
+	    <img id="logo" src="img/logo_menu.svg">
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleMenu" aria-controls="navbarToggleMenu" aria-expanded="false" aria-label="Toggle navigation">
+	    <div class="navbar-title">10. KONEC VOJNE</div>
+        <span id="navbar-hamburger" class="navbar-toggler-icon"></span>
+        <span id="navbar-cheeseburger" class="hidden" style="padding-top:0.1rem;">&#x2573;</span>
+      </button>
+    </nav>
+
+    <!-- Navbar toggle menu -->
+	<div id="navbarToggleMenu" class="br text-light hidden">
+	  <table>
+	    <tr>
+		  <td id="plebiscit-menu" style="width:75vh" class="disabled"><center>PLEBISCIT</center></td>
+		  <td rowspan="4" valign="top" style="height:100vh;padding:0">
+		    <div style="height:100vh;overflow-y:scroll;overflow:-moz-scrollbars-vertical;">
+		      <!-- Mobile menu: Plebiscit -->
+			  <table border="0" id="plebiscit-menu-m" class="hidden">
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit.html'">
+					<center style="font-size:1rem">Ogled filma</center>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit1.html'">
+					<div class="item-number-m">1</div>
+					<div class="item-label-m">PRED<br />PLEBISCITOM</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit2.html'">
+					<div class="item-number-m">2</div>
+					<div class="item-label-m">DAN<br />PLEBISCITA</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='plebiscit3.html'">
+					<div class="item-number-m">3</div>
+					<div class="item-label-m">PO<br />PLEBISCITU</div>
+				  </td>
+				</tr>
+			  </table>
+		      <!-- Mobile menu: Osamosvojitev -->
+			  <table border="0" id="samostojnost-menu-m" class="hidden">
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost.html'">
+					<center style="font-size:1rem">Ogled filma</center>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost1.html'">
+					<div class="item-number-m">4</div>
+					<div class="item-label-m">80. LETA V<br />JUGOSLAVIJI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost2.html'">
+					<div class="item-number-m">5</div>
+					<div class="item-label-m">PROCESI<br />DEMOKRATIZACIJE</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost3.html'">
+					<div class="item-number-m">6</div>
+					<div class="item-label-m">RAZGLASITEV<br />SAMOSTOJNOSTI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='samostojnost4.html'">
+					<div class="item-number-m">7</div>
+					<div class="item-label-m">VARNOSTNI<br />VIDIKI</div>
+				  </td>
+				</tr>
+			  </table>
+		      <!-- Mobile menu: Vojna -->
+			  <table border="0" id="vojna-menu-m">
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna.html'">
+					<center style="font-size:1rem">Ogled filma</center>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna1.html'">
+					<div class="item-number-m">8</div>
+					<div class="item-label-m">DAN<br />PREJ</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu" style="height:25vh" onclick="window.location='vojna2.html'">
+					<div class="item-number-m">9</div>
+					<div class="item-label-m">SPOPADI</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu active" style="height:25vh">
+					<div class="item-number-m" style="padding-left:0.5rem">10</div>
+					<div class="item-label-m">KONEC<br />VOJNE</div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="menu active content" style="height:25vh">
+					<div class="item-content-m" style="font-size:1rem">
+					  <a href="#vojna31" onclick="hideToggleMenu()">Brionska deklaracija</a><br />
+					  <a href="#vojna32" onclick="hideToggleMenu()">Mednarodno priznanje</a><br />
+					</div>
+				  </td>
+				</tr>
+			  </table>
+		      <!-- Mobile menu: Osnovni meni -->
+			  <table border="0" width="100%" id="osnovni-menu-m" class="hidden" style="height:100vh">
+				<tr>
+				  <td width="40%" class="menu-main-column">
+					<img src="img/logo_menu.svg" style="width:100%;padding:10px">
+				  </td>
+				  <td class="menu-main-column">
+					<div class="menu-items" style="width:100%;font-size:1rem;line-height:1.5rem;">
+					  <a href="index.html">Vstopna stran</a><br />
+					  <a href="gradiva.html">Učna gradiva</a><br />
+					  <a href="viri.html">Viri</a><br />
+					  <a href="#" data-toggle="modal" data-target="#about">O projektu</a><br />
+					  <a href="#" data-toggle="modal" data-target="#copyright">Avtorske pravice</a><br />
+					</div>
+				  </td>
+				</tr>
+			  </table>
+			</div>
+		  </td>
+		</tr>
+	    <tr>
+		  <td id="samostojnost-menu" style="width:75vh" class="disabled"><center>OSAMOSVOJITEV</center></td>
+		</tr>
+	    <tr>
+		  <td id="vojna-menu" style="width:75vh"><center>VOJNA</center></td>
+		</tr>
+	    <tr>
+		  <td id="osnovni-menu" style="width:75vh" class="disabled"><center>OSNOVNI MENI</center></td>
+		</tr>
+	  </table>
+	</div>
+
+    <!-- Navbar bottom menu -->
+	<div id="navbarBottomMenu" class="br text-light hidden">
+	  <table>
+	    <tr>
+		  <td width="16%" rowspan="8" valign="top" class="menu-main-column">
+		    <img src="img/logo_menu.svg" width="60%">
+			<div class="menu-items" style="padding-left:1.3em;padding-top:1.3em">
+			  <a href="index.html">Vstopna stran</a><br />
+			  <a href="gradiva.html">Učna gradiva</a><br />
+			  <a href="viri.html">Viri</a><br />
+			  <a href="#" data-toggle="modal" data-target="#about">O projektu</a><br />
+			  <a href="#" data-toggle="modal" data-target="#copyright">Avtorske pravice</a><br />
+			</div>
+		  </td>
+		  <td width="28%" height="12.5%" id="plebiscit" class="disabled bl"><center>PLEBISCIT</center></td>
+		  <td width="28%" height="12.5%" id="samostojnost" class="disabled bl"><center>OSAMOSVOJITEV</center></td>
+		  <td width="28%" height="12.5%" id="vojna" class="bl"><center>VOJNA</center></td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit.html'">
+		    <center>Ogled filma</center>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost.html'">
+		    <center>Ogled filma</center>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna.html'">
+		    <center>Ogled filma</center>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit1.html'">
+		    <div class="item-number">1</div>
+			<div class="item-label">PRED<br />PLEBISCITOM</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost1.html'">
+		    <div class="item-number">4</div>
+			<div class="item-label">80. LETA V<br />JUGOSLAVIJI</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna1.html'">
+		    <div class="item-number">8</div>
+			<div class="item-label">DAN<br />PREJ</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit2.html'">
+		    <div class="item-number">2</div>
+			<div class="item-label">DAN<br />PLEBISCITA</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost2.html'">
+		    <div class="item-number">5</div>
+			<div class="item-label">PROCESI<br />DEMOKRATIZACIJE</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='vojna2.html'">
+		    <div class="item-number">9</div>
+			<div class="item-label">SPOPADI</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='plebiscit3.html'">
+		    <div class="item-number">3</div>
+			<div class="item-label">PO<br />PLEBISCITU</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost3.html'">
+		    <div class="item-number">6</div>
+			<div class="item-label">RAZGLASITEV<br />SAMOSTOJNOSTI</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu active bl">
+		    <div class="item-number">10</div>
+			<div class="item-label">KONEC<br />VOJNE</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="menu bl" onclick="window.location='samostojnost4.html'">
+		    <div class="item-number">7</div>
+			<div class="item-label">VARNOSTNI<br />VIDIKI</div>
+		  </td>
+		  <td width="28%" height="12.5%" class="menu active content bl">
+		    <div class="item-content">
+			  <a href="#vojna31" onclick="hideBottomMenu()">Brionska deklaracija</a><br />
+			  <a href="#vojna32" onclick="hideBottomMenu()">Mednarodno priznanje</a><br />
+			</div>
+		  </td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		</tr>
+		<tr>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		  <td width="28%" height="12.5%" class="bl"></td>
+		</tr>
+	  </table>
+    </div>
+
+	<!-- Previous and next buttons -->
+	<div class="nav-prev-btn" id="navPrevBtn">
+		<svg width="20px" height="30px" viewBox="0 0 20 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g id="nazaj_24" transform="translate(-19, -103)" stroke="#858585" stroke-width="6">
+					<polyline id="nazaj_24" transform="translate(30, 118) rotate(-180) translate(-30, -118)" points="24 106 36 118 24 130"></polyline>
+				</g>
+			</g>
+		</svg>
+	</div>
+	<div class="nav-next-btn" id="navNextBtn">
+		<center>
+		<svg width="20px" height="30px" viewBox="0 0 20 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g id="naprej_24" transform="translate(-204, -729)" stroke="#858585" stroke-width="6">
+					<polyline id="naprej_24" points="207 732 219 744 207 756"></polyline>
+				</g>
+			</g>
+		</svg>
+		</center>
+	</div>
+
+
+	<!-- Device orientation -->
+    <div id="device-orientation">
+	  <center>
+	    <div id="orientation-box">
+	      <p><img src="img/list_desno.svg" style="height:20vh"></p>
+	      <p>Ta stran se vidi najbolje, če
+		  <br />je naprava obrnjena vodoravno.</p>
+	    </div>
+	  </center>
+	</div>
+
+	<!-- Loading box -->
+    <div id="content-loading">
+	  <center>
+	    <div id="loading-box">
+	      <img src="img/nalaganje_opt.gif">
+	      <br />Nalaganje v teku ...
+	    </div>
+	  </center>
+	</div>
+
+	<!-- Main page content -->
+    <div class="main-content">
+
+		<div class="heading-box heading-bg">
+		  <div class="heading-number" style="padding-left:10vh">10</div>
+		  <div class="heading-title">KONEC<br />VOJNE</div>
+		  <div class="scroll-indicator">
+		    <img src="img/scroll_indicator2.png">
+		  </div>
+		</div>
+
+		<!-- Modal: Hans van den Broek -->
+		<div class="modal fade" id="popup_broek" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-level1">
+						<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/33/photo/broek.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Hans van den Broek,<br /> spletni vir: Wikipedija
+						</div>
+					</span>
+						<p><b><span class="green">Hans van den Broek</span> (1936-), nizozemski politik.</b></p>
+						<p>Po študiju prava na Utrechtski univerzi je v šestdesetih letih služboval kot pravnik v Rotterdamu. Leta 1976 je postal član spodnjega doma parlamenta, leta 1981 pa je bil izvoljen za državnega sekretarja za zunanje zadeve. Takoj naslednje leto je bil izvoljen za ministra za zunanje zadeve in na tem mestu ostal do leta 1993. Takrat je postal evropski komisar in Evropsko komisijo vodil do leta 1999. Van den Broek je poznan predvsem kot odličen pogajalec – kot tak je v imenu Evropske skupnosti sodeloval tudi pri reševanju konflikta v Sloveniji leta 1991.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal: Petar Gračanin -->
+		<div class="modal fade" id="popup_gracanin" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-level1">
+						<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+				    </div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/33/photo/gracanin.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Petar Gračanin,<br /> spletni vir: Wikipedija
+						</div>
+					</span>
+						<p><b><span class="green">Petar Gračanin</span> (1923-2004), srbski general in politik.</b></p>
+						<p>Med 2. svetovno vojno je sodeloval v narodnoosvobodilnem boju in se pridružil Komunistični partiji Jugoslavije. Po vojni je bil leta 1951 odlikovan z redom narodnega heroja. Zaključil je Višjo vojaško akademijo JLA in služboval na visokih položajih v vojski, med drugim na mestu načelnika Generalštaba JLA med letoma 1982 in 1985. Po koncu vojaške kariere, v kateri je dosegel čin generalpolkovnika, se je vključil v politiko in leta 1987 postal predsednik Predsedstva Republike Srbije, nato pa od 1989 do 1992 opravljal funkcijo ministra za notranje zadeve SFRJ.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal: Budimir Lončar -->
+		<div class="modal fade" id="popup_loncar" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-level1">
+						<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+					</div>
+					<span style="float:left; padding-right:1rem">
+						<img src="thumb/33/photo/loncar.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Budimir Lončar,<br /> spletni vir: Wikipedija
+						</div>
+					    </span>
+						<p><b><span class="green">Budimir Lončar</span> (1924-), hrvaški politik in diplomat.</b></p>
+						<p>Med 2. svetovno vojno je postal član Komunistične partije Jugoslavije. V petdesetih letih je sodeloval pri jugoslovanski misiji v Združenih narodih, leta 1956 pa se je vrnil v Beograd in se zaposlil na ministrstvu za zunanje zadeve. Leta 1984 je bil imenovan za namestnika ministra za zunanje zadeve, tri leta kasneje pa postal minister za zunanje zadeve. Na tem položaju je ostal do razpada Jugoslavije leta 1991. Med letoma 1993 in 1995 je bil predstavnik gibanja neuvrščenih v Združenih narodih, sodeloval pa je tudi z različnimi nevladnimi organizacijami.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal: Stane Brovet -->
+		<div class="modal fade" id="popup_brovet" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-level1">
+						<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+						</div>
+						<span style="float:left; padding-right:1rem">
+						<img src="thumb/33/photo/brovet.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Stane Brovet,<br /> spletni vir: Demokracija
+						</div>
+					</span>
+						<p><b><span class="green">Stane Brovet</span> (1930-2007), slovenski obveščevalec in admiral JLA.</b></p>
+						<p>Med 2. svetovno vojno se je pridružil partizanom, po vojni pa uspešno zaključil vojaško pomorsko šolo v Splitu. Kmalu po začetku službovanja v JLA je postal operativec protiobveščevalne službe (KOS), nato pa služboval kot sekretar vojaškega atašeja na Kitajskem in v Italiji ter kot vojaški ataše v Angliji. Leta 1980 je zaključil Vojaško šolo JLA in v osemdesetih letih opravljal funkcijo načelnika protiobveščevalne agencije. Med letoma 1988 in 1992 je bil namestnik zveznega sekretarja za ljudsko obrambo, takrat je bil tudi povišan v čin admirala. V času vojne za Slovenijo je sodeloval kot pogajalec na strani zveznih oblasti, med drugim tudi na Brionih. Bil je Slovenec z najvišjim činom v JLA. Po vojni leta 1992 je bil prisilno upokojen in do smrti živel v Beogradu.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal: Peter Carrington -->
+		<div class="modal fade" id="popup_carrington" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-level1">
+						<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+						</div>
+						<span style="float:left; padding-right:1rem">
+						<img src="thumb/33/photo/carrington.jpg" class="popup-photo">
+						<div class="bottom-note" style="width:180px">
+						Peter Carrington,<br /> spletni vir: Wikipedia
+						</div>
+					</span>
+						<p><b><span class="green">Peter Carrington</span> (1919-2018), britanski častnik in politik.</b></p>
+						<p>Leta 1938 je kot baron Carrington nasledil svojega očeta, po katerem je podedoval tudi sedež v lordski zbornici. V petdesetih letih je bil sekretar na ministrstvu za kmetijstvo in hrano ter ministrstvu za obrambo, nato pa visoki komisar Združenega kraljestva v Avstraliji (1956–59). Bil je tudi minister brez listnice in vodja lordske zbornice (1963–64), sekretar za obrambo (1970–74), predsednik Konservativne stranke (1972–74), državni sekretar za energijo (1974), sekretar za zunanje zadeve in minister za prekomorski razvoj (1979–84). V drugi polovici osemdesetih let je bil generalni sekretar Nata. Leta 1991 je bil vodja pogajanj v zvezi z razpadom Jugoslavije in se zavzemal za neodvisnost vsake od jugoslovanskih republik.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal: Mednarodnem sodišču za vojne zločine -->
+		<div class="modal fade" id="popup_sodisce" tabindex="-1" role="dialog" aria-labelledby="podrobnosti31" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-level1">
+						<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+						</div>
+						<p><b><span class="green">Mednarodno sodišče za vojne zločine</span></b></p>
+						<p>Mednarodno sodišče za vojne zločine na tleh nekdanje Jugoslavije je bila institucija Organizacije združenih narodov za sojenje storilcem resnih zločinov med vojnami na območju nekdanje Jugoslavije. Nahajalo se je v Haagu na Nizozemskem. Sodišče je bilo ustanovljeno maja 1993 na predlog takratnega nemškega zunanjega ministra Klausa Kinkla. Pooblaščeno je bilo za sojenje posameznikom (ne pa tudi državam in organizacijam) za štiri skupine zločinov, in sicer za grobe kršitve Ženevskih konvencij iz leta 1949, kršitve vojnega prava, genocid in zločine proti človeštvu. Najvišja mogoča kazen, ki jo je lahko sodišče izreklo, je bil dosmrtni zapor. Prvo obtožnico je sodišče izdalo leta 1994, dve leti kasneje pa se je začelo tudi prvo sojenje. Od 161 obtožencev jih je bilo v Haagu obsojenih 83. Zadnja sodba je bila izrečena novembra 2017, 31. decembra istega leta pa je sodišče formalno prenehalo obstajati.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal: Osimski sporazumi -->
+		<div class="modal fade" id="popup_sporazumi" tabindex="-1" role="dialog" aria-labelledby="podrobnosti31" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-level1">
+						<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+						</div>
+						<p><b><span class="green">Osimski sporazumi</span></b></p>
+						<p>Osimski sporazumi so mednarodni pravni akti, ki sta jih leta 1975 podpisale SFRJ in Republika Italija v italijanskem mestu Osimo blizu Ancone. S sporazumi je bilo urejeno vprašanje meje med državama, ki je predstavljalo srž spora od konca 2. svetovne vojne. Dogovor vključuje tudi sporazum o gospodarskem sodelovanju med Italijo in SFRJ ter protokol o prosti coni. Slovenija je po osamosvojitvi julija 1992 postala pravna naslednica Osimskih sporazumov in le-ti ostajajo v veljavi še danes.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal: Avstrijska državna pogodba -->
+		<div class="modal fade" id="popup_pogodba" tabindex="-1" role="dialog" aria-labelledby="podrobnosti31" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-level1">
+						<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+						</div>
+						<p><b><span class="green">Avstrijska državna pogodba</span></b></p>
+						<p>Avstrijska državna pogodba je sporazum o ponovni vzpostavitvi samostojne in demokratične Avstrije, ki je bil podpisan 15. maja 1955. Podpisniki sporazuma so bili zunanji ministri ZDA, Velike Britanije, Francije, Sovjetske zveze in Avstrije. S pogodbo, ki jo je jugoslavija podpisala novembra leta 1955 je bilo urejeno tudi vprašanje slovensko-avstrijske meje - v zameno za varstvo slovenske in hrvaške manjšine na Koroškem, Štajerskem in Gradiščanskem se je Jugoslavija odpovedala ozemeljskim zahtevam.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal: Organizacija združenih narodov (OZN) -->
+		<div class="modal fade" id="popup_ozn" tabindex="-1" role="dialog" aria-labelledby="podrobnosti31" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-level1">
+						<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+						</div>
+						<p><b><span class="green">Organizacija združenih narodov (OZN)</span></b></p>
+						<p>Organizacija združenih narodov (OZN) je mednarodna organizacija katere članice so skoraj vse države sveta. Ustanovljena je bila takoj po koncu 2. svetovne vojne leta 1945 v San Franciscu. Ustanovilo jo je 51 držav, med drugim tudi Jugoslavija. Predhodnik OZN je bilo Društvo narodov, temeljno vodilo držav članic pa je bilo prizadevanje po ohranjanju mednarodnega miru in varnosti, sodelovanju med narodi ter varstvu človekovih pravic. Strukturo OZN sestavlja šest glavnih organov in sicer Generalna skupščina, Varnostni svet, Ekonomski in socialni svet, Skrbniški svet ter Meddržavno sodišče in Sekretariat. Vodilna oseba v OZN je generalni sekretar, ki vodi Sekretariat, imenuje pa ga Generalna skupščina na predlog Varnostnega sveta.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal: Zveza NATO (Severnoatlantsko zavezništvo) -->
+		<div class="modal fade" id="popup_nato" tabindex="-1" role="dialog" aria-labelledby="podrobnosti31" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body text-level1">
+						<div class="close-icon">
+					  <span data-dismiss="modal" aria-label="Zapri">
+						<img src="img/icon_zapri_siva.svg">
+					  </span>
+						</div>
+						<p><b><span class="green">Zveza NATO (Severnoatlantsko zavezništvo)</span></b></p>
+						<p>Zveza NATO (Severnoatlantsko zavezništvo) je mednarodna vojaško politična organizacija držav za sodelovanje na področju obrambe. Ustanovljena je bila po 2. svetovni vojni, aprila 1949 z Washingtonsko pogodbo. Zvezo so na podlagi ustanovne listine OZN, ki državam omogoča pravico do individualne ali kolektivne samoobrambe  ustanovile Belgija, Danska, Francija, Islandija, Italija, Kanada, Luksemburg, Nizozemska, Norveška, Portugalska, Združeno kraljestvo in Združene države Amerike. NATO je bil tako ustanovljen z namenom kolektivne samoobrambe držav članic predvsem v luči zaostrovanja razmer s Sovjetsko zvezo in začetkom hladne vojne. Slovenija se je v zvezo NATO vključila leta 2004.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!------------------------------
+		//  PART 1
+		//----------------------------->
+		<div class="cover-box rel pointer" id="vojna31"><!-- MUST use "rel" -->
+		  <div class="heading-last-diagonal wd"></div>
+		  <div class="cover-box-title">
+			<div class="frame">
+			  <span class="green">BRIONSKA</span><br />DEKLARACIJA
+			</div>
+		  </div>
+		  <div class="intro-first-diagonal wd"></div>
+		</div>
+
+		<div class="intro-box w100" style="margin-left:-1px">
+		  <div class="h20 flex-row">
+		    <div class="intro-title" id="citat_slapar">
+				»Na naši zemlji ni več nobenih tujih vojakov. Svobodo in suverenost varujejo naše sile!«
+				<span class="text-level2 ml2">generalmajor Janez Slapar odhodu zadnjega vojaka JLA iz Slovenije</span>
+			</div>
+		  </div>
+		  <div class="w80 h60 flex-row">
+		    <div class="intro-content">
+				Po sklenitvi dogovora o prekinitvi ognja 3. julija 1991 je jugoslovanska vojska prenehala z napadi, a je z nenajavljenimi preleti in snemanjem položajev Teritorialne obrambe še naprej kršila premirje. Slovenske obrambne sile so zato v tem času izvajale poostren nadzor nad vojašnicami in gibanjem JLA. 7. julija 1991 so se predstavniki Slovenije, Hrvaške in Jugoslavije skupaj z opazovalci Evropske skupnosti sestali na Brionih in se uspeli sporazumeti o rešitvi konflikta v Sloveniji.
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box">
+		    <div class="blue-last-diagonal wd"></div>
+			<div class="flex-column mt-auto mb-auto ml8">
+				<img src="thumb/33/news1/01.jpg" class="h80 pointer" id="armada">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="media/33/karikatura_jna.jpg" class="h60 pointer" id="karikatura_jna">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w60">
+				<p>
+					Konferenco na Brionih je za vse vpletene strani 7. julija 1991 pripravila Evropska skupnost (ES) pod vodstvom pogajalca in tedanjega zunanjega ministra Nizozemske <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_broek">Hansa van den Broeka</a>. Na slovenski strani so se je udeležili predsednik Republike Slovenije Milan Kučan, predsednik izvršnega sveta (vlade) Lojze Peterle, zunanji minister dr. Dimitrij Rupel, predsednik slovenske skupščine dr. France Bučar in član predsedstva Jugoslavije Janez Drnovšek. Poleg slovenske delegacije so prišli na Brione tudi predstavniki Republike Hrvaške ter vodstvo federacije – predsednik Zveznega izvršnega sveta (vlade) SFRJ Ante Marković, notranji minister <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_gracanin">Petar Gračanin</a>, zunanji minister <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_loncar">Budimir Lončar</a>, pomočnik obrambnega ministra <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_brovet">Stane Brovet</a> ter člani Zveznega predsedstva SFRJ (brez predstavnikov Kosova in Vojvodine). Jugoslovanska stran je predstavnike Slovenije poskušala prepričati o preoblikovanju SFRJ, a je slovenska stran predloge za ohranjanje enotne države ostro zavračala.
+				</p>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner mt-0 mb-auto">
+				<img src="thumb/33/photo1/tiskovna_cd.jpg" class="h70 pointer" id="tiskovna_cd">
+				<div class="bottom-note text-level2">
+					Tiskovna konferenca v Cankarjevem domu po vrnitvi z Brionov
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/33/news1/05.jpg" class="h50 pointer" id="nas_glas">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w50">
+				Po petnajsturnih pogajanjih so predstavniki vseh vpletenih strani sprejeli Brionsko deklaracijo, ki je temeljila na predlogu Evropske skupnosti o takojšnjem premirju, umiku vojakov v vojašnice in odložitvi ukrepov osamosvajanja Republike Slovenije za tri mesece. Skupščina RS je predlog sprejela predvsem zaradi upravičenega strahu o morebitnem drugem, agresivnejšem napadu JLA na državo.
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/33/news1/09.jpg" class="h50 pointer" id="ce_smo_cakali">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h70 flex-column mt-auto mb-auto">
+				<div class="gallery-2rows-zigzag h80 flex-zigzag pointer" style="width:40vh" id="brionska_deklaracija">
+					<div class="gallery-zigzag-item">
+						<img src="thumb/33/docs1/brioni1.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/33/docs1/brioni2.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item zigzag-offset-top">
+						<img src="thumb/33/docs1/brioni3.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/33/docs1/brioni4.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml1rem">
+			<div class="h80 content-box-inner">
+				<div class="flex-row h10 mb-auto">
+					<div class="side-note text-level2 w20">
+						Brionska deklaracija
+					</div>
+				</div>
+				<div class="flex-row h70 mt-auto">
+					<div class="text-level2 w20">
+						Skupščina Republike Slovenije je 10. julija 1991 z več kot dvotretjinsko večino potrdila Brionsko deklaracijo.
+					</div>
+				</div>
+			</div>
+			<div class="gray-first-diagonal"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news33_1">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/33/news1/11.jpg" class="p2">
+					<img src="thumb/33/news1/12.jpg" class="p2">
+					<img src="thumb/33/news1/13.jpg" class="p2">
+					<img src="thumb/33/news1/14.jpg" class="p2">
+				</div>
+				<div class="news-column news_down img-vertical-scroll w40">
+					<img src="thumb/33/news1/15.jpg" class="p2">
+					<img src="thumb/33/news1/16.jpg" class="p2">
+					<img src="thumb/33/news1/17.jpg" class="p2">
+					<img src="thumb/33/news1/18.jpg" class="p2">
+					<img src="thumb/33/news1/19.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal"></div>
+			<div class="content-box-inner">
+				<img src="media/33/docs1/brioni_vojna.jpg" class="h50 pointer" id="brioni_vojna">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w50">
+				Brionska deklaracija je na področju obrambe in varnosti med drugim določala, da se lahko narodi Jugoslavije sami in avtonomno odločajo o svoji prihodnosti, da se morajo vse strani vzdržati enostranskih ukrepov in se ne smejo posluževati nikakršnega nasilja, da bo Predsedstvo SFRJ prevzelo vse z ustavo določene pristojnosti pri vodenju države, da se bo oblikovala mednarodna opazovalna skupina za spremljanje sprejetih določil deklaracije in da morata obe strani takoj izpustiti vojne ujetnike in druge zadržane osebe.
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="media/33/karikatura_brioni.jpg" class="h60 pointer" id="karikatura_brioni">
+			</div>
+			<div class="gray-first-diagonal ml8"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news33_2">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/33/news1/20.jpg" class="p2">
+					<img src="thumb/33/news1/21.jpg" class="p2">
+					<img src="thumb/33/news1/22.jpg" class="p2">
+					<img src="thumb/33/news1/23.jpg" class="p2">
+				</div>
+				<div class="news-column news_down img-vertical-scroll w40">
+					<img src="thumb/33/news1/24.jpg" class="p2">
+					<img src="thumb/33/news1/25.jpg" class="p2">
+					<img src="thumb/33/news1/26.jpg" class="p2">
+					<img src="thumb/33/news1/27.jpg" class="p2">
+				</div>
+			</div>
+			<div class="content-box-inner flex-column-space">
+		      <div class="h60 mb-auto">
+		        <div class="text-level2 w25">
+				    Boji v Sloveniji so za seboj pustili razdejanje, katerega pričevalci so bili porušene stavbe, uničene ceste in požgana vozila. Z nastalo materialno škodo so se državljani Slovenije tako spopadali še več let po koncu vojne.
+			    </div>
+			  </div>
+		    </div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal"></div>
+			<div class="content-box-inner text-level1 w50">
+				Evropska skupnost je po dogovoru na Brionih v Jugoslavijo poslala svoje opazovalce. Prva skupina je prišla v Slovenijo 15. julija 1991 in se nastanila na Brdu pri Kranju. Opazovalci so obiskovali slovenske vojašnice in opravljali informativne pogovore s pripadniki Teritorialne obrambe, milice in oblasti.
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/photo1/opazovalci.jpg" class="h60 pointer" id="opazovalci">
+			</div>
+			<div class="h60 flex-column mt-auto mb-auto ml1rem">
+				<div class="side-note w20">
+					Evropski opazovalci v Mariboru 19. julija 1991
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column">
+				<div class="flex-row" id="memorandum">
+					<div class="news-column img-vertical-scroll w40">
+						<img src="thumb/33/docs1/memorandum1.jpg" class="p2">
+						<img src="thumb/33/docs1/memorandum2.jpg" class="p2">
+						<img src="thumb/33/docs1/memorandum3.jpg" class="p2">
+						<img src="thumb/33/docs1/memorandum4.jpg" class="p2">
+						<img src="thumb/33/docs1/memorandum5.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+			<div class="w25 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row mt-0 mb-auto">
+					<div class="side-note text-level2">
+						Memorandum o soglasju o opazovalni misiji
+					</div>
+				</div>
+			</div>
+			<div class="gray-first-diagonal"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news33_3">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/33/news1/31.jpg" class="p2">
+					<img src="thumb/33/news1/32.jpg" class="p2">
+					<img src="thumb/33/news1/33.jpg" class="p2">
+					<img src="thumb/33/news1/34.jpg" class="p2">
+				</div>
+				<div class="news-column news_down img-vertical-scroll w40">
+					<img src="thumb/33/news1/35.jpg" class="p2">
+					<img src="thumb/33/news1/36.jpg" class="p2">
+					<img src="thumb/33/news1/37.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal"></div>
+			<div class="h70 flex-column mt-auto mb-auto">
+				<div class="gallery-2rows-zigzag h80 flex-zigzag pointer" style="width:120vh" id="seznam_padlih">
+					<div class="gallery-zigzag-item">
+						<img src="thumb/33/docs1/seznam1a.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/33/docs1/seznam1b.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item zigzag-offset-top">
+						<img src="thumb/33/docs1/seznam1c.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/33/docs1/seznam1d.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/33/docs1/seznam1e.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/33/docs1/seznam1f.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item zigzag-offset-top">
+						<img src="thumb/33/docs1/seznam1g.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/33/docs1/seznam1h.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/33/docs1/seznam1i.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item">
+						<img src="thumb/33/docs1/seznam1j.jpg" class="p2">
+					</div>
+					<div class="gallery-zigzag-item zigzag-offset-top">
+						<img src="thumb/33/docs1/seznam2.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="h80 w25 content-box-inner ml1rem">
+				<div class="flex-row h10 mt-0 mb-auto">
+					<div class="side-note text-level2">
+						Seznam padlih
+					</div>
+				</div>
+				<div class="flex-row h70 text-level2 mt-auto">
+					Poleg materialne škode je vojna povzročila tudi izgube človeških življenj, tako na jugoslovanski kot slovenski strani. Podatke o žrtvah vojne za Slovenijo je po prenehanju bojev v juliju objavil Rdeči križ Slovenije.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column">
+				<div class="flex-row" id="clanki_zrtve">
+					<div class="news-column news_up img-vertical-scroll w40">
+						<img src="thumb/33/news1/41a.jpg" class="p2">
+						<img src="thumb/33/news1/41b.jpg" class="p2">
+						<img src="thumb/33/news1/42.jpg" class="p2">
+						<img src="thumb/33/news1/43.jpg" class="p2">
+						<img src="thumb/33/news1/44.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column">
+				<div class="flex-row" id="zvzva">
+					<div class="news-column img-vertical-scroll w40">
+						<img src="thumb/33/docs1/zvzva1.jpg" class="p2">
+						<img src="thumb/33/docs1/zvzva2.jpg" class="p2">
+						<img src="thumb/33/docs1/zvzva3.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+			<div class="h80 w25 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row h10 mb-auto">
+					<div class="side-note text-level2">
+						Zakon o varstvu žrtev vojaške agresije
+					</div>
+				</div>
+				<div class="flex-row h70 text-level2 mt-auto">
+					Skupščina RS je avgusta 1991 sprejela Zakon o varstvu žrtev vojaške agresije na Republiko Slovenijo v letu 1991. Skrb za vse ljudi, ki so bili v vojni ranjeni in poškodovani, je tako dobila še zakonsko podlago.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/docs1/demobilizacija.jpg" class="h80 pointer" id="demobilizacija">
+			</div>
+			<div class="h80 w25 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row h10 mb-auto">
+					<div class="side-note text-level2">
+						Demobilizacija
+					</div>
+				</div>
+				<div class="flex-row h70 text-level2 mt-auto">
+					Po prenehanju spopadov in sprejetem dogovoru na Brionih je vodstvo Teritorialne obrambe 17. julija izvedlo demobilizacijo.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w50">
+				Pomemben del pogajanj na Brionih so bili pogovori o umiku pripadnikov JLA z ozemlja Slovenije. Predsedstvo SFRJ je tako 18. julija 1991 sprejelo sklep o umiku enot JLA, ki je bil predviden v roku treh mesecev. Vodstvo je najprej začelo s koncentracijo vseh vojaških sredstev na zbirnih mestih, sledil pa naj bi transport po železnici v Bosno in Hercegovino ter na Hrvaško.
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="gallery-3rows h80 flex-gallery pointer" style="width:120vh" id="galerija_odhod">
+				<div class="w40" style="border:2px solid transparent">
+					<div class="photo-note zbirka-fotografij" style="height:26.1vh">
+						Odhajanje JLA iz Slovenije
+					</div>
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/odhod/01.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/odhod/02.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/odhod/03.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/odhod/06.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/odhod/05.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/odhod/04.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/odhod/07.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/odhod/08.jpg" class="p2">
+				</div>
+			</div>
+			<div class="gray-first-diagonal"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news33_4">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/33/news1/51.jpg" class="p2">
+					<img src="thumb/33/news1/52.jpg" class="p2">
+					<img src="thumb/33/news1/53.jpg" class="p2">
+					<img src="thumb/33/news1/54.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal"></div>
+			<div class="content-box-inner text-level1 w50">
+				Ker je bil umik vojske z vlaki prepočasen, se je JLA odločila še za odhod po morski poti. Zaradi tega je morala kljub temu, da si je prizadevala odpeljati čim več sredstev, del tehnike pustiti v Sloveniji. Priprave JLA na odhod so spremljale slovenske obrambne sile, vendar večjih incidentov ni bilo. Zadnji vojaški konvoj in s tem pripadnik JLA je slovensko ozemlje zapustil na malteškem trajektu Venus, 26. oktobra 1991, malo po polnoči.
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h80 flex-column mt-auto mb-auto">
+				<img src="media/33/karikatura_odhod.jpg" class="h70 pointer" id="karikatura_odhod">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="gallery-3rows h80 flex-gallery pointer" style="width:140vh" id="galerija_koper">
+				<div class="w40" style="border:2px solid transparent">
+					<div class="photo-note zbirka-fotografij" style="height:26.1vh">
+						Slovesnost ob odhodu zadnjega vojaka JLA iz Kopra
+					</div>
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/koper/01.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/koper/02.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/koper/03.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/koper/04.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/koper/05.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/koper/06.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/koper/07.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/koper/08.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/koper/09.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/koper/10.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/koper/11.jpg" class="p2">
+				</div>
+				<div class="gallery-3rows-img">
+					<img src="thumb/33/photo1/koper/12.jpg" class="p2">
+				</div>
+			</div>
+			<div class="gray-first-diagonal"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news33_5">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/33/news1/60.jpg" class="p2">
+					<img src="thumb/33/news1/61.jpg" class="p2">
+					<img src="thumb/33/news1/62.jpg" class="p2">
+					<img src="thumb/33/news1/63.jpg" class="p2">
+					<img src="thumb/33/news1/64.jpg" class="p2">
+				</div>
+				<div class="news-column news_down img-vertical-scroll w40">
+					<img src="thumb/33/news1/65.jpg" class="p2">
+					<img src="thumb/33/news1/66.jpg" class="p2">
+					<img src="thumb/33/news1/67.jpg" class="p2">
+					<img src="thumb/33/news1/68.jpg" class="p2">
+					<img src="thumb/33/news1/69.jpg" class="p2">
+				</div>
+			</div>
+
+			<div class="content-box-inner flex-column-space">
+				<div class="h60 mb-auto ml8">
+					<div class="text-level2 w50">
+						<b>Razlogi za zmago slovenskih obrambnih sil</b><br>
+						Kljub veliki prednosti jugoslovanske vojske v opremi in tehniki je imela Republika Slovenija v času vojne številčno premoč. Za slovensko stran sta se kot izjemno pomembni komponenti izkazali legitimnost in legalnost uporabe sile, od česar je bila odvisna tudi podpora javnosti. Uporaba sile na slovenski strani je bila prepoznana kot obrambna vojna, s katero je bilo treba zaščititi jasno izraženo voljo slovenskega naroda. Vodstvu je uspelo s skupnim delovanjem povsem poenotiti slovenski narod in si zagotoviti podporo pri delovanju slovenskih obrambnih sil. S tem je bila zagotovljena izjemno visoka bojna morala pri pripadnikih TO in milice, urejena pa so bila tudi številna logistična vprašanja, ki jih obrambni sistem sam ne bi bil sposoben rešiti.
+						<br>
+						Pomembno vlogo je imela tudi poveljniška struktura, ki je pripravila dobre strateške in taktične načrte, s čimer so bile povečane možnosti za zmago in zmanjšane nepotrebne žrtve. Zaradi ukrepov slovenskega vojaškega vrha in geografskih značilnosti slovenskega ozemlja tako jugoslovanska premoč v vojaški tehniki ni prišla do izraza. Enote JLA so ostale blokirane v vojašnicah in na barikadah.
+					</div>
+				</div>
+			</div>
+
+			<div class="content-box-inner flex-column-space">
+				<div class="h60 mb-auto ml8">
+					<div class="text-level2 w40">
+						Izrednega pomena je bilo skupno nastopanje TO in slovenske milice, s čimer se je obrambna zmogljivost izjemno povečala. Po zaslugi milice je bila vzpostavljena dobra obveščevalna mreža in s tem povečana odzivnost in mobilnost slovenskih obrambnih sil. Pri razlogih za poraz JLA pa ne smemo tudi mimo njenega odkritega podcenjevanja slovenskih obrambnih zmožnosti.
+						<br>
+						Slovenija je z jasno strukturo vodenja in poveljevanja ter sodelovanjem na vseh ravneh mednarodni skupnosti predstavila svojo politično zrelost. Slovenska vojna za obrambo neodvisnosti ostaja edini proces v razpadu Jugoslavije, ki ga ni bilo treba braniti na <a href="#" class="news-popup-link" data-toggle="modal" data-target="#popup_sodisce">Mednarodnem sodišču za vojne zločine</a> na tleh nekdanje Jugoslavije v Haagu.
+					</div>
+				</div>
+			</div>
+
+			<div class="flex-row ml8 mr8 pointer" id="news33_6">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/33/news1/71a.jpg" class="p2">
+					<img src="thumb/33/news1/71b.jpg" class="p2">
+					<img src="thumb/33/news1/71c.jpg" class="p2">
+					<img src="thumb/33/news1/71d.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal"></div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/docs1/delegacija.jpg" class="h80 pointer" id="delegacija">
+			</div>
+			<div class="h50 w25 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row mb-auto">
+					<div class="side-note text-level2">
+						Akt o imenovanju delegacije
+					</div>
+				</div>
+				<div class="flex-row text-level2 mt-auto">
+					Skupščina Republike Slovenije je 31. julija 1991 imenovala delegacijo za pogajanja o razdružitvi Jugoslavije.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w60">
+				<p>
+				Evropska skupnost je od začetka konflikta v Sloveniji budno spremljala vse bolj zaskrbljujoče razmere v Jugoslaviji. Po podpisu dogovora na Brionih se je zato zavzela za mirno reševanje sporov, republikam, ki so zavračale podpis premirja, pa zagrozila z gospodarskimi sankcijami, pri čemer so jo podprle tudi ZDA. Tako so 2. septembra 1991 predsedniki jugoslovanskih republik in predsednik Predsedstva SFRJ v Beogradu podpisali sporazum o premirju in razširitvi opazovalne misije na območje Hrvaške, ES pa je na podlagi avgusta sprejete deklaracije o Jugoslaviji sklicala mirovno konferenco v Haagu. Slednja se je začela 7. septembra pod predsedstvom lorda <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_carrington">Petra Carringtona</a>, udeležili pa so se je vsi predstavniki jugoslovanskih republik, federacije in vseh držav članic Evropske skupnosti. V okviru konference je bila ustanovljena tudi arbitražna komisija o izpolnjevanju pogojev za mednarodno priznanje novonastalih držav.
+				</p>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/33/news1/81.jpg" class="h60 pointer" id="konferenca1">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/33/news1/82.jpg" class="h60 pointer" id="konferenca2">
+			</div>
+		</div>
+
+		<div class="content-box ml8" id="stalisca">
+			<div class="h80 flex-column mt-auto mb-auto">
+				<img src="thumb/33/docs1/stalisca1.jpg" class="h80 pointer">
+			</div>
+			<div class="h80 flex-column mt-auto mb-auto ml4">
+				<img src="thumb/33/docs1/stalisca2.jpg" class="h80 pointer">
+			</div>
+			<div class="h80 w30 content-box-inner ml1rem">
+				<div class="flex-row h10 mb-auto">
+					<div class="side-note text-level2">
+						Stališča Skupščine RS ob izteku 3 mesečnega moratorija
+					</div>
+				</div>
+				<div class="flex-row h70 text-level2 mt-auto">
+					Skupščina Republike Slovenije je 2. oktobra 1991 sprejela Stališča in sklepe ob izteku trimesečnega moratorija. Ugotovila je, da so z iztekom moratorija prenehale vse obveznosti Slovenije, določene z Brionsko deklaracijo, zato je zveznim organom odvzela vse pristojnosti nad Slovenijo in 7. oktobra prevzela nadzor nad državno mejo.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8" id="zde">
+			<div class="h80 flex-column mt-auto mb-auto">
+				<img src="thumb/33/docs1/zde1.jpg" class="h80 pointer">
+			</div>
+			<div class="h80 flex-column mt-auto mb-auto ml4">
+				<img src="thumb/33/docs1/zde2.jpg" class="h80 pointer">
+			</div>
+			<div class="h80 w25 content-box-inner ml1rem">
+				<div class="flex-row h10 mb-auto">
+					<div class="side-note text-level2">
+						Zakon o denarni enoti RS
+					</div>
+				</div>
+				<div class="flex-row h70 text-level2 mt-auto">
+					Skupščina Republike Slovenije je 8. oktobra 1991, še pred odhodom jugoslovanske vojske, sprejela Zakon o denarni enoti Republike Slovenije, naslednji dan pa so bili v obtok kot začasna valuta uvedeni vrednostni boni.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml4">
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="gallery-3rows h86 flex-gallery-centered ml8 mr8 pointer" style="width:110vh" id="denar_boni">
+			<div class="gallery-3rows-img">
+			  <img src="thumb/33/denar/bon1s.jpg" class="pa2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/33/denar/bon1z.jpg" class="pa2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/33/denar/bon2s.jpg" class="pa2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/33/denar/bon2z.jpg" class="pa2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/33/denar/bon5s.jpg" class="pa2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/33/denar/bon5z.jpg" class="pa2">
+			</div>
+		  </div>
+		</div>
+
+		<!------------------------------
+		//  PART 2
+		//----------------------------->
+		<div class="cover-box rel pointer" id="vojna32"><!-- MUST use "rel" -->
+		  <div class="gray-last-diagonal wd"></div>
+		  <div class="cover-box-title">
+			<div class="frame">
+			  <span class="green">MEDNARODNO</span><br />PRIZNANJE
+			</div>
+		  </div>
+		  <div class="intro-first-diagonal wd"></div>
+		</div>
+
+		<div class="intro-box w80" style="margin-left:-1px">
+		  <div class="h20 flex-row">
+		    <div class="intro-title"><!-- Brez naslova --></div>
+		  </div>
+		  <div class="h60 flex-row">
+		    <div class="intro-content">
+				Po razpadu Sovjetske zveze je na območju osrednje in vzhodne Evrope vzniknilo več novih držav, ki so se borile s politično, gospodarsko in identitetno krizo. V strahu pred destabilizacijo celine si je mednarodna skupnost prizadevala za ohranitev starih meja oziroma poskušala preprečiti nasilno spreminjanje le-teh. Za Republiko Slovenijo sta poglabljanje jugoslovanske krize in širitev vojaškega konflikta na Balkanu predstavljala veliko grožnjo, zaradi česar si je močno prizadevala za mednarodno priznanje. Slovenski diplomaciji je v dobrem letu dni mednarodno javnost uspelo prepričati o legitimnosti svojih prizadevanj in leta 1992 je bila priznana nova evropska država.
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner text-level1 w50">
+				Odločitev o osamosvojitvi Slovenije je sprva naletela na vsesplošno neodobravanje, z argumentom, da bi takšno enostransko dejanje v Jugoslaviji verjetno sprožilo vojno. Pred 25. junijem 1991 so se pozitivno do slovenske osamosvojitve tako izrekle samo Hrvaška, pogojno Avstrija ter italijanski mejni pokrajini Furlanija - Julijska krajina in Benečija. Previdno naklonjenost so izkazovali tudi Madžarska, Vatikan in krščansko-demokratski krogi v zahodni Evropi, odločno proti slovenskim nameram pa so bile Jugoslavija, ZDA, Sovjetska zveza in Evropska skupnost.
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="media/33/diareja_mladina_priznanje.jpg" class="h50 pointer" id="diareja_mladina_priznanje">
+				<div class="bottom-note text-level2">
+					Peterletova vlada si prizadeva za priznanje Slovenije v tujini
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h100 flex-column">
+				<div class="h25 flex-row">
+					<img src="thumb/33/news2/01.jpg" class="h20 pointer" id="podpora">
+				</div>
+				<div class="flex-row">
+					<img src="thumb/33/news2/02.jpg" class="pointer" style="height:55vh" id="stali_ob_strani">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="media/33/karikatura_priznanje.jpg" class="h60 pointer" id="karikatura_priznanje">
+			</div>
+		</div>
+
+		<div class="content-box ml1rem">
+			<div class="content-box-inner">
+				<div class="flex-row text-level2 w30">
+					ZDA so najprej vztrajale pri ohranitvi enotne Jugoslavije, nato pa pri vsaki nenasilni rešitvi krize. Predvsem pa so pobudo prepuščale Evropski skupnosti in uvajale enotne gospodarske sankcije za vse dele Jugoslavije. Kljub temu so bile pripravljene na dvostransko sodelovanje s Slovenijo, le brez njenega priznanja. Slovenski predstavniki so tako v letu 1991 večkrat obiskali ZDA s ciljem iskanja podpore pri predstavnikih slovenske izseljenske skupnosti. Ob ZDA je bila velika zagovornica ohranitve Jugoslavije tudi Velika Britanija, ki sta jo v letu 1991 večkrat obiskala Lojze Peterle in Dimitrij Rupel ter med parlamentarci iskala podporo za Slovenijo.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/33/news2/05.jpg" class="h50 pointer" id="konsolidacija">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<div class="flex-row text-level1 w50">
+					A Slovenija kljub nenaklonjenosti mednarodne skupnosti njenemu osamosvajanju ob napadu JLA ni ostala sama. Svetovna javnost je stopila na njeno stran in Evropska skupnost (ES) je že 28. junija 1991 v Beograd poslala pogajalsko trojko svojih opazovalcev.
+					<br>
+					Pri oblikovanju in sprejemanju dogovorov na Brionih je Slovenija sodelovala kot enakopravna partnerica, kar je imelo veliko moralno in politično težo ter dokazovalo njeno politično zrelost in pripravljenost na kompromise. Za mir je od takrat jamčila ES, ki je Republiki Sloveniji zagotovila mednarodno priznanje, če bi ga ta po poteku trimesečnega moratorija zahtevala.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<div class="flex-row text-level1 w50">
+					Kot enakopravna partnerica se je Slovenija udeležila tudi haaške konference septembra 1991 in se aktivno vključila v njeno delovanje. Zavzemala se je za pravico vsake izmed republik, da si izbere ustrezno obliko sodelovanja z drugimi sestavnimi deli SFRJ, za mirno rešitev krize, prosto trgovinsko cono, stalno konferenco o varnosti in sodelovanju v nekdanji skupni državi ter mednarodno priznanje in ureditev nasledstva SFRJ.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="media/33/karikatura_samostojnost.jpg" class="h60 pointer" id="karikatura_samostojnost">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/docs2/lt_priznanje1.jpg" class="h80 pointer" id="lt_priznanje">
+			</div>
+			<div class="h50 w25 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row mb-auto">
+					<div class="side-note text-level2">
+						Mednarodno priznanje Slovenije s strani Litve
+					</div>
+				</div>
+				<div class="flex-row text-level2 mt-auto">
+					Republika Hrvaška je samostojnost razglasila isti dan kot Slovenija, 25. junija 1991, državi pa sta se nato tudi vzajemno priznali. Prve države, ki so priznale Slovenijo, so bile Litva v juliju ter Gruzija in Latvija v avgustu, septembra in decembra pa so sledile še Estonija, Ukrajina, Islandija, Švedska, Nemčija in Belorusija. 13. januarja 1992 je Slovenijo priznal Vatikan.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/docs2/is_priznanje1.jpg" class="h80 pointer" id="is_priznanje">
+			</div>
+			<div class="h50 w25 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row mb-auto">
+					<div class="side-note text-level2">
+						Mednarodno priznanje Slovenije s strani Islandije
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/docs2/va_priznanje.jpg" class="h80 pointer" id="va_priznanje">
+			</div>
+			<div class="h50 w25 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row mb-auto">
+					<div class="side-note text-level2">
+						Mednarodno priznanje Slovenije s strani Vatikana
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h70 flex-column mt-auto mb-auto">
+				<img src="thumb/33/news2/11.jpg" class="h70 pointer" id="vatikan">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h70 flex-column mt-auto mb-auto">
+				<div class="flex-row">
+					<img src="thumb/33/photo/flag_eu.png" class="w60 pointer" id="zastava_eu">
+				</div>
+				<div class="bottom-note text-level2 w60">
+					Zastava Evropske unije
+				</div>
+				<div class="flex-row text-level1 w60 mt-auto mb-0">
+					Po nekajmesečnem zasedanju konference o Jugoslaviji v Haagu je bilo sklenjeno, da je SFRJ razpadla, Evropska skupnost pa se je odločila, da bo po 15. januarju 1992 mednarodno priznala vse republike nekdanje SFRJ, ki bodo izpolnjevale pogoje za to.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column">
+				<div class="flex-row" id="clanki1">
+					<div class="news-column news_up img-vertical-scroll w40">
+						<img src="thumb/33/news2/16.jpg" class="p2">
+						<img src="thumb/33/news2/17.jpg" class="p2">
+						<img src="thumb/33/news2/18.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<div class="flex-row text-level1 w50">
+					V času intenzivnih prizadevanj za mednarodno priznanje Slovenije je morala slovenska oblast poskrbeti za sprejetje ustave, k čemur jo je zavezovala plebiscitarna odločitev. Leto dni po plebiscitu o samostojni in suvereni Sloveniji je tako Ustavna komisija RS dosegla soglasje o slovenski ustavi, 23. decembra 1991 pa so poslanci vseh treh zborov Skupščine sprejeli Ustavo Republike Slovenije. Izvršni svet Skupščine je bil ob tem preimenovan v Vlado RS.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/33/photo2/ustava.jpg" class="h50 pointer" id="ustava">
+				<div class="bottom-note text-level2">
+					Ustava Republike Slovenije
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column">
+				<div class="flex-row" id="odlok">
+					<div class="news-column img-vertical-scroll w40">
+						<img src="thumb/33/docs2/odlok/odlok01.jpg" class="p2">
+						<img src="thumb/33/docs2/odlok/odlok02.jpg" class="p2">
+						<img src="thumb/33/docs2/odlok/odlok03.jpg" class="p2">
+						<img src="thumb/33/docs2/odlok/odlok04.jpg" class="p2">
+						<img src="thumb/33/docs2/odlok/odlok05.jpg" class="p2">
+						<img src="thumb/33/docs2/odlok/odlok06.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+			<div class="w20 content-box-inner ml1rem">
+				<div class="side-note text-level2">
+					Odlok o razglasitvi ustave
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+		  <div class="gray-first-diagonal wd"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+		  <div class="gallery-3rows h86 flex-gallery-centered ml8 mr8 pointer" style="width:110vh" id="denar_bankovci">
+			<div class="gallery-3rows-img">
+			  <img src="thumb/33/denar/sit00050s.jpg" class="pa2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/33/denar/sit00050z.jpg" class="pa2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/33/denar/sit00500s.jpg" class="pa2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/33/denar/sit00500z.jpg" class="pa2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/33/denar/sit01000s.jpg" class="pa2">
+			</div>
+			<div class="gallery-3rows-img">
+			  <img src="thumb/33/denar/sit01000z.jpg" class="pa2">
+			</div>
+		  </div>
+
+		  <div class="content-box-inner flex-column-space">
+			<div class="h60 mb-auto">
+			  <div class="text-level2 w20">
+				Leto dni po uvedbi začasne valute (bonov) je Slovenija kot uradno denarno enoto uvedla slovenski tolar in na Banko Slovenije prenesla pristojnosti vodenja tečajne politike. Uvedla je tudi samostojni devizni, posojilni, carinski in izvozno-uvozni režim.
+			  </div>
+		    </div>
+		  </div>
+
+		  <div class="content-box ml8">
+			<div class="h80 flex-column mt-auto mb-auto">
+			  <img src="thumb/33/news2/25.jpg" class="h70 pointer" id="nov_denar">
+			</div>
+		  </div>
+
+		  <div class="content-box ml8 mr8">
+			<div class="content-box-inner">
+			  <img src="media/33/karikatura_tolar.jpg" class="h60 pointer" id="karikatura_tolar">
+			</div>
+		  </div>
+		</div>
+		<div class="content-box">
+		  <div class="gray-last-diagonal wd"></div>
+		</div>
+
+		<div class="content-box">
+			<div class="content-box-inner">
+				<div class="flex-row text-level1 w50">
+					Za uspeh Slovenije na konferenci in hitro pridobitev mednarodnega priznanja je bila zaslužna njena diplomatska dejavnost. Ta je bila v času Jugoslavije v veliki meri zanemarjena – zastopanost Slovencev v diplomatskih službah je bila izredno majhna, v diplomatski komunikaciji pa se je uporabljal le srbski jezik. Ko je ideja o jugoslovanski konfederaciji propadla, je Slovenija hitro oblikovala svojo zunanjepolitično strategijo in začela sodelovati na mednarodnem prizorišču. Začela je vzdrževati intenzivne samostojne stike s svojimi sosedami in članicami ES, v tujih državah in mednarodnih organizacijah je imenovala svoje predstavnike, v Ljubljani pa so se po letu 1991 odprla tudi tuja predstavništva.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h80 flex-column mt-auto mb-auto">
+				<img src="thumb/33/news2/28.jpg" class="h80 pointer" id="slo_v_svetu">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/33/news2/29.jpg" class="h50 pointer" id="modri_potni_list">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<div class="flex-row text-level1 w60">
+					<p>
+						Slovenija je skrb za zamejske Slovence začela samostojno uresničevati na podlagi mednarodnega prava v zvezi z zaščito manjšin. Od Jugoslavije je podedovala določila <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_sporazumi">Osimskih sporazumov</a>, s katerimi je uredila vprašanje meje z Italijo, in <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_pogodba">Avstrijsko državno pogodbo</a>, ki je urejala mejno vprašanje z Avstrijo. Dobri odnosi z Madžarsko so se potrdili z odpiranjem novih mejnih prehodov in diplomatskih predstavništev v Ljubljani in Budimpešti. Velja poudariti, da se je razglasitve samostojne države 25. junija 1991 izmed tujih veleposlanikov udeležil samo madžarski konzul. Sodelovanje s Hrvaško pa se je kljub temu, da sta se državi medsebojno priznali že prej, uradno začelo po preteku moratorija, 8. oktobra 1991. Po velikih diplomatskih naporih je v letu 1992 Slovenijo kot samostojno državo priznalo že 94 držav.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+		  <div id="timeline-iframe" class="mt-auto mb-auto ml8 mr4 h60">
+			<iframe src="vojna3-trak.html"class="h50" style="width:110vh;border:none;"></iframe>
+			<div class="bottom-note w100 mb-auto">
+			  Kronološki seznam držav, ki so priznale Republiko Slovenijo in držav, s katerimi je Republika Slovenija sklenila sporazum o navezavi diplomatskih odnosov.
+			</div>
+		  </div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<div class="flex-row text-level1 w50">
+					<p>Z vsemi državami, ki so bile naklonjene slovenski osamosvojitvi, so se takoj začeli pripravljati sporazumi o dvostranskem sodelovanju. Največ uspeha je imela Slovenija pri navezovanju gospodarskih stikov, pri čemer so imela izjemno vlogo slovenska podjetja, banke in slovenske izseljenske skupnosti. V avstralskem Sydneyju sta bila tako na primer ustanovljena Slovenski informacijski urad in Združenje slovenskih razvojnih partnerjev, v avstralskem parlamentu pa se je oblikovala tudi posebna skupina za Slovenijo in Hrvaško. Avstralija je bila prav zaradi lobiranja in velikih naporov izseljencev prva prekomorska država, ki je priznala Slovenijo.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/33/photo2/priznanje_au.jpg" class="h50 pointer" id="priznanje_au">
+				<div class="bottom-note text-level2">
+					Ob priznanju Slovenije – pred avstralskim parlamentom
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="gray-first-diagonal"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news33_7">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/33/docs2/au_peticije.jpg" class="p2">
+					<img src="thumb/33/docs2/au_delegacija.jpg" class="p2">
+					<img src="thumb/33/docs2/au_priznanje1.jpg" class="p2">
+					<img src="thumb/33/docs2/au_priznanje2.jpg" class="p2">
+					<img src="thumb/33/docs2/au_predstavnistva.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal"></div>
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/docs2/au_izjava.jpg" class="h80 pointer" id="au_izjava">
+			</div>
+			<div class="h50 w25 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row mb-auto">
+					<div class="side-note text-level2">
+						Izjava avstralskega predsednika vlade ob priznanju Slovenije
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/docs2/au_zahvala2.jpg" class="h80 pointer" id="au_zahvala2">
+			</div>
+			<div class="h50 w25 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row mb-auto">
+					<div class="side-note text-level2">
+						Zahvala Avstralski slovenski konferenci
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/docs2/au_zahvala1.jpg" class="h80 pointer" id="au_zahvala1">
+			</div>
+			<div class="h50 w25 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row mb-auto">
+					<div class="side-note text-level2">
+						Zahvala za pomoč Slovencem v Avstraliji
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/news2/31.jpg" class="h80 pointer" id="slovenija_mednarodno_priznana">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<div class="flex-row text-level1 w50">
+					<p>V ozadju uspešnega procesa osamosvajanja Slovenije je rasla kriza koalicije Demos. Nasprotja v koaliciji so bila prisotna od vsega začetka, saj je bila zelo raznolika politična formacija. Po končani vojni in sprejetju ustave decembra 1991 so se koalicijske stranke razšle. Ob sklepu za razpustitev Demosa je bil sprejet tudi predlog o predčasnih volitvah, ki naj bi bile izvedene do konca aprila naslednje leto.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="media/33/karikatura_razpad.jpg" class="h60 pointer" id="karikatura_razpad">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/news2/35.jpg" class="h80 pointer" id="trhlih_nogah">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<div class="flex-row text-level1 w50">
+					<p>Demosove stranke so se razhajale tudi v odnosu do Peterletove vlade, ki je bila pod vedno hujšim pritiskom predvsem zaradi slabega gospodarskega položaja. Zaradi osamosvajanja in odcepitve od Jugoslavije se je država namreč znašla v gospodarski krizi. Slovenija se je morala odreči trgom v nekdanjih republikah ter se preusmeriti na zahtevnejši zahodnoevropski trg, poleg tega pa so jo doletele tudi gospodarske sankcije kot posledica jugoslovanske krize. 22. aprila 1992 je bila vladi izglasovana nezaupnica, njeno vodstvo pa je prevzel Janez Drnovšek.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h100 mb-auto">
+				<img src="thumb/33/photo2/peterle_drnovsek.jpg" class="h70 pointer" id="peterle_drnovsek">
+				<div class="bottom-note text-level2">
+					Lojze Peterle in Janez Drnovšek
+				</div>
+			</div>
+			<div class="gray-first-diagonal"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news33_8">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/33/news2/41.jpg" class="p2">
+					<img src="thumb/33/news2/42.jpg" class="p2">
+					<img src="thumb/33/news2/43.jpg" class="p2">
+					<img src="thumb/33/news2/44.jpg" class="p2">
+					<img src="thumb/33/news2/45.jpg" class="p2">
+					<img src="thumb/33/news2/46.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal"></div>
+			<div class="content-box-inner">
+				<div class="flex-row text-level1 w50">
+					<p>22. maja 1992 je bila Slovenija sprejeta tudi v <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_ozn">Organizacijo združenih narodov</a>. Z vstopom na evropsko in mednarodno prizorišče je prevzela nove strateške usmeritve: dokončno je izstopila z območja Balkana in se opredelila za Evropo, se vključila v evropske in evroatlantske politične, varnostne in ekonomske povezave (EU in <a href="#" class="popup-link" data-toggle="modal" data-target="#popup_nato">NATO</a>), prevzela tvorno vlogo v političnih in gospodarskih organizacijah ter se začela prilagajati novi politični vlogi.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8 mr8">
+			<div class="content-box-inner">
+				<img src="thumb/33/photo/flag_un.png" class="h50 pointer" id="zastava_un">
+				<div class="bottom-note text-level2">
+					Simbol OZN
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-first-diagonal"></div>
+		</div>
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news33_9">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/33/news2/51.jpg" class="p2">
+					<img src="thumb/33/news2/52.jpg" class="p2">
+					<img src="thumb/33/news2/53.jpg" class="p2">
+					<img src="thumb/33/news2/54.jpg" class="p2">
+					<img src="thumb/33/news2/55.jpg" class="p2">
+					<img src="thumb/33/news2/56.jpg" class="p2">
+					<img src="thumb/33/news2/57.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal"></div>
+			<div class="content-box-inner">
+				<div class="flex-row text-level1 w50">
+					<p>Slovenija je vzpostavila stike in začela sodelovati tudi z drugimi mednarodnimi organizacijami, na primer Svetovno zdravstveno organizacijo, mednarodnim Rdečim križem in mednarodno socialno službo. Steklo je tudi vključevanje v mednarodne kulturne organizacije – Unesco in Svet za kulturno sodelovanje. Na področju varnosti si je Slovenija ob grozečem splošnem vojaškem konfliktu na Balkanu prizadevala za tesnejše sodelovanje z evropskimi varnostno-vojaškimi organizacijami, zlasti KVSE. Na področju športa pa je bil Slovenski olimpijski komite sprejet v Mednarodni olimpijski komite.					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<img src="thumb/33/news2/61.jpg" class="h50 pointer" id="slovenija_OI">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h80 content-box-inner mt-auto mb-auto">
+				<img src="thumb/33/docs2/znak_odlikovanje.jpg" class="h70 pointer" id="znak_odlikovanje">
+				<div class="bottom-note text-level2">
+					Častni znak svobode in odlikovanje Častni znak svobode
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h80 content-box-inner mt-auto mb-auto">
+				<img src="thumb/33/docs2/znak_plaketa.jpg" class="h60 pointer" id="znak_plaketa">
+				<div class="bottom-note text-level2" style="width:47vh">
+					Vodstvo Republike Slovenije je po vojni, uspešni osamosvojitvi in mednarodnem priznanju podelilo priznanja zaslužnim posameznikom in organizacijam, ki so kakorkoli pripomogli k zmagi v vojni.
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/docs2/zahvala_zupana.jpg" class="h80 pointer" id="zahvala_zupana">
+			</div>
+			<div class="h50 w20 content-box-inner flex-column-space ml1rem">
+				<div class="flex-row mb-auto">
+					<div class="side-note text-level2">
+					  Javna zahvala župana
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8" id="najvisji_odlikovanji">
+			<div class="flex-column mt-auto mb-auto">
+				<img src="thumb/33/news2/65a.jpg" class="h80 pointer">
+			</div>
+			<div class="flex-column mt-auto mb-auto ml4">
+				<img src="thumb/33/news2/65b.jpg" class="h80 pointer">
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="content-box-inner">
+				<div class="flex-row text-level1 w50">
+					<p>Mednarodno priznanje samostojne Slovenije je bilo v danih okoliščinah doseženo zelo hitro in učinkovito – kot rezultat usklajenega in zavzetega delovanja mnogih akterjev. Tako kot v primeru odločitve za samostojnost, za katero smo vsi Slovenci prevzeli odgovornost, si je tudi za mednarodno priznanje Slovenije po svojih močeh prizadeval vsak Slovenec in zagovornik osamosvojitve. Akterji v tem procesu niso bili le državni organi, ampak tudi podjetja, združenja, nevladne organizacije in posamezniki. Ideološke razlike med njimi niso imele nikakršne vloge.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="h80 content-box-inner mt-auto mb-auto">
+				<img src="thumb/33/docs2/zahvala_kacin.jpg" class="h70 pointer" id="zahvala_kacin">
+				<div class="bottom-note text-level2">
+					Zahvala Jelka Kacina Slovencem v tujini
+				</div>
+			</div>
+			<div class="gray-first-diagonal"></div>
+		</div>
+
+		<div class="news-box" style="margin-left:-1px">
+			<div class="flex-column">
+				<div class="news-title float-right">
+					ODMEVI V<br />ČASOPISJU
+				</div>
+			</div>
+			<div class="flex-row ml8 mr8 pointer" id="news33_10">
+				<div class="news-column news_up img-vertical-scroll w40">
+					<img src="thumb/33/news2/71.jpg" class="p2">
+					<img src="thumb/33/news2/72.jpg" class="p2">
+					<img src="thumb/33/news2/73.jpg" class="p2">
+					<img src="thumb/33/news2/74.jpg" class="p2">
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box">
+			<div class="gray-last-diagonal"></div>
+			<div class="content-box-inner">
+				<div class="flex-row text-level1 w50">
+					<p>Osamosvojitev Slovenije in vojna, ki je sledila, pa sta bili žal le uvertura v konflikt na ozemlju nekdanje skupne države. Ta je že poleti 1991 začel pridobivati vse večje in vse bolj tragične razsežnosti. Vojna se je najprej razplamtela na Hrvaškem, nato pa še v Bosni. Tam so bosanski Srbi ob pomoči Srbije in JLA začeli vojno in do konca leta nadzorovali več kot 70 odstotkov ozemlja. Na njem so izvajali etnično čiščenje nad Hrvati in muslimani, več mesecev oblegali Sarajevo in iz države odgnali več kot milijon in pol beguncev. Evropska skupnost, OZN, ZDA in Velika Britanija pri prizadevanjih za zaustavitev napadov niso bile uspešne. V Bosno so nazadnje poslali »modre čelade« ali Unprofor, vojaške enote mednarodne skupnosti.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-box ml8">
+			<div class="flex-column">
+				<div class="flex-row" id="news33_11">
+					<div class="news-column news_up img-vertical-scroll w40">
+						<img src="thumb/33/news2/81.jpg" class="p2">
+						<img src="thumb/33/news2/82.jpg" class="p2">
+						<img src="thumb/33/news2/83.jpg" class="p2">
+						<img src="thumb/33/news2/84.jpg" class="p2">
+						<img src="thumb/33/news2/85.jpg" class="p2">
+						<img src="thumb/33/news2/86.jpg" class="p2">
+						<img src="thumb/33/news2/87.jpg" class="p2">
+						<img src="thumb/33/news2/88.jpg" class="p2">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="heading-box" id="citat_cankar">
+			<div class="beige-last-diagonal wd"></div>
+			<div class="flex-row float-right mt-auto mb-auto">
+				<div class="w80" style="padding-right:40vh">
+				  <i>
+				  Jaz, bratje, pa vem za domovino<br />
+				  in mi vsi jo slutimo ...<br />
+				  Naša domovina je boj in prihodnost,<br />
+				  ta domovina je vredna najžlahtnejše krvi<br />
+				  in najbogatejšega življenja:<br />
+				  Iz muke trpljenja in suženjstva<br />
+				  neštetih milijonov bo zrasla<br />
+				  naša domovina: vsa ta lepa zemlja<br />
+				  z vsem svojim neizmernim bogastvom.<br /><br />
+				  (Ivan Cankar)
+				  </i>
+				</div>
+			</div>
+		</div>
+
+    </div>
+
+	<!------------------------------
+	//  FIXED FOOTER
+	//----------------------------->
+	<div class="progress-container">
+	  <div class="progress-bar" id="progressBar"></div>
+	</div>
+
+	<div id="bottombar" class="bt navbar-dark">
+	  <button class="bottombar-toggler" type="button" data-toggle="collapse" data-target="#navbarBottomMenu" aria-controls="navbarBottomMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="bottombar-title"><span class="dimmed">VOJNA / </span>10. KONEC VOJNE</div>
+        <span id="btmbar-hamburger" class="navbar-toggler-icon"></span>
+        <span id="btmbar-cheeseburger" class="hidden" style="padding-top:0.1rem;">&#x2573;</span>
+      </button>
+	  <div class="paging">
+	    <table width="100%" border="0">
+		  <tr align="center">
+		    <td width="25%"><a href="vojna2.html">&#x3008;</a></td>
+			<td width="50%">10</td>
+			<td width="25%">&#x3009;</td>
+		  </tr>
+		</table>
+	  </div>
+	</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Slick Carousel JavaScript -->
+<script src="js/slick.min.js"></script>
+
+<!-- FancyBox 3 JavaScript -->
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/fancybox-33-parts.js"></script>
+<!--
+<script src="js/fancybox-33-video.js"></script>
+//-->
+
+<!-- Navigacija -->
+<script src="js/navigation.js"></script>
+
+<!-- Custom JavaScript for this site -->
+<script>
+/*
+ *  Hide loading box when page load complete
+ */
+window.onload = function(){
+	document.getElementById('content-loading').style.visibility = 'hidden';
+};
+
+function hideToggleMenu() {
+	$('#navbar-hamburger').removeClass('hidden');
+	$('#navbar-cheeseburger').addClass('hidden');        
+	$('#navbarToggleMenu').addClass('hidden');		  
+}
+
+function hideBottomMenu() {
+	$('#btmbar-hamburger').removeClass('hidden');
+	$('#btmbar-cheeseburger').addClass('hidden');        
+	$('#navbarBottomMenu').addClass('hidden');		  
+}
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-66REXS9BK3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-66REXS9BK3');
+</script>
+
+</body>
+</html>

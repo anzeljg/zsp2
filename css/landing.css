@@ -1,0 +1,325 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('../font/rubik-regular-webfont.woff2') format('woff2'),
+         url('../font/rubik-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../font/rubik-bold-webfont.woff2') format('woff2'),
+         url('../font/rubik-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* override browser default */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* use viewport-relative units to cover page fully */
+body {
+	width: 100vw;
+	height: 100vh;
+	min-height: 0;
+	max-height: 100vh;
+	/* Remove/hide scrollbars while scrolling still works */
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none;    /* Firefox, except on Windows */
+	/* For Firefox on Windows see:
+	https://stackoverflow.com/questions/56875867/only-hide-scrollbar-not-disable-scrollbar-on-firefox-windows
+	*/
+}
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+/* include border and padding in element width and height */
+* {
+  box-sizing: border-box;
+}
+
+
+
+body {
+	font-family: 'Rubik', sans-serif;
+	font-size: 2.4vh;
+	line-height: 3.2vh;
+}
+
+body#plebiscit {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url('../img/plebiscit_video_bg.jpg');
+}
+
+body#samostojnost {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url('../img/samostojnost_video_bg.jpg');
+}
+
+body#vojna {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url('../img/vojna_video_bg.jpg');
+}
+
+a {
+	color: #0C55A3;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-item {
+	flex-grow: 1;
+	padding: 2vh;
+}
+
+.green-line {
+	font-size: 1.8vh;
+	border-left: 2px solid #48AC33;
+}
+
+.close-icon {
+	text-align: right;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+/* Width & height */
+.w25 { width: 25vw }
+.w30 { width: 30vw }
+.w33 { width: 33.33333vw }
+.w40 { width: 40vw }
+.w50 { width: 50vw }
+.w100 { width: 100vw }
+.h08 { height: 8vh }
+.h20 { height: 20vh }
+.h72 { height: 72vh }
+
+.banner {
+	color: #FFFFFF;
+	background-color: #393939;
+	border-left: 1px solid #979797;
+	border-right: 1px solid #979797;
+	font-family: 'Rubik';
+	font-weight: bold;
+	font-size: 4vh;
+	line-height: 6vh;
+	z-index: 10;
+}
+
+.copyright {
+	background-color: #D8D8D8;
+	font-family: 'Rubik';
+	font-size: 1.25vh;
+	line-height: 1.75vh;
+	padding: 1vh 10vh;
+	text-align: center;
+	z-index: 10;
+}
+
+.button {
+	height: 100%;
+	padding: 7vh 5vh;
+	border-left: 1px solid #979797;
+	border-right: 1px solid #979797;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.active {
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.disabled {
+	color: #858585;
+}
+
+.button#plebiscit {
+	background-size: 40vw auto;
+	background-image: url('../img/plebiscit_button_bg.jpg');
+	background-position: 50% 40%;
+}
+
+.button#samostojnost {
+	background-size: 40vw auto;
+	background-image: url('../img/samostojnost_button_bg.jpg');
+	background-position: 50% 20%;
+}
+
+.button#vojna {
+	background-size: 40vw auto;
+	background-image: url('../img/vojna_button_bg.jpg');
+	background-position: 50% 20%;
+}
+
+.button-on {
+	color: #FFFFFF;
+	background-color: #636363;
+}
+
+.button-off {
+	color: #858585;
+	background-color: #393939;
+}
+.button-off:hover {
+	color: #48AC33;
+	background-color: #636363;
+}
+
+/* Remove focus around Bootstrap buttons on click */
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Override rounded corners in modal windows */
+.modal-content {
+	border-radius: 0;
+}
+
+
+.video {
+	width: 100vw;
+	height: 100vh;
+	background-image: url('../img/znak_outline_cel.svg');
+	background-repeat: no-repeat;
+	background-position: -5vw 10vh;
+	background-size: 80vh;
+}
+
+#banner {
+	position: absolute;
+	bottom: 0;
+	height: 20vh;
+	width: 100vw;
+	padding: 4vh 12vh;
+	color: #FFFFFF;
+	background-color: #393939;
+	border-top: 1px solid #979797;
+	font-family: 'Rubik';
+	font-weight: bold;
+	font-size: 6vh;
+	line-height: 6vh;
+	text-align: right;
+	cursor: pointer;
+}
+
+#start {
+	/*height: 6rem;*/
+	height: 12vh;
+	padding-left: 3rem;
+}
+
+#notice {
+	padding: 2vh;
+	color: #FFFFFF;
+	background-color: #393939;
+	font-family: 'Rubik';
+	font-weight: bold;
+}
+
+#logo {
+	height: 60vh;
+}
+
+.intro-video {
+	width: 115vh;
+	height: 65vh;
+}
+
+/*
+ *  Device orientation
+ */
+#device-orientation {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	color: #FFFFFF;
+	background-color: #393939;
+}
+#device-orientation {
+	display: none;
+	z-index: 9999;
+}
+
+#orientation-box {
+	width: 40vh;
+	height: 40vh;
+	margin-top: 30vh;
+	text-align: center;
+	border: auto;
+	background-color: #393939;
+}
+
+/*
+ *  Credits box
+ */
+.credits-box {
+	height: 60vh;
+	overflow-y: scroll;
+}
+
+.credits-box::-webkit-scrollbar {
+	width: 15px;
+	height: 30px;
+}
+.credits-box::-webkit-scrollbar-thumb {
+	background: #CCCCCC;
+	border: 6px solid rgba(0, 0, 0, 0);
+	background-clip: padding-box;
+	border-radius: 30px;
+}
+.credits-box::-webkit-scrollbar-thumb:hover{
+	background: #979797;
+	border: 6px solid rgba(0, 0, 0, 0);
+	background-clip: padding-box;
+	border-radius: 30px;
+}
+
+
+@media only screen and (orientation:portrait){
+	#device-orientation {
+		display: block;
+	}
+
+	body {
+		-ms-overflow-style: none; /* Internet Explorer 10+ */
+		scrollbar-width: none;    /* Firefox, except on Windows */
+	}
+	body::-webkit-scrollbar { 
+		display: none;  /* Safari and Chrome */
+	}
+
+}
+
+@media only screen and (orientation:landscape){
+	#device-orientation {
+		display: none;
+	}
+
+}
+
